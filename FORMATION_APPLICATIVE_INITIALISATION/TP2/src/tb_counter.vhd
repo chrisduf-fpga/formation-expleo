@@ -25,7 +25,7 @@ architecture behavioral of tb_counter is
   -- For K = 2000, 45 us is fine.
   -- constant t_restart: time := 45 us;
   -- Set to zero to disable restart test.
-  -- constant t_restart : time := 0 ns;
+  constant t_restart : time := 0 ns;
   
   -- Simulated 100 MHz clock.
   constant hp : time := 5 ns;
