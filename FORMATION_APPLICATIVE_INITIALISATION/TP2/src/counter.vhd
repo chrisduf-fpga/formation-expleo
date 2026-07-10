@@ -97,7 +97,7 @@ begin
 
   -- Quesion 17: connect resetn input port to button2
   -- before generating the bitstream.
-  resetn <= not btn(1);
+  resetn <= btn(1);
 
 
 end behavioral;
