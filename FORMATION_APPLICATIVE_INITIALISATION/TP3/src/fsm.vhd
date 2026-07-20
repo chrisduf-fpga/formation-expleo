@@ -26,7 +26,7 @@ architecture Behavioral of fsm is
     signal ticks       : std_logic_vector(3 downto 0);
 
     -- Allows to restart Fsm_ticks counter from FSM.
-    signal restart_fsm_ticks : std_logic := '0';
+    signal restart_or_cycle : std_logic := '0';
 
     -- FSM.
     type state_t is (S0, S1, S2, S3);
@@ -73,18 +73,22 @@ begin
     port map (
       clk => clk,
       resetn => resetn,
-      restart => restart_fsm_ticks,
+      restart => restart_or_cycle,
       tick => end_counter,
       ticks => ticks
     );
 
-  -- Whether to restart Fsm_ticks counter.
-  restart_fsm_ticks <= '1' when (restart = '1') or (unsigned(ticks) = 6) else '0';
+  -- Either the restart signal is asserted,
+  -- or we reaches the end of a FSM cycle,
+  -- which is after 3x2 end_counter events.
+  -- In both cases, we need to restart the
+  -- Fsm_ticks counter via its restart input port.
+  restart_or_cycle <= '1' when (restart = '1') or (unsigned(ticks) = 6) else '0';
 
   -- LED drivers.
-  LED_R <= sig_led_r when restart_fsm_ticks = '0' else '0';
-  LED_B <= sig_led_b when restart_fsm_ticks = '0' else '0';
-  LED_G <= sig_led_g when restart_fsm_ticks = '0' else '0';
+  LED_R <= sig_led_r when restart_or_cycle = '0' else '0';
+  LED_B <= sig_led_b when restart_or_cycle = '0' else '0';
+  LED_G <= sig_led_g when restart_or_cycle = '0' else '0';
 
   
   process(clk, resetn)
@@ -93,10 +97,12 @@ begin
       curr_state <= S0;
 
     elsif rising_edge(clk) then
+      -- Synchronous restart.
       if restart = '1' then
         curr_state <= S0;
 
-      elsif restart_fsm_ticks = '1' then
+      -- End of cycle.
+      elsif restart_or_cycle = '1' then
         curr_state <= next_state;
       end if;
 
