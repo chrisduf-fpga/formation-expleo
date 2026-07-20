@@ -1,0 +1,2754 @@
+Copyright 1986-2022 Xilinx, Inc. All Rights Reserved. Copyright 2022-2026 Advanced Micro Devices, Inc. All Rights Reserved.
+---------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------
+| Tool Version : Vivado v.2026.1 (lin64) Build 6511674 Tue Jun 16 11:01:26 MDT 2026
+| Date         : Mon Jul 20 08:17:20 2026
+| Host         : galileo running 64-bit Ubuntu"
+VERSION_ID="24.04 24.04.4 LTS (Noble Numbat)"
+VERSION_CODENAME=noble
+| Command      : report_timing_summary -max_paths 10 -routable_nets -report_unconstrained -file top_fsm_timing_summary_routed.rpt -pb top_fsm_timing_summary_routed.pb -rpx top_fsm_timing_summary_routed.rpx -warn_on_violation
+| Design       : top_fsm
+| Device       : 7z010-clg400
+| Speed File   : -1  PRODUCTION 1.12 2019-11-22
+| Design State : Routed
+---------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------
+
+Timing Summary Report
+
+------------------------------------------------------------------------------------------------
+| Timer Settings
+| --------------
+------------------------------------------------------------------------------------------------
+
+  Enable Multi Corner Analysis               :  Yes
+  Enable Pessimism Removal                   :  Yes
+  Pessimism Removal Resolution               :  Nearest Common Node
+  Enable Input Delay Default Clock           :  No
+  Enable Preset / Clear Arcs                 :  No
+  Disable Flight Delays                      :  No
+  Ignore I/O Paths                           :  No
+  Timing Early Launch at Borrowing Latches   :  No
+  Borrow Time for Max Delay Exceptions       :  Yes
+  Merge Timing Exceptions                    :  Yes
+  Inter-SLR Compensation                     :  Conservative
+
+  Corner  Analyze    Analyze
+  Name    Max Paths  Min Paths
+  ------  ---------  ---------
+  Slow    Yes        Yes
+  Fast    Yes        Yes
+
+
+------------------------------------------------------------------------------------------------
+| Report Methodology
+| ------------------
+------------------------------------------------------------------------------------------------
+
+Rule       Severity  Description                    Violations
+---------  --------  -----------------------------  ----------
+TIMING-18  Warning   Missing input or output delay  5
+
+Note: This report is based on the most recent report_methodology run and may not be up-to-date. Run report_methodology on the current design for the latest report.
+
+
+
+check_timing report
+
+Table of Contents
+-----------------
+1. checking no_clock (0)
+2. checking constant_clock (0)
+3. checking pulse_width_clock (0)
+4. checking unconstrained_internal_endpoints (0)
+5. checking no_input_delay (2)
+6. checking no_output_delay (3)
+7. checking multiple_clock (0)
+8. checking generated_clocks (0)
+9. checking loops (0)
+10. checking partial_input_delay (0)
+11. checking partial_output_delay (0)
+12. checking latch_loops (0)
+
+1. checking no_clock (0)
+------------------------
+ There are 0 register/latch pins with no clock.
+
+
+2. checking constant_clock (0)
+------------------------------
+ There are 0 register/latch pins with constant_clock.
+
+
+3. checking pulse_width_clock (0)
+---------------------------------
+ There are 0 register/latch pins which need pulse_width check
+
+
+4. checking unconstrained_internal_endpoints (0)
+------------------------------------------------
+ There are 0 pins that are not constrained for maximum delay.
+
+ There are 0 pins that are not constrained for maximum delay due to constant clock.
+
+
+5. checking no_input_delay (2)
+------------------------------
+ There are 2 input ports with no input delay specified. (HIGH)
+
+ There are 0 input ports with no input delay but user has a false path constraint.
+
+
+6. checking no_output_delay (3)
+-------------------------------
+ There are 3 ports with no output delay specified. (HIGH)
+
+ There are 0 ports with no output delay but user has a false path constraint
+
+ There are 0 ports with no output delay but with a timing clock defined on it or propagating through it
+
+
+7. checking multiple_clock (0)
+------------------------------
+ There are 0 register/latch pins with multiple clocks.
+
+
+8. checking generated_clocks (0)
+--------------------------------
+ There are 0 generated clocks that are not connected to a clock source.
+
+
+9. checking loops (0)
+---------------------
+ There are 0 combinational loops in the design.
+
+
+10. checking partial_input_delay (0)
+------------------------------------
+ There are 0 input ports with partial input delay specified.
+
+
+11. checking partial_output_delay (0)
+-------------------------------------
+ There are 0 ports with partial output delay specified.
+
+
+12. checking latch_loops (0)
+----------------------------
+ There are 0 combinational latch loops in the design through latch input
+
+
+
+------------------------------------------------------------------------------------------------
+| Design Timing Summary
+| ---------------------
+------------------------------------------------------------------------------------------------
+
+    WNS(ns)      TNS(ns)  TNS Failing Endpoints  TNS Total Endpoints      WHS(ns)      THS(ns)  THS Failing Endpoints  THS Total Endpoints     WPWS(ns)     TPWS(ns)  TPWS Failing Endpoints  TPWS Total Endpoints
+    -------      -------  ---------------------  -------------------      -------      -------  ---------------------  -------------------     --------     --------  ----------------------  --------------------
+      5.140        0.000                      0                   39        0.228        0.000                      0                   39        4.500        0.000                       0                    36
+
+
+All user specified timing constraints are met.
+
+
+------------------------------------------------------------------------------------------------
+| Clock Summary
+| -------------
+------------------------------------------------------------------------------------------------
+
+Clock        Waveform(ns)       Period(ns)      Frequency(MHz)
+-----        ------------       ----------      --------------
+sys_clk_pin  {0.000 5.000}      10.000          100.000
+
+
+------------------------------------------------------------------------------------------------
+| Intra Clock Table
+| -----------------
+------------------------------------------------------------------------------------------------
+
+Clock             WNS(ns)      TNS(ns)  TNS Failing Endpoints  TNS Total Endpoints      WHS(ns)      THS(ns)  THS Failing Endpoints  THS Total Endpoints     WPWS(ns)     TPWS(ns)  TPWS Failing Endpoints  TPWS Total Endpoints
+-----             -------      -------  ---------------------  -------------------      -------      -------  ---------------------  -------------------     --------     --------  ----------------------  --------------------
+sys_clk_pin         5.140        0.000                      0                   39        0.228        0.000                      0                   39        4.500        0.000                       0                    36
+
+
+------------------------------------------------------------------------------------------------
+| Inter Clock Table
+| -----------------
+------------------------------------------------------------------------------------------------
+
+From Clock    To Clock          WNS(ns)      TNS(ns)  TNS Failing Endpoints  TNS Total Endpoints      WHS(ns)      THS(ns)  THS Failing Endpoints  THS Total Endpoints
+----------    --------          -------      -------  ---------------------  -------------------      -------      -------  ---------------------  -------------------
+
+
+------------------------------------------------------------------------------------------------
+| Other Path Groups Table
+| -----------------------
+------------------------------------------------------------------------------------------------
+
+Path Group    From Clock    To Clock          WNS(ns)      TNS(ns)  TNS Failing Endpoints  TNS Total Endpoints      WHS(ns)      THS(ns)  THS Failing Endpoints  THS Total Endpoints
+----------    ----------    --------          -------      -------  ---------------------  -------------------      -------      -------  ---------------------  -------------------
+
+
+------------------------------------------------------------------------------------------------
+| User Ignored Path Table
+| -----------------------
+------------------------------------------------------------------------------------------------
+
+Path Group    From Clock    To Clock
+----------    ----------    --------
+
+
+------------------------------------------------------------------------------------------------
+| Unconstrained Path Table
+| ------------------------
+------------------------------------------------------------------------------------------------
+
+Path Group    From Clock    To Clock
+----------    ----------    --------
+(none)
+(none)        sys_clk_pin
+(none)                      sys_clk_pin
+
+
+------------------------------------------------------------------------------------------------
+| Timing Details
+| --------------
+------------------------------------------------------------------------------------------------
+
+
+---------------------------------------------------------------------------------------------------
+From Clock:  sys_clk_pin
+  To Clock:  sys_clk_pin
+
+Setup :            0  Failing Endpoints,  Worst Slack        5.140ns,  Total Violation        0.000ns
+Hold  :            0  Failing Endpoints,  Worst Slack        0.228ns,  Total Violation        0.000ns
+PW    :            0  Failing Endpoints,  Worst Slack        4.500ns,  Total Violation        0.000ns
+---------------------------------------------------------------------------------------------------
+
+
+Max Delay Paths
+--------------------------------------------------------------------------------------
+Slack (MET) :             5.140ns  (required time - arrival time)
+  Source:                 sate_machine/cu/count_reg[2]/C
+                            (rising edge-triggered cell FDCE clocked by sys_clk_pin  {rise@0.000ns fall@5.000ns period=10.000ns})
+  Destination:            sate_machine/cu/count_reg[25]/D
+                            (rising edge-triggered cell FDCE clocked by sys_clk_pin  {rise@0.000ns fall@5.000ns period=10.000ns})
+  Path Group:             sys_clk_pin
+  Path Type:              Setup (Max at Slow Process Corner)
+  Requirement:            10.000ns  (sys_clk_pin rise@10.000ns - sys_clk_pin rise@0.000ns)
+  Data Path Delay:        4.870ns  (logic 2.264ns (46.489%)  route 2.606ns (53.511%))
+  Logic Levels:           10  (CARRY4=7 LUT4=2 LUT5=1)
+  Clock Path Skew:        -0.017ns (DCD - SCD + CPR)
+    Destination Clock Delay (DCD):    4.916ns = ( 14.916 - 10.000 )
+    Source Clock Delay      (SCD):    5.361ns
+    Clock Pessimism Removal (CPR):    0.429ns
+  Clock Uncertainty:      0.035ns  ((TSJ^2 + TIJ^2)^1/2 + DJ) / 2 + PE
+    Total System Jitter     (TSJ):    0.071ns
+    Total Input Jitter      (TIJ):    0.000ns
+    Discrete Jitter          (DJ):    0.000ns
+    Phase Error              (PE):    0.000ns
+
+    Location             Delay type                Incr(ns)  Path(ns)    Netlist Resource(s)
+  -------------------------------------------------------------------    -------------------
+                         (clock sys_clk_pin rise edge)
+                                                      0.000     0.000 r  <hidden>
+    H16                                               0.000     0.000 r  clk
+                         net (fo=0)                   0.000     0.000    clk
+    H16                  IBUF (Prop_ibuf_I_O)         1.457     1.457 r  clk_IBUF_inst/O
+                         net (fo=1, routed)           2.076     3.533    clk_IBUF
+    BUFGCTRL_X0Y16       BUFG (Prop_bufg_I_O)         0.101     3.634 r  clk_IBUF_BUFG_inst/O
+                         net (fo=35, routed)          1.727     5.361    sate_machine/cu/clk_IBUF_BUFG
+    SLICE_X43Y79         FDCE                                         r  sate_machine/cu/count_reg[2]/C
+  -------------------------------------------------------------------    -------------------
+    SLICE_X43Y79         FDCE (Prop_fdce_C_Q)         0.456     5.817 f  sate_machine/cu/count_reg[2]/Q
+                         net (fo=2, routed)           1.261     7.079    sate_machine/cu/count_reg[2]
+    SLICE_X42Y82         LUT4 (Prop_lut4_I1_O)        0.124     7.203 r  sate_machine/cu/count[3]_i_8/O
+                         net (fo=1, routed)           0.162     7.364    sate_machine/cu/count[3]_i_8_n_0
+    SLICE_X42Y82         LUT5 (Prop_lut5_I4_O)        0.124     7.488 r  sate_machine/cu/count[3]_i_4/O
+                         net (fo=23, routed)          1.183     8.671    sate_machine/cu/count[3]_i_4_n_0
+    SLICE_X43Y79         LUT4 (Prop_lut4_I2_O)        0.124     8.795 r  sate_machine/cu/count[0]_i_6/O
+                         net (fo=1, routed)           0.000     8.795    sate_machine/cu/count[0]_i_6_n_0
+    SLICE_X43Y79         CARRY4 (Prop_carry4_S[0]_CO[3])
+                                                      0.532     9.327 r  sate_machine/cu/count_reg[0]_i_1/CO[3]
+                         net (fo=1, routed)           0.000     9.327    sate_machine/cu/count_reg[0]_i_1_n_0
+    SLICE_X43Y80         CARRY4 (Prop_carry4_CI_CO[3])
+                                                      0.114     9.441 r  sate_machine/cu/count_reg[4]_i_1/CO[3]
+                         net (fo=1, routed)           0.000     9.441    sate_machine/cu/count_reg[4]_i_1_n_0
+    SLICE_X43Y81         CARRY4 (Prop_carry4_CI_CO[3])
+                                                      0.114     9.555 r  sate_machine/cu/count_reg[8]_i_1/CO[3]
+                         net (fo=1, routed)           0.000     9.555    sate_machine/cu/count_reg[8]_i_1_n_0
+    SLICE_X43Y82         CARRY4 (Prop_carry4_CI_CO[3])
+                                                      0.114     9.669 r  sate_machine/cu/count_reg[12]_i_1/CO[3]
+                         net (fo=1, routed)           0.000     9.669    sate_machine/cu/count_reg[12]_i_1_n_0
+    SLICE_X43Y83         CARRY4 (Prop_carry4_CI_CO[3])
+                                                      0.114     9.783 r  sate_machine/cu/count_reg[16]_i_1/CO[3]
+                         net (fo=1, routed)           0.000     9.783    sate_machine/cu/count_reg[16]_i_1_n_0
+    SLICE_X43Y84         CARRY4 (Prop_carry4_CI_CO[3])
+                                                      0.114     9.897 r  sate_machine/cu/count_reg[20]_i_1/CO[3]
+                         net (fo=1, routed)           0.000     9.897    sate_machine/cu/count_reg[20]_i_1_n_0
+    SLICE_X43Y85         CARRY4 (Prop_carry4_CI_O[1])
+                                                      0.334    10.231 r  sate_machine/cu/count_reg[24]_i_1/O[1]
+                         net (fo=1, routed)           0.000    10.231    sate_machine/cu/count_reg[24]_i_1_n_6
+    SLICE_X43Y85         FDCE                                         r  sate_machine/cu/count_reg[25]/D
+  -------------------------------------------------------------------    -------------------
+
+                         (clock sys_clk_pin rise edge)
+                                                     10.000    10.000 r  <hidden>
+    H16                                               0.000    10.000 r  clk
+                         net (fo=0)                   0.000    10.000    clk
+    H16                  IBUF (Prop_ibuf_I_O)         1.387    11.387 r  clk_IBUF_inst/O
+                         net (fo=1, routed)           1.880    13.267    clk_IBUF
+    BUFGCTRL_X0Y16       BUFG (Prop_bufg_I_O)         0.091    13.358 r  clk_IBUF_BUFG_inst/O
+                         net (fo=35, routed)          1.558    14.916    sate_machine/cu/clk_IBUF_BUFG
+    SLICE_X43Y85         FDCE                                         r  sate_machine/cu/count_reg[25]/C
+                         clock pessimism              0.429    15.344    <hidden>
+                         clock uncertainty           -0.035    15.309    <hidden>
+    SLICE_X43Y85         FDCE (Setup_fdce_C_D)        0.062    15.371    sate_machine/cu/count_reg[25]
+  -------------------------------------------------------------------
+                         required time                         15.371    <hidden>
+                         arrival time                         -10.231    <hidden>
+  -------------------------------------------------------------------
+                         slack                                  5.140    <hidden>
+
+Slack (MET) :             5.161ns  (required time - arrival time)
+  Source:                 sate_machine/cu/count_reg[2]/C
+                            (rising edge-triggered cell FDCE clocked by sys_clk_pin  {rise@0.000ns fall@5.000ns period=10.000ns})
+  Destination:            sate_machine/cu/count_reg[27]/D
+                            (rising edge-triggered cell FDCE clocked by sys_clk_pin  {rise@0.000ns fall@5.000ns period=10.000ns})
+  Path Group:             sys_clk_pin
+  Path Type:              Setup (Max at Slow Process Corner)
+  Requirement:            10.000ns  (sys_clk_pin rise@10.000ns - sys_clk_pin rise@0.000ns)
+  Data Path Delay:        4.849ns  (logic 2.243ns (46.257%)  route 2.606ns (53.743%))
+  Logic Levels:           10  (CARRY4=7 LUT4=2 LUT5=1)
+  Clock Path Skew:        -0.017ns (DCD - SCD + CPR)
+    Destination Clock Delay (DCD):    4.916ns = ( 14.916 - 10.000 )
+    Source Clock Delay      (SCD):    5.361ns
+    Clock Pessimism Removal (CPR):    0.429ns
+  Clock Uncertainty:      0.035ns  ((TSJ^2 + TIJ^2)^1/2 + DJ) / 2 + PE
+    Total System Jitter     (TSJ):    0.071ns
+    Total Input Jitter      (TIJ):    0.000ns
+    Discrete Jitter          (DJ):    0.000ns
+    Phase Error              (PE):    0.000ns
+
+    Location             Delay type                Incr(ns)  Path(ns)    Netlist Resource(s)
+  -------------------------------------------------------------------    -------------------
+                         (clock sys_clk_pin rise edge)
+                                                      0.000     0.000 r  <hidden>
+    H16                                               0.000     0.000 r  clk
+                         net (fo=0)                   0.000     0.000    clk
+    H16                  IBUF (Prop_ibuf_I_O)         1.457     1.457 r  clk_IBUF_inst/O
+                         net (fo=1, routed)           2.076     3.533    clk_IBUF
+    BUFGCTRL_X0Y16       BUFG (Prop_bufg_I_O)         0.101     3.634 r  clk_IBUF_BUFG_inst/O
+                         net (fo=35, routed)          1.727     5.361    sate_machine/cu/clk_IBUF_BUFG
+    SLICE_X43Y79         FDCE                                         r  sate_machine/cu/count_reg[2]/C
+  -------------------------------------------------------------------    -------------------
+    SLICE_X43Y79         FDCE (Prop_fdce_C_Q)         0.456     5.817 f  sate_machine/cu/count_reg[2]/Q
+                         net (fo=2, routed)           1.261     7.079    sate_machine/cu/count_reg[2]
+    SLICE_X42Y82         LUT4 (Prop_lut4_I1_O)        0.124     7.203 r  sate_machine/cu/count[3]_i_8/O
+                         net (fo=1, routed)           0.162     7.364    sate_machine/cu/count[3]_i_8_n_0
+    SLICE_X42Y82         LUT5 (Prop_lut5_I4_O)        0.124     7.488 r  sate_machine/cu/count[3]_i_4/O
+                         net (fo=23, routed)          1.183     8.671    sate_machine/cu/count[3]_i_4_n_0
+    SLICE_X43Y79         LUT4 (Prop_lut4_I2_O)        0.124     8.795 r  sate_machine/cu/count[0]_i_6/O
+                         net (fo=1, routed)           0.000     8.795    sate_machine/cu/count[0]_i_6_n_0
+    SLICE_X43Y79         CARRY4 (Prop_carry4_S[0]_CO[3])
+                                                      0.532     9.327 r  sate_machine/cu/count_reg[0]_i_1/CO[3]
+                         net (fo=1, routed)           0.000     9.327    sate_machine/cu/count_reg[0]_i_1_n_0
+    SLICE_X43Y80         CARRY4 (Prop_carry4_CI_CO[3])
+                                                      0.114     9.441 r  sate_machine/cu/count_reg[4]_i_1/CO[3]
+                         net (fo=1, routed)           0.000     9.441    sate_machine/cu/count_reg[4]_i_1_n_0
+    SLICE_X43Y81         CARRY4 (Prop_carry4_CI_CO[3])
+                                                      0.114     9.555 r  sate_machine/cu/count_reg[8]_i_1/CO[3]
+                         net (fo=1, routed)           0.000     9.555    sate_machine/cu/count_reg[8]_i_1_n_0
+    SLICE_X43Y82         CARRY4 (Prop_carry4_CI_CO[3])
+                                                      0.114     9.669 r  sate_machine/cu/count_reg[12]_i_1/CO[3]
+                         net (fo=1, routed)           0.000     9.669    sate_machine/cu/count_reg[12]_i_1_n_0
+    SLICE_X43Y83         CARRY4 (Prop_carry4_CI_CO[3])
+                                                      0.114     9.783 r  sate_machine/cu/count_reg[16]_i_1/CO[3]
+                         net (fo=1, routed)           0.000     9.783    sate_machine/cu/count_reg[16]_i_1_n_0
+    SLICE_X43Y84         CARRY4 (Prop_carry4_CI_CO[3])
+                                                      0.114     9.897 r  sate_machine/cu/count_reg[20]_i_1/CO[3]
+                         net (fo=1, routed)           0.000     9.897    sate_machine/cu/count_reg[20]_i_1_n_0
+    SLICE_X43Y85         CARRY4 (Prop_carry4_CI_O[3])
+                                                      0.313    10.210 r  sate_machine/cu/count_reg[24]_i_1/O[3]
+                         net (fo=1, routed)           0.000    10.210    sate_machine/cu/count_reg[24]_i_1_n_4
+    SLICE_X43Y85         FDCE                                         r  sate_machine/cu/count_reg[27]/D
+  -------------------------------------------------------------------    -------------------
+
+                         (clock sys_clk_pin rise edge)
+                                                     10.000    10.000 r  <hidden>
+    H16                                               0.000    10.000 r  clk
+                         net (fo=0)                   0.000    10.000    clk
+    H16                  IBUF (Prop_ibuf_I_O)         1.387    11.387 r  clk_IBUF_inst/O
+                         net (fo=1, routed)           1.880    13.267    clk_IBUF
+    BUFGCTRL_X0Y16       BUFG (Prop_bufg_I_O)         0.091    13.358 r  clk_IBUF_BUFG_inst/O
+                         net (fo=35, routed)          1.558    14.916    sate_machine/cu/clk_IBUF_BUFG
+    SLICE_X43Y85         FDCE                                         r  sate_machine/cu/count_reg[27]/C
+                         clock pessimism              0.429    15.344    <hidden>
+                         clock uncertainty           -0.035    15.309    <hidden>
+    SLICE_X43Y85         FDCE (Setup_fdce_C_D)        0.062    15.371    sate_machine/cu/count_reg[27]
+  -------------------------------------------------------------------
+                         required time                         15.371    <hidden>
+                         arrival time                         -10.210    <hidden>
+  -------------------------------------------------------------------
+                         slack                                  5.161    <hidden>
+
+Slack (MET) :             5.235ns  (required time - arrival time)
+  Source:                 sate_machine/cu/count_reg[2]/C
+                            (rising edge-triggered cell FDCE clocked by sys_clk_pin  {rise@0.000ns fall@5.000ns period=10.000ns})
+  Destination:            sate_machine/cu/count_reg[26]/D
+                            (rising edge-triggered cell FDCE clocked by sys_clk_pin  {rise@0.000ns fall@5.000ns period=10.000ns})
+  Path Group:             sys_clk_pin
+  Path Type:              Setup (Max at Slow Process Corner)
+  Requirement:            10.000ns  (sys_clk_pin rise@10.000ns - sys_clk_pin rise@0.000ns)
+  Data Path Delay:        4.775ns  (logic 2.169ns (45.424%)  route 2.606ns (54.576%))
+  Logic Levels:           10  (CARRY4=7 LUT4=2 LUT5=1)
+  Clock Path Skew:        -0.017ns (DCD - SCD + CPR)
+    Destination Clock Delay (DCD):    4.916ns = ( 14.916 - 10.000 )
+    Source Clock Delay      (SCD):    5.361ns
+    Clock Pessimism Removal (CPR):    0.429ns
+  Clock Uncertainty:      0.035ns  ((TSJ^2 + TIJ^2)^1/2 + DJ) / 2 + PE
+    Total System Jitter     (TSJ):    0.071ns
+    Total Input Jitter      (TIJ):    0.000ns
+    Discrete Jitter          (DJ):    0.000ns
+    Phase Error              (PE):    0.000ns
+
+    Location             Delay type                Incr(ns)  Path(ns)    Netlist Resource(s)
+  -------------------------------------------------------------------    -------------------
+                         (clock sys_clk_pin rise edge)
+                                                      0.000     0.000 r  <hidden>
+    H16                                               0.000     0.000 r  clk
+                         net (fo=0)                   0.000     0.000    clk
+    H16                  IBUF (Prop_ibuf_I_O)         1.457     1.457 r  clk_IBUF_inst/O
+                         net (fo=1, routed)           2.076     3.533    clk_IBUF
+    BUFGCTRL_X0Y16       BUFG (Prop_bufg_I_O)         0.101     3.634 r  clk_IBUF_BUFG_inst/O
+                         net (fo=35, routed)          1.727     5.361    sate_machine/cu/clk_IBUF_BUFG
+    SLICE_X43Y79         FDCE                                         r  sate_machine/cu/count_reg[2]/C
+  -------------------------------------------------------------------    -------------------
+    SLICE_X43Y79         FDCE (Prop_fdce_C_Q)         0.456     5.817 f  sate_machine/cu/count_reg[2]/Q
+                         net (fo=2, routed)           1.261     7.079    sate_machine/cu/count_reg[2]
+    SLICE_X42Y82         LUT4 (Prop_lut4_I1_O)        0.124     7.203 r  sate_machine/cu/count[3]_i_8/O
+                         net (fo=1, routed)           0.162     7.364    sate_machine/cu/count[3]_i_8_n_0
+    SLICE_X42Y82         LUT5 (Prop_lut5_I4_O)        0.124     7.488 r  sate_machine/cu/count[3]_i_4/O
+                         net (fo=23, routed)          1.183     8.671    sate_machine/cu/count[3]_i_4_n_0
+    SLICE_X43Y79         LUT4 (Prop_lut4_I2_O)        0.124     8.795 r  sate_machine/cu/count[0]_i_6/O
+                         net (fo=1, routed)           0.000     8.795    sate_machine/cu/count[0]_i_6_n_0
+    SLICE_X43Y79         CARRY4 (Prop_carry4_S[0]_CO[3])
+                                                      0.532     9.327 r  sate_machine/cu/count_reg[0]_i_1/CO[3]
+                         net (fo=1, routed)           0.000     9.327    sate_machine/cu/count_reg[0]_i_1_n_0
+    SLICE_X43Y80         CARRY4 (Prop_carry4_CI_CO[3])
+                                                      0.114     9.441 r  sate_machine/cu/count_reg[4]_i_1/CO[3]
+                         net (fo=1, routed)           0.000     9.441    sate_machine/cu/count_reg[4]_i_1_n_0
+    SLICE_X43Y81         CARRY4 (Prop_carry4_CI_CO[3])
+                                                      0.114     9.555 r  sate_machine/cu/count_reg[8]_i_1/CO[3]
+                         net (fo=1, routed)           0.000     9.555    sate_machine/cu/count_reg[8]_i_1_n_0
+    SLICE_X43Y82         CARRY4 (Prop_carry4_CI_CO[3])
+                                                      0.114     9.669 r  sate_machine/cu/count_reg[12]_i_1/CO[3]
+                         net (fo=1, routed)           0.000     9.669    sate_machine/cu/count_reg[12]_i_1_n_0
+    SLICE_X43Y83         CARRY4 (Prop_carry4_CI_CO[3])
+                                                      0.114     9.783 r  sate_machine/cu/count_reg[16]_i_1/CO[3]
+                         net (fo=1, routed)           0.000     9.783    sate_machine/cu/count_reg[16]_i_1_n_0
+    SLICE_X43Y84         CARRY4 (Prop_carry4_CI_CO[3])
+                                                      0.114     9.897 r  sate_machine/cu/count_reg[20]_i_1/CO[3]
+                         net (fo=1, routed)           0.000     9.897    sate_machine/cu/count_reg[20]_i_1_n_0
+    SLICE_X43Y85         CARRY4 (Prop_carry4_CI_O[2])
+                                                      0.239    10.136 r  sate_machine/cu/count_reg[24]_i_1/O[2]
+                         net (fo=1, routed)           0.000    10.136    sate_machine/cu/count_reg[24]_i_1_n_5
+    SLICE_X43Y85         FDCE                                         r  sate_machine/cu/count_reg[26]/D
+  -------------------------------------------------------------------    -------------------
+
+                         (clock sys_clk_pin rise edge)
+                                                     10.000    10.000 r  <hidden>
+    H16                                               0.000    10.000 r  clk
+                         net (fo=0)                   0.000    10.000    clk
+    H16                  IBUF (Prop_ibuf_I_O)         1.387    11.387 r  clk_IBUF_inst/O
+                         net (fo=1, routed)           1.880    13.267    clk_IBUF
+    BUFGCTRL_X0Y16       BUFG (Prop_bufg_I_O)         0.091    13.358 r  clk_IBUF_BUFG_inst/O
+                         net (fo=35, routed)          1.558    14.916    sate_machine/cu/clk_IBUF_BUFG
+    SLICE_X43Y85         FDCE                                         r  sate_machine/cu/count_reg[26]/C
+                         clock pessimism              0.429    15.344    <hidden>
+                         clock uncertainty           -0.035    15.309    <hidden>
+    SLICE_X43Y85         FDCE (Setup_fdce_C_D)        0.062    15.371    sate_machine/cu/count_reg[26]
+  -------------------------------------------------------------------
+                         required time                         15.371    <hidden>
+                         arrival time                         -10.136    <hidden>
+  -------------------------------------------------------------------
+                         slack                                  5.235    <hidden>
+
+Slack (MET) :             5.251ns  (required time - arrival time)
+  Source:                 sate_machine/cu/count_reg[2]/C
+                            (rising edge-triggered cell FDCE clocked by sys_clk_pin  {rise@0.000ns fall@5.000ns period=10.000ns})
+  Destination:            sate_machine/cu/count_reg[24]/D
+                            (rising edge-triggered cell FDCE clocked by sys_clk_pin  {rise@0.000ns fall@5.000ns period=10.000ns})
+  Path Group:             sys_clk_pin
+  Path Type:              Setup (Max at Slow Process Corner)
+  Requirement:            10.000ns  (sys_clk_pin rise@10.000ns - sys_clk_pin rise@0.000ns)
+  Data Path Delay:        4.759ns  (logic 2.153ns (45.241%)  route 2.606ns (54.759%))
+  Logic Levels:           10  (CARRY4=7 LUT4=2 LUT5=1)
+  Clock Path Skew:        -0.017ns (DCD - SCD + CPR)
+    Destination Clock Delay (DCD):    4.916ns = ( 14.916 - 10.000 )
+    Source Clock Delay      (SCD):    5.361ns
+    Clock Pessimism Removal (CPR):    0.429ns
+  Clock Uncertainty:      0.035ns  ((TSJ^2 + TIJ^2)^1/2 + DJ) / 2 + PE
+    Total System Jitter     (TSJ):    0.071ns
+    Total Input Jitter      (TIJ):    0.000ns
+    Discrete Jitter          (DJ):    0.000ns
+    Phase Error              (PE):    0.000ns
+
+    Location             Delay type                Incr(ns)  Path(ns)    Netlist Resource(s)
+  -------------------------------------------------------------------    -------------------
+                         (clock sys_clk_pin rise edge)
+                                                      0.000     0.000 r  <hidden>
+    H16                                               0.000     0.000 r  clk
+                         net (fo=0)                   0.000     0.000    clk
+    H16                  IBUF (Prop_ibuf_I_O)         1.457     1.457 r  clk_IBUF_inst/O
+                         net (fo=1, routed)           2.076     3.533    clk_IBUF
+    BUFGCTRL_X0Y16       BUFG (Prop_bufg_I_O)         0.101     3.634 r  clk_IBUF_BUFG_inst/O
+                         net (fo=35, routed)          1.727     5.361    sate_machine/cu/clk_IBUF_BUFG
+    SLICE_X43Y79         FDCE                                         r  sate_machine/cu/count_reg[2]/C
+  -------------------------------------------------------------------    -------------------
+    SLICE_X43Y79         FDCE (Prop_fdce_C_Q)         0.456     5.817 f  sate_machine/cu/count_reg[2]/Q
+                         net (fo=2, routed)           1.261     7.079    sate_machine/cu/count_reg[2]
+    SLICE_X42Y82         LUT4 (Prop_lut4_I1_O)        0.124     7.203 r  sate_machine/cu/count[3]_i_8/O
+                         net (fo=1, routed)           0.162     7.364    sate_machine/cu/count[3]_i_8_n_0
+    SLICE_X42Y82         LUT5 (Prop_lut5_I4_O)        0.124     7.488 r  sate_machine/cu/count[3]_i_4/O
+                         net (fo=23, routed)          1.183     8.671    sate_machine/cu/count[3]_i_4_n_0
+    SLICE_X43Y79         LUT4 (Prop_lut4_I2_O)        0.124     8.795 r  sate_machine/cu/count[0]_i_6/O
+                         net (fo=1, routed)           0.000     8.795    sate_machine/cu/count[0]_i_6_n_0
+    SLICE_X43Y79         CARRY4 (Prop_carry4_S[0]_CO[3])
+                                                      0.532     9.327 r  sate_machine/cu/count_reg[0]_i_1/CO[3]
+                         net (fo=1, routed)           0.000     9.327    sate_machine/cu/count_reg[0]_i_1_n_0
+    SLICE_X43Y80         CARRY4 (Prop_carry4_CI_CO[3])
+                                                      0.114     9.441 r  sate_machine/cu/count_reg[4]_i_1/CO[3]
+                         net (fo=1, routed)           0.000     9.441    sate_machine/cu/count_reg[4]_i_1_n_0
+    SLICE_X43Y81         CARRY4 (Prop_carry4_CI_CO[3])
+                                                      0.114     9.555 r  sate_machine/cu/count_reg[8]_i_1/CO[3]
+                         net (fo=1, routed)           0.000     9.555    sate_machine/cu/count_reg[8]_i_1_n_0
+    SLICE_X43Y82         CARRY4 (Prop_carry4_CI_CO[3])
+                                                      0.114     9.669 r  sate_machine/cu/count_reg[12]_i_1/CO[3]
+                         net (fo=1, routed)           0.000     9.669    sate_machine/cu/count_reg[12]_i_1_n_0
+    SLICE_X43Y83         CARRY4 (Prop_carry4_CI_CO[3])
+                                                      0.114     9.783 r  sate_machine/cu/count_reg[16]_i_1/CO[3]
+                         net (fo=1, routed)           0.000     9.783    sate_machine/cu/count_reg[16]_i_1_n_0
+    SLICE_X43Y84         CARRY4 (Prop_carry4_CI_CO[3])
+                                                      0.114     9.897 r  sate_machine/cu/count_reg[20]_i_1/CO[3]
+                         net (fo=1, routed)           0.000     9.897    sate_machine/cu/count_reg[20]_i_1_n_0
+    SLICE_X43Y85         CARRY4 (Prop_carry4_CI_O[0])
+                                                      0.223    10.120 r  sate_machine/cu/count_reg[24]_i_1/O[0]
+                         net (fo=1, routed)           0.000    10.120    sate_machine/cu/count_reg[24]_i_1_n_7
+    SLICE_X43Y85         FDCE                                         r  sate_machine/cu/count_reg[24]/D
+  -------------------------------------------------------------------    -------------------
+
+                         (clock sys_clk_pin rise edge)
+                                                     10.000    10.000 r  <hidden>
+    H16                                               0.000    10.000 r  clk
+                         net (fo=0)                   0.000    10.000    clk
+    H16                  IBUF (Prop_ibuf_I_O)         1.387    11.387 r  clk_IBUF_inst/O
+                         net (fo=1, routed)           1.880    13.267    clk_IBUF
+    BUFGCTRL_X0Y16       BUFG (Prop_bufg_I_O)         0.091    13.358 r  clk_IBUF_BUFG_inst/O
+                         net (fo=35, routed)          1.558    14.916    sate_machine/cu/clk_IBUF_BUFG
+    SLICE_X43Y85         FDCE                                         r  sate_machine/cu/count_reg[24]/C
+                         clock pessimism              0.429    15.344    <hidden>
+                         clock uncertainty           -0.035    15.309    <hidden>
+    SLICE_X43Y85         FDCE (Setup_fdce_C_D)        0.062    15.371    sate_machine/cu/count_reg[24]
+  -------------------------------------------------------------------
+                         required time                         15.371    <hidden>
+                         arrival time                         -10.120    <hidden>
+  -------------------------------------------------------------------
+                         slack                                  5.251    <hidden>
+
+Slack (MET) :             5.253ns  (required time - arrival time)
+  Source:                 sate_machine/cu/count_reg[2]/C
+                            (rising edge-triggered cell FDCE clocked by sys_clk_pin  {rise@0.000ns fall@5.000ns period=10.000ns})
+  Destination:            sate_machine/cu/count_reg[21]/D
+                            (rising edge-triggered cell FDCE clocked by sys_clk_pin  {rise@0.000ns fall@5.000ns period=10.000ns})
+  Path Group:             sys_clk_pin
+  Path Type:              Setup (Max at Slow Process Corner)
+  Requirement:            10.000ns  (sys_clk_pin rise@10.000ns - sys_clk_pin rise@0.000ns)
+  Data Path Delay:        4.756ns  (logic 2.150ns (45.206%)  route 2.606ns (54.794%))
+  Logic Levels:           9  (CARRY4=6 LUT4=2 LUT5=1)
+  Clock Path Skew:        -0.018ns (DCD - SCD + CPR)
+    Destination Clock Delay (DCD):    4.915ns = ( 14.915 - 10.000 )
+    Source Clock Delay      (SCD):    5.361ns
+    Clock Pessimism Removal (CPR):    0.429ns
+  Clock Uncertainty:      0.035ns  ((TSJ^2 + TIJ^2)^1/2 + DJ) / 2 + PE
+    Total System Jitter     (TSJ):    0.071ns
+    Total Input Jitter      (TIJ):    0.000ns
+    Discrete Jitter          (DJ):    0.000ns
+    Phase Error              (PE):    0.000ns
+
+    Location             Delay type                Incr(ns)  Path(ns)    Netlist Resource(s)
+  -------------------------------------------------------------------    -------------------
+                         (clock sys_clk_pin rise edge)
+                                                      0.000     0.000 r  <hidden>
+    H16                                               0.000     0.000 r  clk
+                         net (fo=0)                   0.000     0.000    clk
+    H16                  IBUF (Prop_ibuf_I_O)         1.457     1.457 r  clk_IBUF_inst/O
+                         net (fo=1, routed)           2.076     3.533    clk_IBUF
+    BUFGCTRL_X0Y16       BUFG (Prop_bufg_I_O)         0.101     3.634 r  clk_IBUF_BUFG_inst/O
+                         net (fo=35, routed)          1.727     5.361    sate_machine/cu/clk_IBUF_BUFG
+    SLICE_X43Y79         FDCE                                         r  sate_machine/cu/count_reg[2]/C
+  -------------------------------------------------------------------    -------------------
+    SLICE_X43Y79         FDCE (Prop_fdce_C_Q)         0.456     5.817 f  sate_machine/cu/count_reg[2]/Q
+                         net (fo=2, routed)           1.261     7.079    sate_machine/cu/count_reg[2]
+    SLICE_X42Y82         LUT4 (Prop_lut4_I1_O)        0.124     7.203 r  sate_machine/cu/count[3]_i_8/O
+                         net (fo=1, routed)           0.162     7.364    sate_machine/cu/count[3]_i_8_n_0
+    SLICE_X42Y82         LUT5 (Prop_lut5_I4_O)        0.124     7.488 r  sate_machine/cu/count[3]_i_4/O
+                         net (fo=23, routed)          1.183     8.671    sate_machine/cu/count[3]_i_4_n_0
+    SLICE_X43Y79         LUT4 (Prop_lut4_I2_O)        0.124     8.795 r  sate_machine/cu/count[0]_i_6/O
+                         net (fo=1, routed)           0.000     8.795    sate_machine/cu/count[0]_i_6_n_0
+    SLICE_X43Y79         CARRY4 (Prop_carry4_S[0]_CO[3])
+                                                      0.532     9.327 r  sate_machine/cu/count_reg[0]_i_1/CO[3]
+                         net (fo=1, routed)           0.000     9.327    sate_machine/cu/count_reg[0]_i_1_n_0
+    SLICE_X43Y80         CARRY4 (Prop_carry4_CI_CO[3])
+                                                      0.114     9.441 r  sate_machine/cu/count_reg[4]_i_1/CO[3]
+                         net (fo=1, routed)           0.000     9.441    sate_machine/cu/count_reg[4]_i_1_n_0
+    SLICE_X43Y81         CARRY4 (Prop_carry4_CI_CO[3])
+                                                      0.114     9.555 r  sate_machine/cu/count_reg[8]_i_1/CO[3]
+                         net (fo=1, routed)           0.000     9.555    sate_machine/cu/count_reg[8]_i_1_n_0
+    SLICE_X43Y82         CARRY4 (Prop_carry4_CI_CO[3])
+                                                      0.114     9.669 r  sate_machine/cu/count_reg[12]_i_1/CO[3]
+                         net (fo=1, routed)           0.000     9.669    sate_machine/cu/count_reg[12]_i_1_n_0
+    SLICE_X43Y83         CARRY4 (Prop_carry4_CI_CO[3])
+                                                      0.114     9.783 r  sate_machine/cu/count_reg[16]_i_1/CO[3]
+                         net (fo=1, routed)           0.000     9.783    sate_machine/cu/count_reg[16]_i_1_n_0
+    SLICE_X43Y84         CARRY4 (Prop_carry4_CI_O[1])
+                                                      0.334    10.117 r  sate_machine/cu/count_reg[20]_i_1/O[1]
+                         net (fo=1, routed)           0.000    10.117    sate_machine/cu/count_reg[20]_i_1_n_6
+    SLICE_X43Y84         FDCE                                         r  sate_machine/cu/count_reg[21]/D
+  -------------------------------------------------------------------    -------------------
+
+                         (clock sys_clk_pin rise edge)
+                                                     10.000    10.000 r  <hidden>
+    H16                                               0.000    10.000 r  clk
+                         net (fo=0)                   0.000    10.000    clk
+    H16                  IBUF (Prop_ibuf_I_O)         1.387    11.387 r  clk_IBUF_inst/O
+                         net (fo=1, routed)           1.880    13.267    clk_IBUF
+    BUFGCTRL_X0Y16       BUFG (Prop_bufg_I_O)         0.091    13.358 r  clk_IBUF_BUFG_inst/O
+                         net (fo=35, routed)          1.557    14.915    sate_machine/cu/clk_IBUF_BUFG
+    SLICE_X43Y84         FDCE                                         r  sate_machine/cu/count_reg[21]/C
+                         clock pessimism              0.429    15.343    <hidden>
+                         clock uncertainty           -0.035    15.308    <hidden>
+    SLICE_X43Y84         FDCE (Setup_fdce_C_D)        0.062    15.370    sate_machine/cu/count_reg[21]
+  -------------------------------------------------------------------
+                         required time                         15.370    <hidden>
+                         arrival time                         -10.117    <hidden>
+  -------------------------------------------------------------------
+                         slack                                  5.253    <hidden>
+
+Slack (MET) :             5.274ns  (required time - arrival time)
+  Source:                 sate_machine/cu/count_reg[2]/C
+                            (rising edge-triggered cell FDCE clocked by sys_clk_pin  {rise@0.000ns fall@5.000ns period=10.000ns})
+  Destination:            sate_machine/cu/count_reg[23]/D
+                            (rising edge-triggered cell FDCE clocked by sys_clk_pin  {rise@0.000ns fall@5.000ns period=10.000ns})
+  Path Group:             sys_clk_pin
+  Path Type:              Setup (Max at Slow Process Corner)
+  Requirement:            10.000ns  (sys_clk_pin rise@10.000ns - sys_clk_pin rise@0.000ns)
+  Data Path Delay:        4.735ns  (logic 2.129ns (44.963%)  route 2.606ns (55.037%))
+  Logic Levels:           9  (CARRY4=6 LUT4=2 LUT5=1)
+  Clock Path Skew:        -0.018ns (DCD - SCD + CPR)
+    Destination Clock Delay (DCD):    4.915ns = ( 14.915 - 10.000 )
+    Source Clock Delay      (SCD):    5.361ns
+    Clock Pessimism Removal (CPR):    0.429ns
+  Clock Uncertainty:      0.035ns  ((TSJ^2 + TIJ^2)^1/2 + DJ) / 2 + PE
+    Total System Jitter     (TSJ):    0.071ns
+    Total Input Jitter      (TIJ):    0.000ns
+    Discrete Jitter          (DJ):    0.000ns
+    Phase Error              (PE):    0.000ns
+
+    Location             Delay type                Incr(ns)  Path(ns)    Netlist Resource(s)
+  -------------------------------------------------------------------    -------------------
+                         (clock sys_clk_pin rise edge)
+                                                      0.000     0.000 r  <hidden>
+    H16                                               0.000     0.000 r  clk
+                         net (fo=0)                   0.000     0.000    clk
+    H16                  IBUF (Prop_ibuf_I_O)         1.457     1.457 r  clk_IBUF_inst/O
+                         net (fo=1, routed)           2.076     3.533    clk_IBUF
+    BUFGCTRL_X0Y16       BUFG (Prop_bufg_I_O)         0.101     3.634 r  clk_IBUF_BUFG_inst/O
+                         net (fo=35, routed)          1.727     5.361    sate_machine/cu/clk_IBUF_BUFG
+    SLICE_X43Y79         FDCE                                         r  sate_machine/cu/count_reg[2]/C
+  -------------------------------------------------------------------    -------------------
+    SLICE_X43Y79         FDCE (Prop_fdce_C_Q)         0.456     5.817 f  sate_machine/cu/count_reg[2]/Q
+                         net (fo=2, routed)           1.261     7.079    sate_machine/cu/count_reg[2]
+    SLICE_X42Y82         LUT4 (Prop_lut4_I1_O)        0.124     7.203 r  sate_machine/cu/count[3]_i_8/O
+                         net (fo=1, routed)           0.162     7.364    sate_machine/cu/count[3]_i_8_n_0
+    SLICE_X42Y82         LUT5 (Prop_lut5_I4_O)        0.124     7.488 r  sate_machine/cu/count[3]_i_4/O
+                         net (fo=23, routed)          1.183     8.671    sate_machine/cu/count[3]_i_4_n_0
+    SLICE_X43Y79         LUT4 (Prop_lut4_I2_O)        0.124     8.795 r  sate_machine/cu/count[0]_i_6/O
+                         net (fo=1, routed)           0.000     8.795    sate_machine/cu/count[0]_i_6_n_0
+    SLICE_X43Y79         CARRY4 (Prop_carry4_S[0]_CO[3])
+                                                      0.532     9.327 r  sate_machine/cu/count_reg[0]_i_1/CO[3]
+                         net (fo=1, routed)           0.000     9.327    sate_machine/cu/count_reg[0]_i_1_n_0
+    SLICE_X43Y80         CARRY4 (Prop_carry4_CI_CO[3])
+                                                      0.114     9.441 r  sate_machine/cu/count_reg[4]_i_1/CO[3]
+                         net (fo=1, routed)           0.000     9.441    sate_machine/cu/count_reg[4]_i_1_n_0
+    SLICE_X43Y81         CARRY4 (Prop_carry4_CI_CO[3])
+                                                      0.114     9.555 r  sate_machine/cu/count_reg[8]_i_1/CO[3]
+                         net (fo=1, routed)           0.000     9.555    sate_machine/cu/count_reg[8]_i_1_n_0
+    SLICE_X43Y82         CARRY4 (Prop_carry4_CI_CO[3])
+                                                      0.114     9.669 r  sate_machine/cu/count_reg[12]_i_1/CO[3]
+                         net (fo=1, routed)           0.000     9.669    sate_machine/cu/count_reg[12]_i_1_n_0
+    SLICE_X43Y83         CARRY4 (Prop_carry4_CI_CO[3])
+                                                      0.114     9.783 r  sate_machine/cu/count_reg[16]_i_1/CO[3]
+                         net (fo=1, routed)           0.000     9.783    sate_machine/cu/count_reg[16]_i_1_n_0
+    SLICE_X43Y84         CARRY4 (Prop_carry4_CI_O[3])
+                                                      0.313    10.096 r  sate_machine/cu/count_reg[20]_i_1/O[3]
+                         net (fo=1, routed)           0.000    10.096    sate_machine/cu/count_reg[20]_i_1_n_4
+    SLICE_X43Y84         FDCE                                         r  sate_machine/cu/count_reg[23]/D
+  -------------------------------------------------------------------    -------------------
+
+                         (clock sys_clk_pin rise edge)
+                                                     10.000    10.000 r  <hidden>
+    H16                                               0.000    10.000 r  clk
+                         net (fo=0)                   0.000    10.000    clk
+    H16                  IBUF (Prop_ibuf_I_O)         1.387    11.387 r  clk_IBUF_inst/O
+                         net (fo=1, routed)           1.880    13.267    clk_IBUF
+    BUFGCTRL_X0Y16       BUFG (Prop_bufg_I_O)         0.091    13.358 r  clk_IBUF_BUFG_inst/O
+                         net (fo=35, routed)          1.557    14.915    sate_machine/cu/clk_IBUF_BUFG
+    SLICE_X43Y84         FDCE                                         r  sate_machine/cu/count_reg[23]/C
+                         clock pessimism              0.429    15.343    <hidden>
+                         clock uncertainty           -0.035    15.308    <hidden>
+    SLICE_X43Y84         FDCE (Setup_fdce_C_D)        0.062    15.370    sate_machine/cu/count_reg[23]
+  -------------------------------------------------------------------
+                         required time                         15.370    <hidden>
+                         arrival time                         -10.096    <hidden>
+  -------------------------------------------------------------------
+                         slack                                  5.274    <hidden>
+
+Slack (MET) :             5.348ns  (required time - arrival time)
+  Source:                 sate_machine/cu/count_reg[2]/C
+                            (rising edge-triggered cell FDCE clocked by sys_clk_pin  {rise@0.000ns fall@5.000ns period=10.000ns})
+  Destination:            sate_machine/cu/count_reg[22]/D
+                            (rising edge-triggered cell FDCE clocked by sys_clk_pin  {rise@0.000ns fall@5.000ns period=10.000ns})
+  Path Group:             sys_clk_pin
+  Path Type:              Setup (Max at Slow Process Corner)
+  Requirement:            10.000ns  (sys_clk_pin rise@10.000ns - sys_clk_pin rise@0.000ns)
+  Data Path Delay:        4.661ns  (logic 2.055ns (44.089%)  route 2.606ns (55.911%))
+  Logic Levels:           9  (CARRY4=6 LUT4=2 LUT5=1)
+  Clock Path Skew:        -0.018ns (DCD - SCD + CPR)
+    Destination Clock Delay (DCD):    4.915ns = ( 14.915 - 10.000 )
+    Source Clock Delay      (SCD):    5.361ns
+    Clock Pessimism Removal (CPR):    0.429ns
+  Clock Uncertainty:      0.035ns  ((TSJ^2 + TIJ^2)^1/2 + DJ) / 2 + PE
+    Total System Jitter     (TSJ):    0.071ns
+    Total Input Jitter      (TIJ):    0.000ns
+    Discrete Jitter          (DJ):    0.000ns
+    Phase Error              (PE):    0.000ns
+
+    Location             Delay type                Incr(ns)  Path(ns)    Netlist Resource(s)
+  -------------------------------------------------------------------    -------------------
+                         (clock sys_clk_pin rise edge)
+                                                      0.000     0.000 r  <hidden>
+    H16                                               0.000     0.000 r  clk
+                         net (fo=0)                   0.000     0.000    clk
+    H16                  IBUF (Prop_ibuf_I_O)         1.457     1.457 r  clk_IBUF_inst/O
+                         net (fo=1, routed)           2.076     3.533    clk_IBUF
+    BUFGCTRL_X0Y16       BUFG (Prop_bufg_I_O)         0.101     3.634 r  clk_IBUF_BUFG_inst/O
+                         net (fo=35, routed)          1.727     5.361    sate_machine/cu/clk_IBUF_BUFG
+    SLICE_X43Y79         FDCE                                         r  sate_machine/cu/count_reg[2]/C
+  -------------------------------------------------------------------    -------------------
+    SLICE_X43Y79         FDCE (Prop_fdce_C_Q)         0.456     5.817 f  sate_machine/cu/count_reg[2]/Q
+                         net (fo=2, routed)           1.261     7.079    sate_machine/cu/count_reg[2]
+    SLICE_X42Y82         LUT4 (Prop_lut4_I1_O)        0.124     7.203 r  sate_machine/cu/count[3]_i_8/O
+                         net (fo=1, routed)           0.162     7.364    sate_machine/cu/count[3]_i_8_n_0
+    SLICE_X42Y82         LUT5 (Prop_lut5_I4_O)        0.124     7.488 r  sate_machine/cu/count[3]_i_4/O
+                         net (fo=23, routed)          1.183     8.671    sate_machine/cu/count[3]_i_4_n_0
+    SLICE_X43Y79         LUT4 (Prop_lut4_I2_O)        0.124     8.795 r  sate_machine/cu/count[0]_i_6/O
+                         net (fo=1, routed)           0.000     8.795    sate_machine/cu/count[0]_i_6_n_0
+    SLICE_X43Y79         CARRY4 (Prop_carry4_S[0]_CO[3])
+                                                      0.532     9.327 r  sate_machine/cu/count_reg[0]_i_1/CO[3]
+                         net (fo=1, routed)           0.000     9.327    sate_machine/cu/count_reg[0]_i_1_n_0
+    SLICE_X43Y80         CARRY4 (Prop_carry4_CI_CO[3])
+                                                      0.114     9.441 r  sate_machine/cu/count_reg[4]_i_1/CO[3]
+                         net (fo=1, routed)           0.000     9.441    sate_machine/cu/count_reg[4]_i_1_n_0
+    SLICE_X43Y81         CARRY4 (Prop_carry4_CI_CO[3])
+                                                      0.114     9.555 r  sate_machine/cu/count_reg[8]_i_1/CO[3]
+                         net (fo=1, routed)           0.000     9.555    sate_machine/cu/count_reg[8]_i_1_n_0
+    SLICE_X43Y82         CARRY4 (Prop_carry4_CI_CO[3])
+                                                      0.114     9.669 r  sate_machine/cu/count_reg[12]_i_1/CO[3]
+                         net (fo=1, routed)           0.000     9.669    sate_machine/cu/count_reg[12]_i_1_n_0
+    SLICE_X43Y83         CARRY4 (Prop_carry4_CI_CO[3])
+                                                      0.114     9.783 r  sate_machine/cu/count_reg[16]_i_1/CO[3]
+                         net (fo=1, routed)           0.000     9.783    sate_machine/cu/count_reg[16]_i_1_n_0
+    SLICE_X43Y84         CARRY4 (Prop_carry4_CI_O[2])
+                                                      0.239    10.022 r  sate_machine/cu/count_reg[20]_i_1/O[2]
+                         net (fo=1, routed)           0.000    10.022    sate_machine/cu/count_reg[20]_i_1_n_5
+    SLICE_X43Y84         FDCE                                         r  sate_machine/cu/count_reg[22]/D
+  -------------------------------------------------------------------    -------------------
+
+                         (clock sys_clk_pin rise edge)
+                                                     10.000    10.000 r  <hidden>
+    H16                                               0.000    10.000 r  clk
+                         net (fo=0)                   0.000    10.000    clk
+    H16                  IBUF (Prop_ibuf_I_O)         1.387    11.387 r  clk_IBUF_inst/O
+                         net (fo=1, routed)           1.880    13.267    clk_IBUF
+    BUFGCTRL_X0Y16       BUFG (Prop_bufg_I_O)         0.091    13.358 r  clk_IBUF_BUFG_inst/O
+                         net (fo=35, routed)          1.557    14.915    sate_machine/cu/clk_IBUF_BUFG
+    SLICE_X43Y84         FDCE                                         r  sate_machine/cu/count_reg[22]/C
+                         clock pessimism              0.429    15.343    <hidden>
+                         clock uncertainty           -0.035    15.308    <hidden>
+    SLICE_X43Y84         FDCE (Setup_fdce_C_D)        0.062    15.370    sate_machine/cu/count_reg[22]
+  -------------------------------------------------------------------
+                         required time                         15.370    <hidden>
+                         arrival time                         -10.022    <hidden>
+  -------------------------------------------------------------------
+                         slack                                  5.348    <hidden>
+
+Slack (MET) :             5.364ns  (required time - arrival time)
+  Source:                 sate_machine/cu/count_reg[2]/C
+                            (rising edge-triggered cell FDCE clocked by sys_clk_pin  {rise@0.000ns fall@5.000ns period=10.000ns})
+  Destination:            sate_machine/cu/count_reg[20]/D
+                            (rising edge-triggered cell FDCE clocked by sys_clk_pin  {rise@0.000ns fall@5.000ns period=10.000ns})
+  Path Group:             sys_clk_pin
+  Path Type:              Setup (Max at Slow Process Corner)
+  Requirement:            10.000ns  (sys_clk_pin rise@10.000ns - sys_clk_pin rise@0.000ns)
+  Data Path Delay:        4.645ns  (logic 2.039ns (43.897%)  route 2.606ns (56.103%))
+  Logic Levels:           9  (CARRY4=6 LUT4=2 LUT5=1)
+  Clock Path Skew:        -0.018ns (DCD - SCD + CPR)
+    Destination Clock Delay (DCD):    4.915ns = ( 14.915 - 10.000 )
+    Source Clock Delay      (SCD):    5.361ns
+    Clock Pessimism Removal (CPR):    0.429ns
+  Clock Uncertainty:      0.035ns  ((TSJ^2 + TIJ^2)^1/2 + DJ) / 2 + PE
+    Total System Jitter     (TSJ):    0.071ns
+    Total Input Jitter      (TIJ):    0.000ns
+    Discrete Jitter          (DJ):    0.000ns
+    Phase Error              (PE):    0.000ns
+
+    Location             Delay type                Incr(ns)  Path(ns)    Netlist Resource(s)
+  -------------------------------------------------------------------    -------------------
+                         (clock sys_clk_pin rise edge)
+                                                      0.000     0.000 r  <hidden>
+    H16                                               0.000     0.000 r  clk
+                         net (fo=0)                   0.000     0.000    clk
+    H16                  IBUF (Prop_ibuf_I_O)         1.457     1.457 r  clk_IBUF_inst/O
+                         net (fo=1, routed)           2.076     3.533    clk_IBUF
+    BUFGCTRL_X0Y16       BUFG (Prop_bufg_I_O)         0.101     3.634 r  clk_IBUF_BUFG_inst/O
+                         net (fo=35, routed)          1.727     5.361    sate_machine/cu/clk_IBUF_BUFG
+    SLICE_X43Y79         FDCE                                         r  sate_machine/cu/count_reg[2]/C
+  -------------------------------------------------------------------    -------------------
+    SLICE_X43Y79         FDCE (Prop_fdce_C_Q)         0.456     5.817 f  sate_machine/cu/count_reg[2]/Q
+                         net (fo=2, routed)           1.261     7.079    sate_machine/cu/count_reg[2]
+    SLICE_X42Y82         LUT4 (Prop_lut4_I1_O)        0.124     7.203 r  sate_machine/cu/count[3]_i_8/O
+                         net (fo=1, routed)           0.162     7.364    sate_machine/cu/count[3]_i_8_n_0
+    SLICE_X42Y82         LUT5 (Prop_lut5_I4_O)        0.124     7.488 r  sate_machine/cu/count[3]_i_4/O
+                         net (fo=23, routed)          1.183     8.671    sate_machine/cu/count[3]_i_4_n_0
+    SLICE_X43Y79         LUT4 (Prop_lut4_I2_O)        0.124     8.795 r  sate_machine/cu/count[0]_i_6/O
+                         net (fo=1, routed)           0.000     8.795    sate_machine/cu/count[0]_i_6_n_0
+    SLICE_X43Y79         CARRY4 (Prop_carry4_S[0]_CO[3])
+                                                      0.532     9.327 r  sate_machine/cu/count_reg[0]_i_1/CO[3]
+                         net (fo=1, routed)           0.000     9.327    sate_machine/cu/count_reg[0]_i_1_n_0
+    SLICE_X43Y80         CARRY4 (Prop_carry4_CI_CO[3])
+                                                      0.114     9.441 r  sate_machine/cu/count_reg[4]_i_1/CO[3]
+                         net (fo=1, routed)           0.000     9.441    sate_machine/cu/count_reg[4]_i_1_n_0
+    SLICE_X43Y81         CARRY4 (Prop_carry4_CI_CO[3])
+                                                      0.114     9.555 r  sate_machine/cu/count_reg[8]_i_1/CO[3]
+                         net (fo=1, routed)           0.000     9.555    sate_machine/cu/count_reg[8]_i_1_n_0
+    SLICE_X43Y82         CARRY4 (Prop_carry4_CI_CO[3])
+                                                      0.114     9.669 r  sate_machine/cu/count_reg[12]_i_1/CO[3]
+                         net (fo=1, routed)           0.000     9.669    sate_machine/cu/count_reg[12]_i_1_n_0
+    SLICE_X43Y83         CARRY4 (Prop_carry4_CI_CO[3])
+                                                      0.114     9.783 r  sate_machine/cu/count_reg[16]_i_1/CO[3]
+                         net (fo=1, routed)           0.000     9.783    sate_machine/cu/count_reg[16]_i_1_n_0
+    SLICE_X43Y84         CARRY4 (Prop_carry4_CI_O[0])
+                                                      0.223    10.006 r  sate_machine/cu/count_reg[20]_i_1/O[0]
+                         net (fo=1, routed)           0.000    10.006    sate_machine/cu/count_reg[20]_i_1_n_7
+    SLICE_X43Y84         FDCE                                         r  sate_machine/cu/count_reg[20]/D
+  -------------------------------------------------------------------    -------------------
+
+                         (clock sys_clk_pin rise edge)
+                                                     10.000    10.000 r  <hidden>
+    H16                                               0.000    10.000 r  clk
+                         net (fo=0)                   0.000    10.000    clk
+    H16                  IBUF (Prop_ibuf_I_O)         1.387    11.387 r  clk_IBUF_inst/O
+                         net (fo=1, routed)           1.880    13.267    clk_IBUF
+    BUFGCTRL_X0Y16       BUFG (Prop_bufg_I_O)         0.091    13.358 r  clk_IBUF_BUFG_inst/O
+                         net (fo=35, routed)          1.557    14.915    sate_machine/cu/clk_IBUF_BUFG
+    SLICE_X43Y84         FDCE                                         r  sate_machine/cu/count_reg[20]/C
+                         clock pessimism              0.429    15.343    <hidden>
+                         clock uncertainty           -0.035    15.308    <hidden>
+    SLICE_X43Y84         FDCE (Setup_fdce_C_D)        0.062    15.370    sate_machine/cu/count_reg[20]
+  -------------------------------------------------------------------
+                         required time                         15.370    <hidden>
+                         arrival time                         -10.006    <hidden>
+  -------------------------------------------------------------------
+                         slack                                  5.364    <hidden>
+
+Slack (MET) :             5.366ns  (required time - arrival time)
+  Source:                 sate_machine/cu/count_reg[2]/C
+                            (rising edge-triggered cell FDCE clocked by sys_clk_pin  {rise@0.000ns fall@5.000ns period=10.000ns})
+  Destination:            sate_machine/cu/count_reg[17]/D
+                            (rising edge-triggered cell FDCE clocked by sys_clk_pin  {rise@0.000ns fall@5.000ns period=10.000ns})
+  Path Group:             sys_clk_pin
+  Path Type:              Setup (Max at Slow Process Corner)
+  Requirement:            10.000ns  (sys_clk_pin rise@10.000ns - sys_clk_pin rise@0.000ns)
+  Data Path Delay:        4.642ns  (logic 2.036ns (43.860%)  route 2.606ns (56.140%))
+  Logic Levels:           8  (CARRY4=5 LUT4=2 LUT5=1)
+  Clock Path Skew:        -0.019ns (DCD - SCD + CPR)
+    Destination Clock Delay (DCD):    4.914ns = ( 14.914 - 10.000 )
+    Source Clock Delay      (SCD):    5.361ns
+    Clock Pessimism Removal (CPR):    0.429ns
+  Clock Uncertainty:      0.035ns  ((TSJ^2 + TIJ^2)^1/2 + DJ) / 2 + PE
+    Total System Jitter     (TSJ):    0.071ns
+    Total Input Jitter      (TIJ):    0.000ns
+    Discrete Jitter          (DJ):    0.000ns
+    Phase Error              (PE):    0.000ns
+
+    Location             Delay type                Incr(ns)  Path(ns)    Netlist Resource(s)
+  -------------------------------------------------------------------    -------------------
+                         (clock sys_clk_pin rise edge)
+                                                      0.000     0.000 r  <hidden>
+    H16                                               0.000     0.000 r  clk
+                         net (fo=0)                   0.000     0.000    clk
+    H16                  IBUF (Prop_ibuf_I_O)         1.457     1.457 r  clk_IBUF_inst/O
+                         net (fo=1, routed)           2.076     3.533    clk_IBUF
+    BUFGCTRL_X0Y16       BUFG (Prop_bufg_I_O)         0.101     3.634 r  clk_IBUF_BUFG_inst/O
+                         net (fo=35, routed)          1.727     5.361    sate_machine/cu/clk_IBUF_BUFG
+    SLICE_X43Y79         FDCE                                         r  sate_machine/cu/count_reg[2]/C
+  -------------------------------------------------------------------    -------------------
+    SLICE_X43Y79         FDCE (Prop_fdce_C_Q)         0.456     5.817 f  sate_machine/cu/count_reg[2]/Q
+                         net (fo=2, routed)           1.261     7.079    sate_machine/cu/count_reg[2]
+    SLICE_X42Y82         LUT4 (Prop_lut4_I1_O)        0.124     7.203 r  sate_machine/cu/count[3]_i_8/O
+                         net (fo=1, routed)           0.162     7.364    sate_machine/cu/count[3]_i_8_n_0
+    SLICE_X42Y82         LUT5 (Prop_lut5_I4_O)        0.124     7.488 r  sate_machine/cu/count[3]_i_4/O
+                         net (fo=23, routed)          1.183     8.671    sate_machine/cu/count[3]_i_4_n_0
+    SLICE_X43Y79         LUT4 (Prop_lut4_I2_O)        0.124     8.795 r  sate_machine/cu/count[0]_i_6/O
+                         net (fo=1, routed)           0.000     8.795    sate_machine/cu/count[0]_i_6_n_0
+    SLICE_X43Y79         CARRY4 (Prop_carry4_S[0]_CO[3])
+                                                      0.532     9.327 r  sate_machine/cu/count_reg[0]_i_1/CO[3]
+                         net (fo=1, routed)           0.000     9.327    sate_machine/cu/count_reg[0]_i_1_n_0
+    SLICE_X43Y80         CARRY4 (Prop_carry4_CI_CO[3])
+                                                      0.114     9.441 r  sate_machine/cu/count_reg[4]_i_1/CO[3]
+                         net (fo=1, routed)           0.000     9.441    sate_machine/cu/count_reg[4]_i_1_n_0
+    SLICE_X43Y81         CARRY4 (Prop_carry4_CI_CO[3])
+                                                      0.114     9.555 r  sate_machine/cu/count_reg[8]_i_1/CO[3]
+                         net (fo=1, routed)           0.000     9.555    sate_machine/cu/count_reg[8]_i_1_n_0
+    SLICE_X43Y82         CARRY4 (Prop_carry4_CI_CO[3])
+                                                      0.114     9.669 r  sate_machine/cu/count_reg[12]_i_1/CO[3]
+                         net (fo=1, routed)           0.000     9.669    sate_machine/cu/count_reg[12]_i_1_n_0
+    SLICE_X43Y83         CARRY4 (Prop_carry4_CI_O[1])
+                                                      0.334    10.003 r  sate_machine/cu/count_reg[16]_i_1/O[1]
+                         net (fo=1, routed)           0.000    10.003    sate_machine/cu/count_reg[16]_i_1_n_6
+    SLICE_X43Y83         FDCE                                         r  sate_machine/cu/count_reg[17]/D
+  -------------------------------------------------------------------    -------------------
+
+                         (clock sys_clk_pin rise edge)
+                                                     10.000    10.000 r  <hidden>
+    H16                                               0.000    10.000 r  clk
+                         net (fo=0)                   0.000    10.000    clk
+    H16                  IBUF (Prop_ibuf_I_O)         1.387    11.387 r  clk_IBUF_inst/O
+                         net (fo=1, routed)           1.880    13.267    clk_IBUF
+    BUFGCTRL_X0Y16       BUFG (Prop_bufg_I_O)         0.091    13.358 r  clk_IBUF_BUFG_inst/O
+                         net (fo=35, routed)          1.556    14.914    sate_machine/cu/clk_IBUF_BUFG
+    SLICE_X43Y83         FDCE                                         r  sate_machine/cu/count_reg[17]/C
+                         clock pessimism              0.429    15.342    <hidden>
+                         clock uncertainty           -0.035    15.307    <hidden>
+    SLICE_X43Y83         FDCE (Setup_fdce_C_D)        0.062    15.369    sate_machine/cu/count_reg[17]
+  -------------------------------------------------------------------
+                         required time                         15.369    <hidden>
+                         arrival time                         -10.003    <hidden>
+  -------------------------------------------------------------------
+                         slack                                  5.366    <hidden>
+
+Slack (MET) :             5.387ns  (required time - arrival time)
+  Source:                 sate_machine/cu/count_reg[2]/C
+                            (rising edge-triggered cell FDCE clocked by sys_clk_pin  {rise@0.000ns fall@5.000ns period=10.000ns})
+  Destination:            sate_machine/cu/count_reg[19]/D
+                            (rising edge-triggered cell FDCE clocked by sys_clk_pin  {rise@0.000ns fall@5.000ns period=10.000ns})
+  Path Group:             sys_clk_pin
+  Path Type:              Setup (Max at Slow Process Corner)
+  Requirement:            10.000ns  (sys_clk_pin rise@10.000ns - sys_clk_pin rise@0.000ns)
+  Data Path Delay:        4.621ns  (logic 2.015ns (43.605%)  route 2.606ns (56.395%))
+  Logic Levels:           8  (CARRY4=5 LUT4=2 LUT5=1)
+  Clock Path Skew:        -0.019ns (DCD - SCD + CPR)
+    Destination Clock Delay (DCD):    4.914ns = ( 14.914 - 10.000 )
+    Source Clock Delay      (SCD):    5.361ns
+    Clock Pessimism Removal (CPR):    0.429ns
+  Clock Uncertainty:      0.035ns  ((TSJ^2 + TIJ^2)^1/2 + DJ) / 2 + PE
+    Total System Jitter     (TSJ):    0.071ns
+    Total Input Jitter      (TIJ):    0.000ns
+    Discrete Jitter          (DJ):    0.000ns
+    Phase Error              (PE):    0.000ns
+
+    Location             Delay type                Incr(ns)  Path(ns)    Netlist Resource(s)
+  -------------------------------------------------------------------    -------------------
+                         (clock sys_clk_pin rise edge)
+                                                      0.000     0.000 r  <hidden>
+    H16                                               0.000     0.000 r  clk
+                         net (fo=0)                   0.000     0.000    clk
+    H16                  IBUF (Prop_ibuf_I_O)         1.457     1.457 r  clk_IBUF_inst/O
+                         net (fo=1, routed)           2.076     3.533    clk_IBUF
+    BUFGCTRL_X0Y16       BUFG (Prop_bufg_I_O)         0.101     3.634 r  clk_IBUF_BUFG_inst/O
+                         net (fo=35, routed)          1.727     5.361    sate_machine/cu/clk_IBUF_BUFG
+    SLICE_X43Y79         FDCE                                         r  sate_machine/cu/count_reg[2]/C
+  -------------------------------------------------------------------    -------------------
+    SLICE_X43Y79         FDCE (Prop_fdce_C_Q)         0.456     5.817 f  sate_machine/cu/count_reg[2]/Q
+                         net (fo=2, routed)           1.261     7.079    sate_machine/cu/count_reg[2]
+    SLICE_X42Y82         LUT4 (Prop_lut4_I1_O)        0.124     7.203 r  sate_machine/cu/count[3]_i_8/O
+                         net (fo=1, routed)           0.162     7.364    sate_machine/cu/count[3]_i_8_n_0
+    SLICE_X42Y82         LUT5 (Prop_lut5_I4_O)        0.124     7.488 r  sate_machine/cu/count[3]_i_4/O
+                         net (fo=23, routed)          1.183     8.671    sate_machine/cu/count[3]_i_4_n_0
+    SLICE_X43Y79         LUT4 (Prop_lut4_I2_O)        0.124     8.795 r  sate_machine/cu/count[0]_i_6/O
+                         net (fo=1, routed)           0.000     8.795    sate_machine/cu/count[0]_i_6_n_0
+    SLICE_X43Y79         CARRY4 (Prop_carry4_S[0]_CO[3])
+                                                      0.532     9.327 r  sate_machine/cu/count_reg[0]_i_1/CO[3]
+                         net (fo=1, routed)           0.000     9.327    sate_machine/cu/count_reg[0]_i_1_n_0
+    SLICE_X43Y80         CARRY4 (Prop_carry4_CI_CO[3])
+                                                      0.114     9.441 r  sate_machine/cu/count_reg[4]_i_1/CO[3]
+                         net (fo=1, routed)           0.000     9.441    sate_machine/cu/count_reg[4]_i_1_n_0
+    SLICE_X43Y81         CARRY4 (Prop_carry4_CI_CO[3])
+                                                      0.114     9.555 r  sate_machine/cu/count_reg[8]_i_1/CO[3]
+                         net (fo=1, routed)           0.000     9.555    sate_machine/cu/count_reg[8]_i_1_n_0
+    SLICE_X43Y82         CARRY4 (Prop_carry4_CI_CO[3])
+                                                      0.114     9.669 r  sate_machine/cu/count_reg[12]_i_1/CO[3]
+                         net (fo=1, routed)           0.000     9.669    sate_machine/cu/count_reg[12]_i_1_n_0
+    SLICE_X43Y83         CARRY4 (Prop_carry4_CI_O[3])
+                                                      0.313     9.982 r  sate_machine/cu/count_reg[16]_i_1/O[3]
+                         net (fo=1, routed)           0.000     9.982    sate_machine/cu/count_reg[16]_i_1_n_4
+    SLICE_X43Y83         FDCE                                         r  sate_machine/cu/count_reg[19]/D
+  -------------------------------------------------------------------    -------------------
+
+                         (clock sys_clk_pin rise edge)
+                                                     10.000    10.000 r  <hidden>
+    H16                                               0.000    10.000 r  clk
+                         net (fo=0)                   0.000    10.000    clk
+    H16                  IBUF (Prop_ibuf_I_O)         1.387    11.387 r  clk_IBUF_inst/O
+                         net (fo=1, routed)           1.880    13.267    clk_IBUF
+    BUFGCTRL_X0Y16       BUFG (Prop_bufg_I_O)         0.091    13.358 r  clk_IBUF_BUFG_inst/O
+                         net (fo=35, routed)          1.556    14.914    sate_machine/cu/clk_IBUF_BUFG
+    SLICE_X43Y83         FDCE                                         r  sate_machine/cu/count_reg[19]/C
+                         clock pessimism              0.429    15.342    <hidden>
+                         clock uncertainty           -0.035    15.307    <hidden>
+    SLICE_X43Y83         FDCE (Setup_fdce_C_D)        0.062    15.369    sate_machine/cu/count_reg[19]
+  -------------------------------------------------------------------
+                         required time                         15.369    <hidden>
+                         arrival time                          -9.982    <hidden>
+  -------------------------------------------------------------------
+                         slack                                  5.387    <hidden>
+
+
+
+
+
+Min Delay Paths
+--------------------------------------------------------------------------------------
+Slack (MET) :             0.228ns  (arrival time - required time)
+  Source:                 sate_machine/tck/count_reg[3]/C
+                            (rising edge-triggered cell FDCE clocked by sys_clk_pin  {rise@0.000ns fall@5.000ns period=10.000ns})
+  Destination:            sate_machine/tck/count_reg[1]/D
+                            (rising edge-triggered cell FDCE clocked by sys_clk_pin  {rise@0.000ns fall@5.000ns period=10.000ns})
+  Path Group:             sys_clk_pin
+  Path Type:              Hold (Min at Fast Process Corner)
+  Requirement:            0.000ns  (sys_clk_pin rise@0.000ns - sys_clk_pin rise@0.000ns)
+  Data Path Delay:        0.349ns  (logic 0.246ns (70.553%)  route 0.103ns (29.447%))
+  Logic Levels:           1  (LUT5=1)
+  Clock Path Skew:        0.000ns (DCD - SCD - CPR)
+    Destination Clock Delay (DCD):    1.978ns
+    Source Clock Delay      (SCD):    1.462ns
+    Clock Pessimism Removal (CPR):    0.516ns
+
+    Location             Delay type                Incr(ns)  Path(ns)    Netlist Resource(s)
+  -------------------------------------------------------------------    -------------------
+                         (clock sys_clk_pin rise edge)
+                                                      0.000     0.000 r  <hidden>
+    H16                                               0.000     0.000 r  clk
+                         net (fo=0)                   0.000     0.000    clk
+    H16                  IBUF (Prop_ibuf_I_O)         0.225     0.225 r  clk_IBUF_inst/O
+                         net (fo=1, routed)           0.627     0.852    clk_IBUF
+    BUFGCTRL_X0Y16       BUFG (Prop_bufg_I_O)         0.026     0.878 r  clk_IBUF_BUFG_inst/O
+                         net (fo=35, routed)          0.584     1.462    sate_machine/tck/clk_IBUF_BUFG
+    SLICE_X42Y85         FDCE                                         r  sate_machine/tck/count_reg[3]/C
+  -------------------------------------------------------------------    -------------------
+    SLICE_X42Y85         FDCE (Prop_fdce_C_Q)         0.148     1.610 r  sate_machine/tck/count_reg[3]/Q
+                         net (fo=7, routed)           0.103     1.713    sate_machine/tck/ticks[3]
+    SLICE_X42Y85         LUT5 (Prop_lut5_I1_O)        0.098     1.811 r  sate_machine/tck/count[1]_i_1/O
+                         net (fo=1, routed)           0.000     1.811    sate_machine/tck/p_0_in[1]
+    SLICE_X42Y85         FDCE                                         r  sate_machine/tck/count_reg[1]/D
+  -------------------------------------------------------------------    -------------------
+
+                         (clock sys_clk_pin rise edge)
+                                                      0.000     0.000 r  <hidden>
+    H16                                               0.000     0.000 r  clk
+                         net (fo=0)                   0.000     0.000    clk
+    H16                  IBUF (Prop_ibuf_I_O)         0.413     0.413 r  clk_IBUF_inst/O
+                         net (fo=1, routed)           0.683     1.096    clk_IBUF
+    BUFGCTRL_X0Y16       BUFG (Prop_bufg_I_O)         0.029     1.125 r  clk_IBUF_BUFG_inst/O
+                         net (fo=35, routed)          0.853     1.978    sate_machine/tck/clk_IBUF_BUFG
+    SLICE_X42Y85         FDCE                                         r  sate_machine/tck/count_reg[1]/C
+                         clock pessimism             -0.516     1.462    <hidden>
+    SLICE_X42Y85         FDCE (Hold_fdce_C_D)         0.121     1.583    sate_machine/tck/count_reg[1]
+  -------------------------------------------------------------------
+                         required time                         -1.583    <hidden>
+                         arrival time                           1.811    <hidden>
+  -------------------------------------------------------------------
+                         slack                                  0.228    <hidden>
+
+Slack (MET) :             0.264ns  (arrival time - required time)
+  Source:                 sate_machine/cu/count_reg[11]/C
+                            (rising edge-triggered cell FDCE clocked by sys_clk_pin  {rise@0.000ns fall@5.000ns period=10.000ns})
+  Destination:            sate_machine/cu/count_reg[11]/D
+                            (rising edge-triggered cell FDCE clocked by sys_clk_pin  {rise@0.000ns fall@5.000ns period=10.000ns})
+  Path Group:             sys_clk_pin
+  Path Type:              Hold (Min at Fast Process Corner)
+  Requirement:            0.000ns  (sys_clk_pin rise@0.000ns - sys_clk_pin rise@0.000ns)
+  Data Path Delay:        0.369ns  (logic 0.249ns (67.424%)  route 0.120ns (32.576%))
+  Logic Levels:           1  (CARRY4=1)
+  Clock Path Skew:        0.000ns (DCD - SCD - CPR)
+    Destination Clock Delay (DCD):    1.974ns
+    Source Clock Delay      (SCD):    1.459ns
+    Clock Pessimism Removal (CPR):    0.515ns
+
+    Location             Delay type                Incr(ns)  Path(ns)    Netlist Resource(s)
+  -------------------------------------------------------------------    -------------------
+                         (clock sys_clk_pin rise edge)
+                                                      0.000     0.000 r  <hidden>
+    H16                                               0.000     0.000 r  clk
+                         net (fo=0)                   0.000     0.000    clk
+    H16                  IBUF (Prop_ibuf_I_O)         0.225     0.225 r  clk_IBUF_inst/O
+                         net (fo=1, routed)           0.627     0.852    clk_IBUF
+    BUFGCTRL_X0Y16       BUFG (Prop_bufg_I_O)         0.026     0.878 r  clk_IBUF_BUFG_inst/O
+                         net (fo=35, routed)          0.581     1.459    sate_machine/cu/clk_IBUF_BUFG
+    SLICE_X43Y81         FDCE                                         r  sate_machine/cu/count_reg[11]/C
+  -------------------------------------------------------------------    -------------------
+    SLICE_X43Y81         FDCE (Prop_fdce_C_Q)         0.141     1.600 r  sate_machine/cu/count_reg[11]/Q
+                         net (fo=2, routed)           0.120     1.720    sate_machine/cu/count_reg[11]
+    SLICE_X43Y81         CARRY4 (Prop_carry4_S[3]_O[3])
+                                                      0.108     1.828 r  sate_machine/cu/count_reg[8]_i_1/O[3]
+                         net (fo=1, routed)           0.000     1.828    sate_machine/cu/count_reg[8]_i_1_n_4
+    SLICE_X43Y81         FDCE                                         r  sate_machine/cu/count_reg[11]/D
+  -------------------------------------------------------------------    -------------------
+
+                         (clock sys_clk_pin rise edge)
+                                                      0.000     0.000 r  <hidden>
+    H16                                               0.000     0.000 r  clk
+                         net (fo=0)                   0.000     0.000    clk
+    H16                  IBUF (Prop_ibuf_I_O)         0.413     0.413 r  clk_IBUF_inst/O
+                         net (fo=1, routed)           0.683     1.096    clk_IBUF
+    BUFGCTRL_X0Y16       BUFG (Prop_bufg_I_O)         0.029     1.125 r  clk_IBUF_BUFG_inst/O
+                         net (fo=35, routed)          0.849     1.974    sate_machine/cu/clk_IBUF_BUFG
+    SLICE_X43Y81         FDCE                                         r  sate_machine/cu/count_reg[11]/C
+                         clock pessimism             -0.515     1.459    <hidden>
+    SLICE_X43Y81         FDCE (Hold_fdce_C_D)         0.105     1.564    sate_machine/cu/count_reg[11]
+  -------------------------------------------------------------------
+                         required time                         -1.564    <hidden>
+                         arrival time                           1.828    <hidden>
+  -------------------------------------------------------------------
+                         slack                                  0.264    <hidden>
+
+Slack (MET) :             0.267ns  (arrival time - required time)
+  Source:                 sate_machine/cu/count_reg[12]/C
+                            (rising edge-triggered cell FDCE clocked by sys_clk_pin  {rise@0.000ns fall@5.000ns period=10.000ns})
+  Destination:            sate_machine/cu/count_reg[12]/D
+                            (rising edge-triggered cell FDCE clocked by sys_clk_pin  {rise@0.000ns fall@5.000ns period=10.000ns})
+  Path Group:             sys_clk_pin
+  Path Type:              Hold (Min at Fast Process Corner)
+  Requirement:            0.000ns  (sys_clk_pin rise@0.000ns - sys_clk_pin rise@0.000ns)
+  Data Path Delay:        0.372ns  (logic 0.256ns (68.766%)  route 0.116ns (31.234%))
+  Logic Levels:           1  (CARRY4=1)
+  Clock Path Skew:        0.000ns (DCD - SCD - CPR)
+    Destination Clock Delay (DCD):    1.975ns
+    Source Clock Delay      (SCD):    1.460ns
+    Clock Pessimism Removal (CPR):    0.515ns
+
+    Location             Delay type                Incr(ns)  Path(ns)    Netlist Resource(s)
+  -------------------------------------------------------------------    -------------------
+                         (clock sys_clk_pin rise edge)
+                                                      0.000     0.000 r  <hidden>
+    H16                                               0.000     0.000 r  clk
+                         net (fo=0)                   0.000     0.000    clk
+    H16                  IBUF (Prop_ibuf_I_O)         0.225     0.225 r  clk_IBUF_inst/O
+                         net (fo=1, routed)           0.627     0.852    clk_IBUF
+    BUFGCTRL_X0Y16       BUFG (Prop_bufg_I_O)         0.026     0.878 r  clk_IBUF_BUFG_inst/O
+                         net (fo=35, routed)          0.582     1.460    sate_machine/cu/clk_IBUF_BUFG
+    SLICE_X43Y82         FDCE                                         r  sate_machine/cu/count_reg[12]/C
+  -------------------------------------------------------------------    -------------------
+    SLICE_X43Y82         FDCE (Prop_fdce_C_Q)         0.141     1.601 r  sate_machine/cu/count_reg[12]/Q
+                         net (fo=2, routed)           0.116     1.717    sate_machine/cu/count_reg[12]
+    SLICE_X43Y82         CARRY4 (Prop_carry4_S[0]_O[0])
+                                                      0.115     1.832 r  sate_machine/cu/count_reg[12]_i_1/O[0]
+                         net (fo=1, routed)           0.000     1.832    sate_machine/cu/count_reg[12]_i_1_n_7
+    SLICE_X43Y82         FDCE                                         r  sate_machine/cu/count_reg[12]/D
+  -------------------------------------------------------------------    -------------------
+
+                         (clock sys_clk_pin rise edge)
+                                                      0.000     0.000 r  <hidden>
+    H16                                               0.000     0.000 r  clk
+                         net (fo=0)                   0.000     0.000    clk
+    H16                  IBUF (Prop_ibuf_I_O)         0.413     0.413 r  clk_IBUF_inst/O
+                         net (fo=1, routed)           0.683     1.096    clk_IBUF
+    BUFGCTRL_X0Y16       BUFG (Prop_bufg_I_O)         0.029     1.125 r  clk_IBUF_BUFG_inst/O
+                         net (fo=35, routed)          0.850     1.975    sate_machine/cu/clk_IBUF_BUFG
+    SLICE_X43Y82         FDCE                                         r  sate_machine/cu/count_reg[12]/C
+                         clock pessimism             -0.515     1.460    <hidden>
+    SLICE_X43Y82         FDCE (Hold_fdce_C_D)         0.105     1.565    sate_machine/cu/count_reg[12]
+  -------------------------------------------------------------------
+                         required time                         -1.565    <hidden>
+                         arrival time                           1.832    <hidden>
+  -------------------------------------------------------------------
+                         slack                                  0.267    <hidden>
+
+Slack (MET) :             0.267ns  (arrival time - required time)
+  Source:                 sate_machine/cu/count_reg[10]/C
+                            (rising edge-triggered cell FDCE clocked by sys_clk_pin  {rise@0.000ns fall@5.000ns period=10.000ns})
+  Destination:            sate_machine/cu/count_reg[10]/D
+                            (rising edge-triggered cell FDCE clocked by sys_clk_pin  {rise@0.000ns fall@5.000ns period=10.000ns})
+  Path Group:             sys_clk_pin
+  Path Type:              Hold (Min at Fast Process Corner)
+  Requirement:            0.000ns  (sys_clk_pin rise@0.000ns - sys_clk_pin rise@0.000ns)
+  Data Path Delay:        0.372ns  (logic 0.252ns (67.654%)  route 0.120ns (32.346%))
+  Logic Levels:           1  (CARRY4=1)
+  Clock Path Skew:        0.000ns (DCD - SCD - CPR)
+    Destination Clock Delay (DCD):    1.974ns
+    Source Clock Delay      (SCD):    1.459ns
+    Clock Pessimism Removal (CPR):    0.515ns
+
+    Location             Delay type                Incr(ns)  Path(ns)    Netlist Resource(s)
+  -------------------------------------------------------------------    -------------------
+                         (clock sys_clk_pin rise edge)
+                                                      0.000     0.000 r  <hidden>
+    H16                                               0.000     0.000 r  clk
+                         net (fo=0)                   0.000     0.000    clk
+    H16                  IBUF (Prop_ibuf_I_O)         0.225     0.225 r  clk_IBUF_inst/O
+                         net (fo=1, routed)           0.627     0.852    clk_IBUF
+    BUFGCTRL_X0Y16       BUFG (Prop_bufg_I_O)         0.026     0.878 r  clk_IBUF_BUFG_inst/O
+                         net (fo=35, routed)          0.581     1.459    sate_machine/cu/clk_IBUF_BUFG
+    SLICE_X43Y81         FDCE                                         r  sate_machine/cu/count_reg[10]/C
+  -------------------------------------------------------------------    -------------------
+    SLICE_X43Y81         FDCE (Prop_fdce_C_Q)         0.141     1.600 r  sate_machine/cu/count_reg[10]/Q
+                         net (fo=2, routed)           0.120     1.721    sate_machine/cu/count_reg[10]
+    SLICE_X43Y81         CARRY4 (Prop_carry4_S[2]_O[2])
+                                                      0.111     1.832 r  sate_machine/cu/count_reg[8]_i_1/O[2]
+                         net (fo=1, routed)           0.000     1.832    sate_machine/cu/count_reg[8]_i_1_n_5
+    SLICE_X43Y81         FDCE                                         r  sate_machine/cu/count_reg[10]/D
+  -------------------------------------------------------------------    -------------------
+
+                         (clock sys_clk_pin rise edge)
+                                                      0.000     0.000 r  <hidden>
+    H16                                               0.000     0.000 r  clk
+                         net (fo=0)                   0.000     0.000    clk
+    H16                  IBUF (Prop_ibuf_I_O)         0.413     0.413 r  clk_IBUF_inst/O
+                         net (fo=1, routed)           0.683     1.096    clk_IBUF
+    BUFGCTRL_X0Y16       BUFG (Prop_bufg_I_O)         0.029     1.125 r  clk_IBUF_BUFG_inst/O
+                         net (fo=35, routed)          0.849     1.974    sate_machine/cu/clk_IBUF_BUFG
+    SLICE_X43Y81         FDCE                                         r  sate_machine/cu/count_reg[10]/C
+                         clock pessimism             -0.515     1.459    <hidden>
+    SLICE_X43Y81         FDCE (Hold_fdce_C_D)         0.105     1.564    sate_machine/cu/count_reg[10]
+  -------------------------------------------------------------------
+                         required time                         -1.564    <hidden>
+                         arrival time                           1.832    <hidden>
+  -------------------------------------------------------------------
+                         slack                                  0.267    <hidden>
+
+Slack (MET) :             0.268ns  (arrival time - required time)
+  Source:                 sate_machine/cu/count_reg[18]/C
+                            (rising edge-triggered cell FDCE clocked by sys_clk_pin  {rise@0.000ns fall@5.000ns period=10.000ns})
+  Destination:            sate_machine/cu/count_reg[18]/D
+                            (rising edge-triggered cell FDCE clocked by sys_clk_pin  {rise@0.000ns fall@5.000ns period=10.000ns})
+  Path Group:             sys_clk_pin
+  Path Type:              Hold (Min at Fast Process Corner)
+  Requirement:            0.000ns  (sys_clk_pin rise@0.000ns - sys_clk_pin rise@0.000ns)
+  Data Path Delay:        0.373ns  (logic 0.252ns (67.585%)  route 0.121ns (32.415%))
+  Logic Levels:           1  (CARRY4=1)
+  Clock Path Skew:        0.000ns (DCD - SCD - CPR)
+    Destination Clock Delay (DCD):    1.976ns
+    Source Clock Delay      (SCD):    1.461ns
+    Clock Pessimism Removal (CPR):    0.515ns
+
+    Location             Delay type                Incr(ns)  Path(ns)    Netlist Resource(s)
+  -------------------------------------------------------------------    -------------------
+                         (clock sys_clk_pin rise edge)
+                                                      0.000     0.000 r  <hidden>
+    H16                                               0.000     0.000 r  clk
+                         net (fo=0)                   0.000     0.000    clk
+    H16                  IBUF (Prop_ibuf_I_O)         0.225     0.225 r  clk_IBUF_inst/O
+                         net (fo=1, routed)           0.627     0.852    clk_IBUF
+    BUFGCTRL_X0Y16       BUFG (Prop_bufg_I_O)         0.026     0.878 r  clk_IBUF_BUFG_inst/O
+                         net (fo=35, routed)          0.583     1.461    sate_machine/cu/clk_IBUF_BUFG
+    SLICE_X43Y83         FDCE                                         r  sate_machine/cu/count_reg[18]/C
+  -------------------------------------------------------------------    -------------------
+    SLICE_X43Y83         FDCE (Prop_fdce_C_Q)         0.141     1.602 r  sate_machine/cu/count_reg[18]/Q
+                         net (fo=2, routed)           0.121     1.723    sate_machine/cu/count_reg[18]
+    SLICE_X43Y83         CARRY4 (Prop_carry4_S[2]_O[2])
+                                                      0.111     1.834 r  sate_machine/cu/count_reg[16]_i_1/O[2]
+                         net (fo=1, routed)           0.000     1.834    sate_machine/cu/count_reg[16]_i_1_n_5
+    SLICE_X43Y83         FDCE                                         r  sate_machine/cu/count_reg[18]/D
+  -------------------------------------------------------------------    -------------------
+
+                         (clock sys_clk_pin rise edge)
+                                                      0.000     0.000 r  <hidden>
+    H16                                               0.000     0.000 r  clk
+                         net (fo=0)                   0.000     0.000    clk
+    H16                  IBUF (Prop_ibuf_I_O)         0.413     0.413 r  clk_IBUF_inst/O
+                         net (fo=1, routed)           0.683     1.096    clk_IBUF
+    BUFGCTRL_X0Y16       BUFG (Prop_bufg_I_O)         0.029     1.125 r  clk_IBUF_BUFG_inst/O
+                         net (fo=35, routed)          0.851     1.976    sate_machine/cu/clk_IBUF_BUFG
+    SLICE_X43Y83         FDCE                                         r  sate_machine/cu/count_reg[18]/C
+                         clock pessimism             -0.515     1.461    <hidden>
+    SLICE_X43Y83         FDCE (Hold_fdce_C_D)         0.105     1.566    sate_machine/cu/count_reg[18]
+  -------------------------------------------------------------------
+                         required time                         -1.566    <hidden>
+                         arrival time                           1.834    <hidden>
+  -------------------------------------------------------------------
+                         slack                                  0.268    <hidden>
+
+Slack (MET) :             0.268ns  (arrival time - required time)
+  Source:                 sate_machine/cu/count_reg[20]/C
+                            (rising edge-triggered cell FDCE clocked by sys_clk_pin  {rise@0.000ns fall@5.000ns period=10.000ns})
+  Destination:            sate_machine/cu/count_reg[20]/D
+                            (rising edge-triggered cell FDCE clocked by sys_clk_pin  {rise@0.000ns fall@5.000ns period=10.000ns})
+  Path Group:             sys_clk_pin
+  Path Type:              Hold (Min at Fast Process Corner)
+  Requirement:            0.000ns  (sys_clk_pin rise@0.000ns - sys_clk_pin rise@0.000ns)
+  Data Path Delay:        0.373ns  (logic 0.256ns (68.565%)  route 0.117ns (31.435%))
+  Logic Levels:           1  (CARRY4=1)
+  Clock Path Skew:        0.000ns (DCD - SCD - CPR)
+    Destination Clock Delay (DCD):    1.977ns
+    Source Clock Delay      (SCD):    1.462ns
+    Clock Pessimism Removal (CPR):    0.515ns
+
+    Location             Delay type                Incr(ns)  Path(ns)    Netlist Resource(s)
+  -------------------------------------------------------------------    -------------------
+                         (clock sys_clk_pin rise edge)
+                                                      0.000     0.000 r  <hidden>
+    H16                                               0.000     0.000 r  clk
+                         net (fo=0)                   0.000     0.000    clk
+    H16                  IBUF (Prop_ibuf_I_O)         0.225     0.225 r  clk_IBUF_inst/O
+                         net (fo=1, routed)           0.627     0.852    clk_IBUF
+    BUFGCTRL_X0Y16       BUFG (Prop_bufg_I_O)         0.026     0.878 r  clk_IBUF_BUFG_inst/O
+                         net (fo=35, routed)          0.584     1.462    sate_machine/cu/clk_IBUF_BUFG
+    SLICE_X43Y84         FDCE                                         r  sate_machine/cu/count_reg[20]/C
+  -------------------------------------------------------------------    -------------------
+    SLICE_X43Y84         FDCE (Prop_fdce_C_Q)         0.141     1.603 r  sate_machine/cu/count_reg[20]/Q
+                         net (fo=2, routed)           0.117     1.720    sate_machine/cu/count_reg[20]
+    SLICE_X43Y84         CARRY4 (Prop_carry4_S[0]_O[0])
+                                                      0.115     1.835 r  sate_machine/cu/count_reg[20]_i_1/O[0]
+                         net (fo=1, routed)           0.000     1.835    sate_machine/cu/count_reg[20]_i_1_n_7
+    SLICE_X43Y84         FDCE                                         r  sate_machine/cu/count_reg[20]/D
+  -------------------------------------------------------------------    -------------------
+
+                         (clock sys_clk_pin rise edge)
+                                                      0.000     0.000 r  <hidden>
+    H16                                               0.000     0.000 r  clk
+                         net (fo=0)                   0.000     0.000    clk
+    H16                  IBUF (Prop_ibuf_I_O)         0.413     0.413 r  clk_IBUF_inst/O
+                         net (fo=1, routed)           0.683     1.096    clk_IBUF
+    BUFGCTRL_X0Y16       BUFG (Prop_bufg_I_O)         0.029     1.125 r  clk_IBUF_BUFG_inst/O
+                         net (fo=35, routed)          0.852     1.977    sate_machine/cu/clk_IBUF_BUFG
+    SLICE_X43Y84         FDCE                                         r  sate_machine/cu/count_reg[20]/C
+                         clock pessimism             -0.515     1.462    <hidden>
+    SLICE_X43Y84         FDCE (Hold_fdce_C_D)         0.105     1.567    sate_machine/cu/count_reg[20]
+  -------------------------------------------------------------------
+                         required time                         -1.567    <hidden>
+                         arrival time                           1.835    <hidden>
+  -------------------------------------------------------------------
+                         slack                                  0.268    <hidden>
+
+Slack (MET) :             0.273ns  (arrival time - required time)
+  Source:                 sate_machine/tck/count_reg[2]/C
+                            (rising edge-triggered cell FDCE clocked by sys_clk_pin  {rise@0.000ns fall@5.000ns period=10.000ns})
+  Destination:            sate_machine/tck/count_reg[3]/D
+                            (rising edge-triggered cell FDCE clocked by sys_clk_pin  {rise@0.000ns fall@5.000ns period=10.000ns})
+  Path Group:             sys_clk_pin
+  Path Type:              Hold (Min at Fast Process Corner)
+  Requirement:            0.000ns  (sys_clk_pin rise@0.000ns - sys_clk_pin rise@0.000ns)
+  Data Path Delay:        0.404ns  (logic 0.207ns (51.207%)  route 0.197ns (48.793%))
+  Logic Levels:           1  (LUT5=1)
+  Clock Path Skew:        0.000ns (DCD - SCD - CPR)
+    Destination Clock Delay (DCD):    1.978ns
+    Source Clock Delay      (SCD):    1.462ns
+    Clock Pessimism Removal (CPR):    0.516ns
+
+    Location             Delay type                Incr(ns)  Path(ns)    Netlist Resource(s)
+  -------------------------------------------------------------------    -------------------
+                         (clock sys_clk_pin rise edge)
+                                                      0.000     0.000 r  <hidden>
+    H16                                               0.000     0.000 r  clk
+                         net (fo=0)                   0.000     0.000    clk
+    H16                  IBUF (Prop_ibuf_I_O)         0.225     0.225 r  clk_IBUF_inst/O
+                         net (fo=1, routed)           0.627     0.852    clk_IBUF
+    BUFGCTRL_X0Y16       BUFG (Prop_bufg_I_O)         0.026     0.878 r  clk_IBUF_BUFG_inst/O
+                         net (fo=35, routed)          0.584     1.462    sate_machine/tck/clk_IBUF_BUFG
+    SLICE_X42Y85         FDCE                                         r  sate_machine/tck/count_reg[2]/C
+  -------------------------------------------------------------------    -------------------
+    SLICE_X42Y85         FDCE (Prop_fdce_C_Q)         0.164     1.626 r  sate_machine/tck/count_reg[2]/Q
+                         net (fo=7, routed)           0.197     1.823    sate_machine/tck/ticks[2]
+    SLICE_X42Y85         LUT5 (Prop_lut5_I1_O)        0.043     1.866 r  sate_machine/tck/count[3]_i_2/O
+                         net (fo=1, routed)           0.000     1.866    sate_machine/tck/p_0_in[3]
+    SLICE_X42Y85         FDCE                                         r  sate_machine/tck/count_reg[3]/D
+  -------------------------------------------------------------------    -------------------
+
+                         (clock sys_clk_pin rise edge)
+                                                      0.000     0.000 r  <hidden>
+    H16                                               0.000     0.000 r  clk
+                         net (fo=0)                   0.000     0.000    clk
+    H16                  IBUF (Prop_ibuf_I_O)         0.413     0.413 r  clk_IBUF_inst/O
+                         net (fo=1, routed)           0.683     1.096    clk_IBUF
+    BUFGCTRL_X0Y16       BUFG (Prop_bufg_I_O)         0.029     1.125 r  clk_IBUF_BUFG_inst/O
+                         net (fo=35, routed)          0.853     1.978    sate_machine/tck/clk_IBUF_BUFG
+    SLICE_X42Y85         FDCE                                         r  sate_machine/tck/count_reg[3]/C
+                         clock pessimism             -0.516     1.462    <hidden>
+    SLICE_X42Y85         FDCE (Hold_fdce_C_D)         0.131     1.593    sate_machine/tck/count_reg[3]
+  -------------------------------------------------------------------
+                         required time                         -1.593    <hidden>
+                         arrival time                           1.866    <hidden>
+  -------------------------------------------------------------------
+                         slack                                  0.273    <hidden>
+
+Slack (MET) :             0.286ns  (arrival time - required time)
+  Source:                 sate_machine/tck/count_reg[2]/C
+                            (rising edge-triggered cell FDCE clocked by sys_clk_pin  {rise@0.000ns fall@5.000ns period=10.000ns})
+  Destination:            sate_machine/tck/count_reg[2]/D
+                            (rising edge-triggered cell FDCE clocked by sys_clk_pin  {rise@0.000ns fall@5.000ns period=10.000ns})
+  Path Group:             sys_clk_pin
+  Path Type:              Hold (Min at Fast Process Corner)
+  Requirement:            0.000ns  (sys_clk_pin rise@0.000ns - sys_clk_pin rise@0.000ns)
+  Data Path Delay:        0.406ns  (logic 0.209ns (51.447%)  route 0.197ns (48.553%))
+  Logic Levels:           1  (LUT5=1)
+  Clock Path Skew:        0.000ns (DCD - SCD - CPR)
+    Destination Clock Delay (DCD):    1.978ns
+    Source Clock Delay      (SCD):    1.462ns
+    Clock Pessimism Removal (CPR):    0.516ns
+
+    Location             Delay type                Incr(ns)  Path(ns)    Netlist Resource(s)
+  -------------------------------------------------------------------    -------------------
+                         (clock sys_clk_pin rise edge)
+                                                      0.000     0.000 r  <hidden>
+    H16                                               0.000     0.000 r  clk
+                         net (fo=0)                   0.000     0.000    clk
+    H16                  IBUF (Prop_ibuf_I_O)         0.225     0.225 r  clk_IBUF_inst/O
+                         net (fo=1, routed)           0.627     0.852    clk_IBUF
+    BUFGCTRL_X0Y16       BUFG (Prop_bufg_I_O)         0.026     0.878 r  clk_IBUF_BUFG_inst/O
+                         net (fo=35, routed)          0.584     1.462    sate_machine/tck/clk_IBUF_BUFG
+    SLICE_X42Y85         FDCE                                         r  sate_machine/tck/count_reg[2]/C
+  -------------------------------------------------------------------    -------------------
+    SLICE_X42Y85         FDCE (Prop_fdce_C_Q)         0.164     1.626 r  sate_machine/tck/count_reg[2]/Q
+                         net (fo=7, routed)           0.197     1.823    sate_machine/tck/ticks[2]
+    SLICE_X42Y85         LUT5 (Prop_lut5_I4_O)        0.045     1.868 r  sate_machine/tck/count[2]_i_1/O
+                         net (fo=1, routed)           0.000     1.868    sate_machine/tck/p_0_in[2]
+    SLICE_X42Y85         FDCE                                         r  sate_machine/tck/count_reg[2]/D
+  -------------------------------------------------------------------    -------------------
+
+                         (clock sys_clk_pin rise edge)
+                                                      0.000     0.000 r  <hidden>
+    H16                                               0.000     0.000 r  clk
+                         net (fo=0)                   0.000     0.000    clk
+    H16                  IBUF (Prop_ibuf_I_O)         0.413     0.413 r  clk_IBUF_inst/O
+                         net (fo=1, routed)           0.683     1.096    clk_IBUF
+    BUFGCTRL_X0Y16       BUFG (Prop_bufg_I_O)         0.029     1.125 r  clk_IBUF_BUFG_inst/O
+                         net (fo=35, routed)          0.853     1.978    sate_machine/tck/clk_IBUF_BUFG
+    SLICE_X42Y85         FDCE                                         r  sate_machine/tck/count_reg[2]/C
+                         clock pessimism             -0.516     1.462    <hidden>
+    SLICE_X42Y85         FDCE (Hold_fdce_C_D)         0.120     1.582    sate_machine/tck/count_reg[2]
+  -------------------------------------------------------------------
+                         required time                         -1.582    <hidden>
+                         arrival time                           1.868    <hidden>
+  -------------------------------------------------------------------
+                         slack                                  0.286    <hidden>
+
+Slack (MET) :             0.301ns  (arrival time - required time)
+  Source:                 sate_machine/cu/count_reg[18]/C
+                            (rising edge-triggered cell FDCE clocked by sys_clk_pin  {rise@0.000ns fall@5.000ns period=10.000ns})
+  Destination:            sate_machine/cu/count_reg[19]/D
+                            (rising edge-triggered cell FDCE clocked by sys_clk_pin  {rise@0.000ns fall@5.000ns period=10.000ns})
+  Path Group:             sys_clk_pin
+  Path Type:              Hold (Min at Fast Process Corner)
+  Requirement:            0.000ns  (sys_clk_pin rise@0.000ns - sys_clk_pin rise@0.000ns)
+  Data Path Delay:        0.406ns  (logic 0.285ns (70.221%)  route 0.121ns (29.779%))
+  Logic Levels:           1  (CARRY4=1)
+  Clock Path Skew:        0.000ns (DCD - SCD - CPR)
+    Destination Clock Delay (DCD):    1.976ns
+    Source Clock Delay      (SCD):    1.461ns
+    Clock Pessimism Removal (CPR):    0.515ns
+
+    Location             Delay type                Incr(ns)  Path(ns)    Netlist Resource(s)
+  -------------------------------------------------------------------    -------------------
+                         (clock sys_clk_pin rise edge)
+                                                      0.000     0.000 r  <hidden>
+    H16                                               0.000     0.000 r  clk
+                         net (fo=0)                   0.000     0.000    clk
+    H16                  IBUF (Prop_ibuf_I_O)         0.225     0.225 r  clk_IBUF_inst/O
+                         net (fo=1, routed)           0.627     0.852    clk_IBUF
+    BUFGCTRL_X0Y16       BUFG (Prop_bufg_I_O)         0.026     0.878 r  clk_IBUF_BUFG_inst/O
+                         net (fo=35, routed)          0.583     1.461    sate_machine/cu/clk_IBUF_BUFG
+    SLICE_X43Y83         FDCE                                         r  sate_machine/cu/count_reg[18]/C
+  -------------------------------------------------------------------    -------------------
+    SLICE_X43Y83         FDCE (Prop_fdce_C_Q)         0.141     1.602 r  sate_machine/cu/count_reg[18]/Q
+                         net (fo=2, routed)           0.121     1.723    sate_machine/cu/count_reg[18]
+    SLICE_X43Y83         CARRY4 (Prop_carry4_S[2]_O[3])
+                                                      0.144     1.867 r  sate_machine/cu/count_reg[16]_i_1/O[3]
+                         net (fo=1, routed)           0.000     1.867    sate_machine/cu/count_reg[16]_i_1_n_4
+    SLICE_X43Y83         FDCE                                         r  sate_machine/cu/count_reg[19]/D
+  -------------------------------------------------------------------    -------------------
+
+                         (clock sys_clk_pin rise edge)
+                                                      0.000     0.000 r  <hidden>
+    H16                                               0.000     0.000 r  clk
+                         net (fo=0)                   0.000     0.000    clk
+    H16                  IBUF (Prop_ibuf_I_O)         0.413     0.413 r  clk_IBUF_inst/O
+                         net (fo=1, routed)           0.683     1.096    clk_IBUF
+    BUFGCTRL_X0Y16       BUFG (Prop_bufg_I_O)         0.029     1.125 r  clk_IBUF_BUFG_inst/O
+                         net (fo=35, routed)          0.851     1.976    sate_machine/cu/clk_IBUF_BUFG
+    SLICE_X43Y83         FDCE                                         r  sate_machine/cu/count_reg[19]/C
+                         clock pessimism             -0.515     1.461    <hidden>
+    SLICE_X43Y83         FDCE (Hold_fdce_C_D)         0.105     1.566    sate_machine/cu/count_reg[19]
+  -------------------------------------------------------------------
+                         required time                         -1.566    <hidden>
+                         arrival time                           1.867    <hidden>
+  -------------------------------------------------------------------
+                         slack                                  0.301    <hidden>
+
+Slack (MET) :             0.303ns  (arrival time - required time)
+  Source:                 sate_machine/cu/count_reg[12]/C
+                            (rising edge-triggered cell FDCE clocked by sys_clk_pin  {rise@0.000ns fall@5.000ns period=10.000ns})
+  Destination:            sate_machine/cu/count_reg[13]/D
+                            (rising edge-triggered cell FDCE clocked by sys_clk_pin  {rise@0.000ns fall@5.000ns period=10.000ns})
+  Path Group:             sys_clk_pin
+  Path Type:              Hold (Min at Fast Process Corner)
+  Requirement:            0.000ns  (sys_clk_pin rise@0.000ns - sys_clk_pin rise@0.000ns)
+  Data Path Delay:        0.408ns  (logic 0.292ns (71.520%)  route 0.116ns (28.480%))
+  Logic Levels:           1  (CARRY4=1)
+  Clock Path Skew:        0.000ns (DCD - SCD - CPR)
+    Destination Clock Delay (DCD):    1.975ns
+    Source Clock Delay      (SCD):    1.460ns
+    Clock Pessimism Removal (CPR):    0.515ns
+
+    Location             Delay type                Incr(ns)  Path(ns)    Netlist Resource(s)
+  -------------------------------------------------------------------    -------------------
+                         (clock sys_clk_pin rise edge)
+                                                      0.000     0.000 r  <hidden>
+    H16                                               0.000     0.000 r  clk
+                         net (fo=0)                   0.000     0.000    clk
+    H16                  IBUF (Prop_ibuf_I_O)         0.225     0.225 r  clk_IBUF_inst/O
+                         net (fo=1, routed)           0.627     0.852    clk_IBUF
+    BUFGCTRL_X0Y16       BUFG (Prop_bufg_I_O)         0.026     0.878 r  clk_IBUF_BUFG_inst/O
+                         net (fo=35, routed)          0.582     1.460    sate_machine/cu/clk_IBUF_BUFG
+    SLICE_X43Y82         FDCE                                         r  sate_machine/cu/count_reg[12]/C
+  -------------------------------------------------------------------    -------------------
+    SLICE_X43Y82         FDCE (Prop_fdce_C_Q)         0.141     1.601 r  sate_machine/cu/count_reg[12]/Q
+                         net (fo=2, routed)           0.116     1.717    sate_machine/cu/count_reg[12]
+    SLICE_X43Y82         CARRY4 (Prop_carry4_S[0]_O[1])
+                                                      0.151     1.868 r  sate_machine/cu/count_reg[12]_i_1/O[1]
+                         net (fo=1, routed)           0.000     1.868    sate_machine/cu/count_reg[12]_i_1_n_6
+    SLICE_X43Y82         FDCE                                         r  sate_machine/cu/count_reg[13]/D
+  -------------------------------------------------------------------    -------------------
+
+                         (clock sys_clk_pin rise edge)
+                                                      0.000     0.000 r  <hidden>
+    H16                                               0.000     0.000 r  clk
+                         net (fo=0)                   0.000     0.000    clk
+    H16                  IBUF (Prop_ibuf_I_O)         0.413     0.413 r  clk_IBUF_inst/O
+                         net (fo=1, routed)           0.683     1.096    clk_IBUF
+    BUFGCTRL_X0Y16       BUFG (Prop_bufg_I_O)         0.029     1.125 r  clk_IBUF_BUFG_inst/O
+                         net (fo=35, routed)          0.850     1.975    sate_machine/cu/clk_IBUF_BUFG
+    SLICE_X43Y82         FDCE                                         r  sate_machine/cu/count_reg[13]/C
+                         clock pessimism             -0.515     1.460    <hidden>
+    SLICE_X43Y82         FDCE (Hold_fdce_C_D)         0.105     1.565    sate_machine/cu/count_reg[13]
+  -------------------------------------------------------------------
+                         required time                         -1.565    <hidden>
+                         arrival time                           1.868    <hidden>
+  -------------------------------------------------------------------
+                         slack                                  0.303    <hidden>
+
+
+
+
+
+Pulse Width Checks
+--------------------------------------------------------------------------------------
+Clock Name:         sys_clk_pin
+Waveform(ns):       { 0.000 5.000 }
+Period(ns):         10.000
+Sources:            { clk }
+
+Check Type        Corner  Lib Pin  Reference Pin  Required(ns)  Actual(ns)  Slack(ns)  Location        Pin
+Min Period        n/a     BUFG/I   n/a            2.155         10.000      7.845      BUFGCTRL_X0Y16  clk_IBUF_BUFG_inst/I
+Min Period        n/a     FDCE/C   n/a            1.000         10.000      9.000      SLICE_X42Y84    sate_machine/FSM_sequential_curr_state_reg[0]/C
+Min Period        n/a     FDCE/C   n/a            1.000         10.000      9.000      SLICE_X42Y84    sate_machine/FSM_sequential_curr_state_reg[1]/C
+Min Period        n/a     FDCE/C   n/a            1.000         10.000      9.000      SLICE_X43Y79    sate_machine/cu/count_reg[0]/C
+Min Period        n/a     FDCE/C   n/a            1.000         10.000      9.000      SLICE_X43Y81    sate_machine/cu/count_reg[10]/C
+Min Period        n/a     FDCE/C   n/a            1.000         10.000      9.000      SLICE_X43Y81    sate_machine/cu/count_reg[11]/C
+Min Period        n/a     FDCE/C   n/a            1.000         10.000      9.000      SLICE_X43Y82    sate_machine/cu/count_reg[12]/C
+Min Period        n/a     FDCE/C   n/a            1.000         10.000      9.000      SLICE_X43Y82    sate_machine/cu/count_reg[13]/C
+Min Period        n/a     FDCE/C   n/a            1.000         10.000      9.000      SLICE_X43Y82    sate_machine/cu/count_reg[14]/C
+Min Period        n/a     FDCE/C   n/a            1.000         10.000      9.000      SLICE_X43Y82    sate_machine/cu/count_reg[15]/C
+Low Pulse Width   Slow    FDCE/C   n/a            0.500         5.000       4.500      SLICE_X42Y84    sate_machine/FSM_sequential_curr_state_reg[0]/C
+Low Pulse Width   Fast    FDCE/C   n/a            0.500         5.000       4.500      SLICE_X42Y84    sate_machine/FSM_sequential_curr_state_reg[0]/C
+Low Pulse Width   Slow    FDCE/C   n/a            0.500         5.000       4.500      SLICE_X42Y84    sate_machine/FSM_sequential_curr_state_reg[1]/C
+Low Pulse Width   Fast    FDCE/C   n/a            0.500         5.000       4.500      SLICE_X42Y84    sate_machine/FSM_sequential_curr_state_reg[1]/C
+Low Pulse Width   Slow    FDCE/C   n/a            0.500         5.000       4.500      SLICE_X43Y79    sate_machine/cu/count_reg[0]/C
+Low Pulse Width   Fast    FDCE/C   n/a            0.500         5.000       4.500      SLICE_X43Y79    sate_machine/cu/count_reg[0]/C
+Low Pulse Width   Slow    FDCE/C   n/a            0.500         5.000       4.500      SLICE_X43Y81    sate_machine/cu/count_reg[10]/C
+Low Pulse Width   Fast    FDCE/C   n/a            0.500         5.000       4.500      SLICE_X43Y81    sate_machine/cu/count_reg[10]/C
+Low Pulse Width   Slow    FDCE/C   n/a            0.500         5.000       4.500      SLICE_X43Y81    sate_machine/cu/count_reg[11]/C
+Low Pulse Width   Fast    FDCE/C   n/a            0.500         5.000       4.500      SLICE_X43Y81    sate_machine/cu/count_reg[11]/C
+High Pulse Width  Slow    FDCE/C   n/a            0.500         5.000       4.500      SLICE_X42Y84    sate_machine/FSM_sequential_curr_state_reg[0]/C
+High Pulse Width  Fast    FDCE/C   n/a            0.500         5.000       4.500      SLICE_X42Y84    sate_machine/FSM_sequential_curr_state_reg[0]/C
+High Pulse Width  Slow    FDCE/C   n/a            0.500         5.000       4.500      SLICE_X42Y84    sate_machine/FSM_sequential_curr_state_reg[1]/C
+High Pulse Width  Fast    FDCE/C   n/a            0.500         5.000       4.500      SLICE_X42Y84    sate_machine/FSM_sequential_curr_state_reg[1]/C
+High Pulse Width  Slow    FDCE/C   n/a            0.500         5.000       4.500      SLICE_X43Y79    sate_machine/cu/count_reg[0]/C
+High Pulse Width  Fast    FDCE/C   n/a            0.500         5.000       4.500      SLICE_X43Y79    sate_machine/cu/count_reg[0]/C
+High Pulse Width  Slow    FDCE/C   n/a            0.500         5.000       4.500      SLICE_X43Y81    sate_machine/cu/count_reg[10]/C
+High Pulse Width  Fast    FDCE/C   n/a            0.500         5.000       4.500      SLICE_X43Y81    sate_machine/cu/count_reg[10]/C
+High Pulse Width  Slow    FDCE/C   n/a            0.500         5.000       4.500      SLICE_X43Y81    sate_machine/cu/count_reg[11]/C
+High Pulse Width  Fast    FDCE/C   n/a            0.500         5.000       4.500      SLICE_X43Y81    sate_machine/cu/count_reg[11]/C
+
+
+
+--------------------------------------------------------------------------------------
+Path Group:  (none)
+From Clock:
+  To Clock:
+
+Max Delay             3 Endpoints
+Min Delay             3 Endpoints
+--------------------------------------------------------------------------------------
+
+
+Max Delay Paths
+--------------------------------------------------------------------------------------
+Slack:                    inf
+  Source:                 BTN1
+                            (input port)
+  Destination:            LED1_G
+                            (output port)
+  Path Group:             (none)
+  Path Type:              Max at Slow Process Corner
+  Data Path Delay:        9.535ns  (logic 5.272ns (55.285%)  route 4.264ns (44.715%))
+  Logic Levels:           4  (IBUF=1 LUT4=1 LUT5=1 OBUF=1)
+
+    Location             Delay type                Incr(ns)  Path(ns)    Netlist Resource(s)
+  -------------------------------------------------------------------    -------------------
+    D19                                               0.000     0.000 f  BTN1
+                         net (fo=0)                   0.000     0.000    BTN1
+    D19                  IBUF (Prop_ibuf_I_O)         1.477     1.477 f  BTN1_IBUF_inst/O
+                         net (fo=9, routed)           1.476     2.953    sate_machine/tck/BTN1_IBUF
+    SLICE_X42Y84         LUT5 (Prop_lut5_I0_O)        0.124     3.077 r  sate_machine/tck/LED1_G_OBUF_inst_i_2/O
+                         net (fo=5, routed)           0.194     3.271    sate_machine/tck/count_reg[3]_0
+    SLICE_X42Y84         LUT4 (Prop_lut4_I1_O)        0.124     3.395 r  sate_machine/tck/LED1_G_OBUF_inst_i_1/O
+                         net (fo=1, routed)           2.594     5.989    LED1_G_OBUF
+    L14                  OBUF (Prop_obuf_I_O)         3.547     9.535 r  LED1_G_OBUF_inst/O
+                         net (fo=0)                   0.000     9.535    LED1_G
+    L14                                                               r  LED1_G
+  -------------------------------------------------------------------    -------------------
+
+Slack:                    inf
+  Source:                 BTN1
+                            (input port)
+  Destination:            LED1_R
+                            (output port)
+  Path Group:             (none)
+  Path Type:              Max at Slow Process Corner
+  Data Path Delay:        9.393ns  (logic 5.140ns (54.723%)  route 4.253ns (45.277%))
+  Logic Levels:           3  (IBUF=1 LUT6=1 OBUF=1)
+
+    Location             Delay type                Incr(ns)  Path(ns)    Netlist Resource(s)
+  -------------------------------------------------------------------    -------------------
+    D19                                               0.000     0.000 f  BTN1
+                         net (fo=0)                   0.000     0.000    BTN1
+    D19                  IBUF (Prop_ibuf_I_O)         1.477     1.477 f  BTN1_IBUF_inst/O
+                         net (fo=9, routed)           1.387     2.864    sate_machine/tck/BTN1_IBUF
+    SLICE_X42Y84         LUT6 (Prop_lut6_I1_O)        0.124     2.988 r  sate_machine/tck/LED1_R_OBUF_inst_i_1/O
+                         net (fo=1, routed)           2.866     5.854    LED1_R_OBUF
+    M15                  OBUF (Prop_obuf_I_O)         3.539     9.393 r  LED1_R_OBUF_inst/O
+                         net (fo=0)                   0.000     9.393    LED1_R
+    M15                                                               r  LED1_R
+  -------------------------------------------------------------------    -------------------
+
+Slack:                    inf
+  Source:                 BTN1
+                            (input port)
+  Destination:            LED1_B
+                            (output port)
+  Path Group:             (none)
+  Path Type:              Max at Slow Process Corner
+  Data Path Delay:        8.613ns  (logic 5.087ns (59.058%)  route 3.526ns (40.942%))
+  Logic Levels:           3  (IBUF=1 LUT6=1 OBUF=1)
+
+    Location             Delay type                Incr(ns)  Path(ns)    Netlist Resource(s)
+  -------------------------------------------------------------------    -------------------
+    D19                                               0.000     0.000 f  BTN1
+                         net (fo=0)                   0.000     0.000    BTN1
+    D19                  IBUF (Prop_ibuf_I_O)         1.477     1.477 f  BTN1_IBUF_inst/O
+                         net (fo=9, routed)           1.410     2.887    sate_machine/tck/BTN1_IBUF
+    SLICE_X42Y85         LUT6 (Prop_lut6_I1_O)        0.124     3.011 r  sate_machine/tck/LED1_B_OBUF_inst_i_1/O
+                         net (fo=1, routed)           2.116     5.127    LED1_B_OBUF
+    G14                  OBUF (Prop_obuf_I_O)         3.485     8.613 r  LED1_B_OBUF_inst/O
+                         net (fo=0)                   0.000     8.613    LED1_B
+    G14                                                               r  LED1_B
+  -------------------------------------------------------------------    -------------------
+
+
+
+
+
+Min Delay Paths
+--------------------------------------------------------------------------------------
+Slack:                    inf
+  Source:                 BTN1
+                            (input port)
+  Destination:            LED1_B
+                            (output port)
+  Path Group:             (none)
+  Path Type:              Min at Fast Process Corner
+  Data Path Delay:        2.610ns  (logic 1.477ns (56.582%)  route 1.133ns (43.418%))
+  Logic Levels:           3  (IBUF=1 LUT6=1 OBUF=1)
+
+    Location             Delay type                Incr(ns)  Path(ns)    Netlist Resource(s)
+  -------------------------------------------------------------------    -------------------
+    D19                                               0.000     0.000 f  BTN1
+                         net (fo=0)                   0.000     0.000    BTN1
+    D19                  IBUF (Prop_ibuf_I_O)         0.245     0.245 f  BTN1_IBUF_inst/O
+                         net (fo=9, routed)           0.604     0.849    sate_machine/tck/BTN1_IBUF
+    SLICE_X42Y85         LUT6 (Prop_lut6_I1_O)        0.045     0.894 r  sate_machine/tck/LED1_B_OBUF_inst_i_1/O
+                         net (fo=1, routed)           0.529     1.423    LED1_B_OBUF
+    G14                  OBUF (Prop_obuf_I_O)         1.187     2.610 r  LED1_B_OBUF_inst/O
+                         net (fo=0)                   0.000     2.610    LED1_B
+    G14                                                               r  LED1_B
+  -------------------------------------------------------------------    -------------------
+
+Slack:                    inf
+  Source:                 BTN1
+                            (input port)
+  Destination:            LED1_R
+                            (output port)
+  Path Group:             (none)
+  Path Type:              Min at Fast Process Corner
+  Data Path Delay:        2.964ns  (logic 1.530ns (51.620%)  route 1.434ns (48.380%))
+  Logic Levels:           3  (IBUF=1 LUT6=1 OBUF=1)
+
+    Location             Delay type                Incr(ns)  Path(ns)    Netlist Resource(s)
+  -------------------------------------------------------------------    -------------------
+    D19                                               0.000     0.000 f  BTN1
+                         net (fo=0)                   0.000     0.000    BTN1
+    D19                  IBUF (Prop_ibuf_I_O)         0.245     0.245 f  BTN1_IBUF_inst/O
+                         net (fo=9, routed)           0.577     0.822    sate_machine/tck/BTN1_IBUF
+    SLICE_X42Y84         LUT6 (Prop_lut6_I1_O)        0.045     0.867 r  sate_machine/tck/LED1_R_OBUF_inst_i_1/O
+                         net (fo=1, routed)           0.857     1.724    LED1_R_OBUF
+    M15                  OBUF (Prop_obuf_I_O)         1.240     2.964 r  LED1_R_OBUF_inst/O
+                         net (fo=0)                   0.000     2.964    LED1_R
+    M15                                                               r  LED1_R
+  -------------------------------------------------------------------    -------------------
+
+Slack:                    inf
+  Source:                 BTN1
+                            (input port)
+  Destination:            LED1_G
+                            (output port)
+  Path Group:             (none)
+  Path Type:              Min at Fast Process Corner
+  Data Path Delay:        3.011ns  (logic 1.582ns (52.549%)  route 1.429ns (47.451%))
+  Logic Levels:           4  (IBUF=1 LUT4=1 LUT5=1 OBUF=1)
+
+    Location             Delay type                Incr(ns)  Path(ns)    Netlist Resource(s)
+  -------------------------------------------------------------------    -------------------
+    D19                                               0.000     0.000 f  BTN1
+                         net (fo=0)                   0.000     0.000    BTN1
+    D19                  IBUF (Prop_ibuf_I_O)         0.245     0.245 f  BTN1_IBUF_inst/O
+                         net (fo=9, routed)           0.589     0.834    sate_machine/tck/BTN1_IBUF
+    SLICE_X42Y84         LUT5 (Prop_lut5_I0_O)        0.045     0.879 r  sate_machine/tck/LED1_G_OBUF_inst_i_2/O
+                         net (fo=5, routed)           0.075     0.954    sate_machine/tck/count_reg[3]_0
+    SLICE_X42Y84         LUT4 (Prop_lut4_I1_O)        0.045     0.999 r  sate_machine/tck/LED1_G_OBUF_inst_i_1/O
+                         net (fo=1, routed)           0.765     1.764    LED1_G_OBUF
+    L14                  OBUF (Prop_obuf_I_O)         1.247     3.011 r  LED1_G_OBUF_inst/O
+                         net (fo=0)                   0.000     3.011    LED1_G
+    L14                                                               r  LED1_G
+  -------------------------------------------------------------------    -------------------
+
+
+
+
+
+--------------------------------------------------------------------------------------
+Path Group:  (none)
+From Clock:  sys_clk_pin
+  To Clock:
+
+Max Delay             3 Endpoints
+Min Delay             3 Endpoints
+--------------------------------------------------------------------------------------
+
+
+Max Delay Paths
+--------------------------------------------------------------------------------------
+Slack:                    inf
+  Source:                 sate_machine/tck/count_reg[0]/C
+                            (rising edge-triggered cell FDCE clocked by sys_clk_pin  {rise@0.000ns fall@5.000ns period=10.000ns})
+  Destination:            LED1_G
+                            (output port)
+  Path Group:             (none)
+  Path Type:              Max at Slow Process Corner
+  Data Path Delay:        8.241ns  (logic 4.450ns (53.991%)  route 3.792ns (46.009%))
+  Logic Levels:           3  (LUT4=1 LUT5=1 OBUF=1)
+  Clock Uncertainty:      0.025ns  ((TSJ^2 + TIJ^2)^1/2 + DJ) / 2 + PE
+    Total System Jitter     (TSJ):    0.050ns
+    Total Input Jitter      (TIJ):    0.000ns
+    Discrete Jitter          (DJ):    0.000ns
+    Phase Error              (PE):    0.000ns
+
+    Location             Delay type                Incr(ns)  Path(ns)    Netlist Resource(s)
+  -------------------------------------------------------------------    -------------------
+                         (clock sys_clk_pin rise edge)
+                                                      0.000     0.000 r  <hidden>
+    H16                                               0.000     0.000 r  clk
+                         net (fo=0)                   0.000     0.000    clk
+    H16                  IBUF (Prop_ibuf_I_O)         1.457     1.457 r  clk_IBUF_inst/O
+                         net (fo=1, routed)           2.076     3.533    clk_IBUF
+    BUFGCTRL_X0Y16       BUFG (Prop_bufg_I_O)         0.101     3.634 r  clk_IBUF_BUFG_inst/O
+                         net (fo=35, routed)          1.735     5.369    sate_machine/tck/clk_IBUF_BUFG
+    SLICE_X42Y85         FDCE                                         r  sate_machine/tck/count_reg[0]/C
+  -------------------------------------------------------------------    -------------------
+    SLICE_X42Y85         FDCE (Prop_fdce_C_Q)         0.478     5.847 r  sate_machine/tck/count_reg[0]/Q
+                         net (fo=8, routed)           1.004     6.851    sate_machine/tck/ticks[0]
+    SLICE_X42Y84         LUT5 (Prop_lut5_I4_O)        0.301     7.152 r  sate_machine/tck/LED1_G_OBUF_inst_i_2/O
+                         net (fo=5, routed)           0.194     7.346    sate_machine/tck/count_reg[3]_0
+    SLICE_X42Y84         LUT4 (Prop_lut4_I1_O)        0.124     7.470 r  sate_machine/tck/LED1_G_OBUF_inst_i_1/O
+                         net (fo=1, routed)           2.594    10.064    LED1_G_OBUF
+    L14                  OBUF (Prop_obuf_I_O)         3.547    13.610 r  LED1_G_OBUF_inst/O
+                         net (fo=0)                   0.000    13.610    LED1_G
+    L14                                                               r  LED1_G
+  -------------------------------------------------------------------    -------------------
+
+Slack:                    inf
+  Source:                 sate_machine/tck/count_reg[3]/C
+                            (rising edge-triggered cell FDCE clocked by sys_clk_pin  {rise@0.000ns fall@5.000ns period=10.000ns})
+  Destination:            LED1_R
+                            (output port)
+  Path Group:             (none)
+  Path Type:              Max at Slow Process Corner
+  Data Path Delay:        8.022ns  (logic 4.312ns (53.755%)  route 3.710ns (46.245%))
+  Logic Levels:           2  (LUT6=1 OBUF=1)
+  Clock Uncertainty:      0.025ns  ((TSJ^2 + TIJ^2)^1/2 + DJ) / 2 + PE
+    Total System Jitter     (TSJ):    0.050ns
+    Total Input Jitter      (TIJ):    0.000ns
+    Discrete Jitter          (DJ):    0.000ns
+    Phase Error              (PE):    0.000ns
+
+    Location             Delay type                Incr(ns)  Path(ns)    Netlist Resource(s)
+  -------------------------------------------------------------------    -------------------
+                         (clock sys_clk_pin rise edge)
+                                                      0.000     0.000 r  <hidden>
+    H16                                               0.000     0.000 r  clk
+                         net (fo=0)                   0.000     0.000    clk
+    H16                  IBUF (Prop_ibuf_I_O)         1.457     1.457 r  clk_IBUF_inst/O
+                         net (fo=1, routed)           2.076     3.533    clk_IBUF
+    BUFGCTRL_X0Y16       BUFG (Prop_bufg_I_O)         0.101     3.634 r  clk_IBUF_BUFG_inst/O
+                         net (fo=35, routed)          1.735     5.369    sate_machine/tck/clk_IBUF_BUFG
+    SLICE_X42Y85         FDCE                                         r  sate_machine/tck/count_reg[3]/C
+  -------------------------------------------------------------------    -------------------
+    SLICE_X42Y85         FDCE (Prop_fdce_C_Q)         0.478     5.847 r  sate_machine/tck/count_reg[3]/Q
+                         net (fo=7, routed)           0.844     6.691    sate_machine/tck/ticks[3]
+    SLICE_X42Y84         LUT6 (Prop_lut6_I2_O)        0.295     6.986 r  sate_machine/tck/LED1_R_OBUF_inst_i_1/O
+                         net (fo=1, routed)           2.866     9.852    LED1_R_OBUF
+    M15                  OBUF (Prop_obuf_I_O)         3.539    13.391 r  LED1_R_OBUF_inst/O
+                         net (fo=0)                   0.000    13.391    LED1_R
+    M15                                                               r  LED1_R
+  -------------------------------------------------------------------    -------------------
+
+Slack:                    inf
+  Source:                 sate_machine/tck/count_reg[0]/C
+                            (rising edge-triggered cell FDCE clocked by sys_clk_pin  {rise@0.000ns fall@5.000ns period=10.000ns})
+  Destination:            LED1_B
+                            (output port)
+  Path Group:             (none)
+  Path Type:              Max at Slow Process Corner
+  Data Path Delay:        7.382ns  (logic 4.264ns (57.772%)  route 3.117ns (42.228%))
+  Logic Levels:           2  (LUT6=1 OBUF=1)
+  Clock Uncertainty:      0.025ns  ((TSJ^2 + TIJ^2)^1/2 + DJ) / 2 + PE
+    Total System Jitter     (TSJ):    0.050ns
+    Total Input Jitter      (TIJ):    0.000ns
+    Discrete Jitter          (DJ):    0.000ns
+    Phase Error              (PE):    0.000ns
+
+    Location             Delay type                Incr(ns)  Path(ns)    Netlist Resource(s)
+  -------------------------------------------------------------------    -------------------
+                         (clock sys_clk_pin rise edge)
+                                                      0.000     0.000 r  <hidden>
+    H16                                               0.000     0.000 r  clk
+                         net (fo=0)                   0.000     0.000    clk
+    H16                  IBUF (Prop_ibuf_I_O)         1.457     1.457 r  clk_IBUF_inst/O
+                         net (fo=1, routed)           2.076     3.533    clk_IBUF
+    BUFGCTRL_X0Y16       BUFG (Prop_bufg_I_O)         0.101     3.634 r  clk_IBUF_BUFG_inst/O
+                         net (fo=35, routed)          1.735     5.369    sate_machine/tck/clk_IBUF_BUFG
+    SLICE_X42Y85         FDCE                                         r  sate_machine/tck/count_reg[0]/C
+  -------------------------------------------------------------------    -------------------
+    SLICE_X42Y85         FDCE (Prop_fdce_C_Q)         0.478     5.847 f  sate_machine/tck/count_reg[0]/Q
+                         net (fo=8, routed)           1.001     6.848    sate_machine/tck/ticks[0]
+    SLICE_X42Y85         LUT6 (Prop_lut6_I0_O)        0.301     7.149 r  sate_machine/tck/LED1_B_OBUF_inst_i_1/O
+                         net (fo=1, routed)           2.116     9.265    LED1_B_OBUF
+    G14                  OBUF (Prop_obuf_I_O)         3.485    12.751 r  LED1_B_OBUF_inst/O
+                         net (fo=0)                   0.000    12.751    LED1_B
+    G14                                                               r  LED1_B
+  -------------------------------------------------------------------    -------------------
+
+
+
+
+
+Min Delay Paths
+--------------------------------------------------------------------------------------
+Slack:                    inf
+  Source:                 sate_machine/FSM_sequential_curr_state_reg[0]/C
+                            (rising edge-triggered cell FDCE clocked by sys_clk_pin  {rise@0.000ns fall@5.000ns period=10.000ns})
+  Destination:            LED1_B
+                            (output port)
+  Path Group:             (none)
+  Path Type:              Min at Fast Process Corner
+  Data Path Delay:        2.111ns  (logic 1.396ns (66.132%)  route 0.715ns (33.868%))
+  Logic Levels:           2  (LUT6=1 OBUF=1)
+  Clock Uncertainty:      0.025ns  ((TSJ^2 + TIJ^2)^1/2 + DJ) / 2 + PE
+    Total System Jitter     (TSJ):    0.050ns
+    Total Input Jitter      (TIJ):    0.000ns
+    Discrete Jitter          (DJ):    0.000ns
+    Phase Error              (PE):    0.000ns
+
+    Location             Delay type                Incr(ns)  Path(ns)    Netlist Resource(s)
+  -------------------------------------------------------------------    -------------------
+                         (clock sys_clk_pin rise edge)
+                                                      0.000     0.000 r  <hidden>
+    H16                                               0.000     0.000 r  clk
+                         net (fo=0)                   0.000     0.000    clk
+    H16                  IBUF (Prop_ibuf_I_O)         0.225     0.225 r  clk_IBUF_inst/O
+                         net (fo=1, routed)           0.627     0.852    clk_IBUF
+    BUFGCTRL_X0Y16       BUFG (Prop_bufg_I_O)         0.026     0.878 r  clk_IBUF_BUFG_inst/O
+                         net (fo=35, routed)          0.584     1.462    sate_machine/clk_IBUF_BUFG
+    SLICE_X42Y84         FDCE                                         r  sate_machine/FSM_sequential_curr_state_reg[0]/C
+  -------------------------------------------------------------------    -------------------
+    SLICE_X42Y84         FDCE (Prop_fdce_C_Q)         0.164     1.626 f  sate_machine/FSM_sequential_curr_state_reg[0]/Q
+                         net (fo=4, routed)           0.186     1.812    sate_machine/tck/curr_state[0]
+    SLICE_X42Y85         LUT6 (Prop_lut6_I5_O)        0.045     1.857 r  sate_machine/tck/LED1_B_OBUF_inst_i_1/O
+                         net (fo=1, routed)           0.529     2.386    LED1_B_OBUF
+    G14                  OBUF (Prop_obuf_I_O)         1.187     3.573 r  LED1_B_OBUF_inst/O
+                         net (fo=0)                   0.000     3.573    LED1_B
+    G14                                                               r  LED1_B
+  -------------------------------------------------------------------    -------------------
+
+Slack:                    inf
+  Source:                 sate_machine/FSM_sequential_curr_state_reg[1]/C
+                            (rising edge-triggered cell FDCE clocked by sys_clk_pin  {rise@0.000ns fall@5.000ns period=10.000ns})
+  Destination:            LED1_G
+                            (output port)
+  Path Group:             (none)
+  Path Type:              Min at Fast Process Corner
+  Data Path Delay:        2.412ns  (logic 1.493ns (61.916%)  route 0.918ns (38.084%))
+  Logic Levels:           2  (LUT4=1 OBUF=1)
+  Clock Uncertainty:      0.025ns  ((TSJ^2 + TIJ^2)^1/2 + DJ) / 2 + PE
+    Total System Jitter     (TSJ):    0.050ns
+    Total Input Jitter      (TIJ):    0.000ns
+    Discrete Jitter          (DJ):    0.000ns
+    Phase Error              (PE):    0.000ns
+
+    Location             Delay type                Incr(ns)  Path(ns)    Netlist Resource(s)
+  -------------------------------------------------------------------    -------------------
+                         (clock sys_clk_pin rise edge)
+                                                      0.000     0.000 r  <hidden>
+    H16                                               0.000     0.000 r  clk
+                         net (fo=0)                   0.000     0.000    clk
+    H16                  IBUF (Prop_ibuf_I_O)         0.225     0.225 r  clk_IBUF_inst/O
+                         net (fo=1, routed)           0.627     0.852    clk_IBUF
+    BUFGCTRL_X0Y16       BUFG (Prop_bufg_I_O)         0.026     0.878 r  clk_IBUF_BUFG_inst/O
+                         net (fo=35, routed)          0.584     1.462    sate_machine/clk_IBUF_BUFG
+    SLICE_X42Y84         FDCE                                         r  sate_machine/FSM_sequential_curr_state_reg[1]/C
+  -------------------------------------------------------------------    -------------------
+    SLICE_X42Y84         FDCE (Prop_fdce_C_Q)         0.148     1.610 r  sate_machine/FSM_sequential_curr_state_reg[1]/Q
+                         net (fo=4, routed)           0.154     1.764    sate_machine/tck/curr_state[1]
+    SLICE_X42Y84         LUT4 (Prop_lut4_I3_O)        0.098     1.862 r  sate_machine/tck/LED1_G_OBUF_inst_i_1/O
+                         net (fo=1, routed)           0.765     2.627    LED1_G_OBUF
+    L14                  OBUF (Prop_obuf_I_O)         1.247     3.874 r  LED1_G_OBUF_inst/O
+                         net (fo=0)                   0.000     3.874    LED1_G
+    L14                                                               r  LED1_G
+  -------------------------------------------------------------------    -------------------
+
+Slack:                    inf
+  Source:                 sate_machine/tck/count_reg[1]/C
+                            (rising edge-triggered cell FDCE clocked by sys_clk_pin  {rise@0.000ns fall@5.000ns period=10.000ns})
+  Destination:            LED1_R
+                            (output port)
+  Path Group:             (none)
+  Path Type:              Min at Fast Process Corner
+  Data Path Delay:        2.456ns  (logic 1.449ns (58.990%)  route 1.007ns (41.010%))
+  Logic Levels:           2  (LUT6=1 OBUF=1)
+  Clock Uncertainty:      0.025ns  ((TSJ^2 + TIJ^2)^1/2 + DJ) / 2 + PE
+    Total System Jitter     (TSJ):    0.050ns
+    Total Input Jitter      (TIJ):    0.000ns
+    Discrete Jitter          (DJ):    0.000ns
+    Phase Error              (PE):    0.000ns
+
+    Location             Delay type                Incr(ns)  Path(ns)    Netlist Resource(s)
+  -------------------------------------------------------------------    -------------------
+                         (clock sys_clk_pin rise edge)
+                                                      0.000     0.000 r  <hidden>
+    H16                                               0.000     0.000 r  clk
+                         net (fo=0)                   0.000     0.000    clk
+    H16                  IBUF (Prop_ibuf_I_O)         0.225     0.225 r  clk_IBUF_inst/O
+                         net (fo=1, routed)           0.627     0.852    clk_IBUF
+    BUFGCTRL_X0Y16       BUFG (Prop_bufg_I_O)         0.026     0.878 r  clk_IBUF_BUFG_inst/O
+                         net (fo=35, routed)          0.584     1.462    sate_machine/tck/clk_IBUF_BUFG
+    SLICE_X42Y85         FDCE                                         r  sate_machine/tck/count_reg[1]/C
+  -------------------------------------------------------------------    -------------------
+    SLICE_X42Y85         FDCE (Prop_fdce_C_Q)         0.164     1.626 f  sate_machine/tck/count_reg[1]/Q
+                         net (fo=7, routed)           0.150     1.776    sate_machine/tck/ticks[1]
+    SLICE_X42Y84         LUT6 (Prop_lut6_I4_O)        0.045     1.821 r  sate_machine/tck/LED1_R_OBUF_inst_i_1/O
+                         net (fo=1, routed)           0.857     2.678    LED1_R_OBUF
+    M15                  OBUF (Prop_obuf_I_O)         1.240     3.918 r  LED1_R_OBUF_inst/O
+                         net (fo=0)                   0.000     3.918    LED1_R
+    M15                                                               r  LED1_R
+  -------------------------------------------------------------------    -------------------
+
+
+
+
+
+--------------------------------------------------------------------------------------
+Path Group:  (none)
+From Clock:
+  To Clock:  sys_clk_pin
+
+Max Delay            46 Endpoints
+Min Delay            46 Endpoints
+--------------------------------------------------------------------------------------
+
+
+Max Delay Paths
+--------------------------------------------------------------------------------------
+Slack:                    inf
+  Source:                 BTN1
+                            (input port)
+  Destination:            sate_machine/tck/count_reg[0]/CE
+                            (rising edge-triggered cell FDCE clocked by sys_clk_pin  {rise@0.000ns fall@5.000ns period=10.000ns})
+  Path Group:             (none)
+  Path Type:              Setup (Max at Slow Process Corner)
+  Data Path Delay:        4.579ns  (logic 1.749ns (38.199%)  route 2.830ns (61.801%))
+  Logic Levels:           3  (IBUF=1 LUT5=2)
+  Clock Path Skew:        4.916ns (DCD - SCD + CPR)
+    Destination Clock Delay (DCD):    4.916ns
+    Source Clock Delay      (SCD):    0.000ns
+    Clock Pessimism Removal (CPR):    0.000ns
+  Clock Uncertainty:      0.025ns  ((TSJ^2 + TIJ^2)^1/2 + DJ) / 2 + PE
+    Total System Jitter     (TSJ):    0.050ns
+    Total Input Jitter      (TIJ):    0.000ns
+    Discrete Jitter          (DJ):    0.000ns
+    Phase Error              (PE):    0.000ns
+
+    Location             Delay type                Incr(ns)  Path(ns)    Netlist Resource(s)
+  -------------------------------------------------------------------    -------------------
+    D19                                               0.000     0.000 r  BTN1
+                         net (fo=0)                   0.000     0.000    BTN1
+    D19                  IBUF (Prop_ibuf_I_O)         1.477     1.477 r  BTN1_IBUF_inst/O
+                         net (fo=9, routed)           1.476     2.953    sate_machine/tck/BTN1_IBUF
+    SLICE_X42Y84         LUT5 (Prop_lut5_I0_O)        0.124     3.077 f  sate_machine/tck/LED1_G_OBUF_inst_i_2/O
+                         net (fo=5, routed)           0.876     3.953    sate_machine/cu/ticks_ce_reg_0
+    SLICE_X42Y82         LUT5 (Prop_lut5_I4_O)        0.148     4.101 r  sate_machine/cu/count[3]_i_1/O
+                         net (fo=4, routed)           0.478     4.579    sate_machine/tck/E[0]
+    SLICE_X42Y85         FDCE                                         r  sate_machine/tck/count_reg[0]/CE
+  -------------------------------------------------------------------    -------------------
+
+                         (clock sys_clk_pin rise edge)
+                                                      0.000     0.000 r  <hidden>
+    H16                                               0.000     0.000 r  clk
+                         net (fo=0)                   0.000     0.000    clk
+    H16                  IBUF (Prop_ibuf_I_O)         1.387     1.387 r  clk_IBUF_inst/O
+                         net (fo=1, routed)           1.880     3.267    clk_IBUF
+    BUFGCTRL_X0Y16       BUFG (Prop_bufg_I_O)         0.091     3.358 r  clk_IBUF_BUFG_inst/O
+                         net (fo=35, routed)          1.558     4.916    sate_machine/tck/clk_IBUF_BUFG
+    SLICE_X42Y85         FDCE                                         r  sate_machine/tck/count_reg[0]/C
+
+Slack:                    inf
+  Source:                 BTN1
+                            (input port)
+  Destination:            sate_machine/tck/count_reg[1]/CE
+                            (rising edge-triggered cell FDCE clocked by sys_clk_pin  {rise@0.000ns fall@5.000ns period=10.000ns})
+  Path Group:             (none)
+  Path Type:              Setup (Max at Slow Process Corner)
+  Data Path Delay:        4.579ns  (logic 1.749ns (38.199%)  route 2.830ns (61.801%))
+  Logic Levels:           3  (IBUF=1 LUT5=2)
+  Clock Path Skew:        4.916ns (DCD - SCD + CPR)
+    Destination Clock Delay (DCD):    4.916ns
+    Source Clock Delay      (SCD):    0.000ns
+    Clock Pessimism Removal (CPR):    0.000ns
+  Clock Uncertainty:      0.025ns  ((TSJ^2 + TIJ^2)^1/2 + DJ) / 2 + PE
+    Total System Jitter     (TSJ):    0.050ns
+    Total Input Jitter      (TIJ):    0.000ns
+    Discrete Jitter          (DJ):    0.000ns
+    Phase Error              (PE):    0.000ns
+
+    Location             Delay type                Incr(ns)  Path(ns)    Netlist Resource(s)
+  -------------------------------------------------------------------    -------------------
+    D19                                               0.000     0.000 r  BTN1
+                         net (fo=0)                   0.000     0.000    BTN1
+    D19                  IBUF (Prop_ibuf_I_O)         1.477     1.477 r  BTN1_IBUF_inst/O
+                         net (fo=9, routed)           1.476     2.953    sate_machine/tck/BTN1_IBUF
+    SLICE_X42Y84         LUT5 (Prop_lut5_I0_O)        0.124     3.077 f  sate_machine/tck/LED1_G_OBUF_inst_i_2/O
+                         net (fo=5, routed)           0.876     3.953    sate_machine/cu/ticks_ce_reg_0
+    SLICE_X42Y82         LUT5 (Prop_lut5_I4_O)        0.148     4.101 r  sate_machine/cu/count[3]_i_1/O
+                         net (fo=4, routed)           0.478     4.579    sate_machine/tck/E[0]
+    SLICE_X42Y85         FDCE                                         r  sate_machine/tck/count_reg[1]/CE
+  -------------------------------------------------------------------    -------------------
+
+                         (clock sys_clk_pin rise edge)
+                                                      0.000     0.000 r  <hidden>
+    H16                                               0.000     0.000 r  clk
+                         net (fo=0)                   0.000     0.000    clk
+    H16                  IBUF (Prop_ibuf_I_O)         1.387     1.387 r  clk_IBUF_inst/O
+                         net (fo=1, routed)           1.880     3.267    clk_IBUF
+    BUFGCTRL_X0Y16       BUFG (Prop_bufg_I_O)         0.091     3.358 r  clk_IBUF_BUFG_inst/O
+                         net (fo=35, routed)          1.558     4.916    sate_machine/tck/clk_IBUF_BUFG
+    SLICE_X42Y85         FDCE                                         r  sate_machine/tck/count_reg[1]/C
+
+Slack:                    inf
+  Source:                 BTN1
+                            (input port)
+  Destination:            sate_machine/tck/count_reg[2]/CE
+                            (rising edge-triggered cell FDCE clocked by sys_clk_pin  {rise@0.000ns fall@5.000ns period=10.000ns})
+  Path Group:             (none)
+  Path Type:              Setup (Max at Slow Process Corner)
+  Data Path Delay:        4.579ns  (logic 1.749ns (38.199%)  route 2.830ns (61.801%))
+  Logic Levels:           3  (IBUF=1 LUT5=2)
+  Clock Path Skew:        4.916ns (DCD - SCD + CPR)
+    Destination Clock Delay (DCD):    4.916ns
+    Source Clock Delay      (SCD):    0.000ns
+    Clock Pessimism Removal (CPR):    0.000ns
+  Clock Uncertainty:      0.025ns  ((TSJ^2 + TIJ^2)^1/2 + DJ) / 2 + PE
+    Total System Jitter     (TSJ):    0.050ns
+    Total Input Jitter      (TIJ):    0.000ns
+    Discrete Jitter          (DJ):    0.000ns
+    Phase Error              (PE):    0.000ns
+
+    Location             Delay type                Incr(ns)  Path(ns)    Netlist Resource(s)
+  -------------------------------------------------------------------    -------------------
+    D19                                               0.000     0.000 r  BTN1
+                         net (fo=0)                   0.000     0.000    BTN1
+    D19                  IBUF (Prop_ibuf_I_O)         1.477     1.477 r  BTN1_IBUF_inst/O
+                         net (fo=9, routed)           1.476     2.953    sate_machine/tck/BTN1_IBUF
+    SLICE_X42Y84         LUT5 (Prop_lut5_I0_O)        0.124     3.077 f  sate_machine/tck/LED1_G_OBUF_inst_i_2/O
+                         net (fo=5, routed)           0.876     3.953    sate_machine/cu/ticks_ce_reg_0
+    SLICE_X42Y82         LUT5 (Prop_lut5_I4_O)        0.148     4.101 r  sate_machine/cu/count[3]_i_1/O
+                         net (fo=4, routed)           0.478     4.579    sate_machine/tck/E[0]
+    SLICE_X42Y85         FDCE                                         r  sate_machine/tck/count_reg[2]/CE
+  -------------------------------------------------------------------    -------------------
+
+                         (clock sys_clk_pin rise edge)
+                                                      0.000     0.000 r  <hidden>
+    H16                                               0.000     0.000 r  clk
+                         net (fo=0)                   0.000     0.000    clk
+    H16                  IBUF (Prop_ibuf_I_O)         1.387     1.387 r  clk_IBUF_inst/O
+                         net (fo=1, routed)           1.880     3.267    clk_IBUF
+    BUFGCTRL_X0Y16       BUFG (Prop_bufg_I_O)         0.091     3.358 r  clk_IBUF_BUFG_inst/O
+                         net (fo=35, routed)          1.558     4.916    sate_machine/tck/clk_IBUF_BUFG
+    SLICE_X42Y85         FDCE                                         r  sate_machine/tck/count_reg[2]/C
+
+Slack:                    inf
+  Source:                 BTN1
+                            (input port)
+  Destination:            sate_machine/tck/count_reg[3]/CE
+                            (rising edge-triggered cell FDCE clocked by sys_clk_pin  {rise@0.000ns fall@5.000ns period=10.000ns})
+  Path Group:             (none)
+  Path Type:              Setup (Max at Slow Process Corner)
+  Data Path Delay:        4.579ns  (logic 1.749ns (38.199%)  route 2.830ns (61.801%))
+  Logic Levels:           3  (IBUF=1 LUT5=2)
+  Clock Path Skew:        4.916ns (DCD - SCD + CPR)
+    Destination Clock Delay (DCD):    4.916ns
+    Source Clock Delay      (SCD):    0.000ns
+    Clock Pessimism Removal (CPR):    0.000ns
+  Clock Uncertainty:      0.025ns  ((TSJ^2 + TIJ^2)^1/2 + DJ) / 2 + PE
+    Total System Jitter     (TSJ):    0.050ns
+    Total Input Jitter      (TIJ):    0.000ns
+    Discrete Jitter          (DJ):    0.000ns
+    Phase Error              (PE):    0.000ns
+
+    Location             Delay type                Incr(ns)  Path(ns)    Netlist Resource(s)
+  -------------------------------------------------------------------    -------------------
+    D19                                               0.000     0.000 r  BTN1
+                         net (fo=0)                   0.000     0.000    BTN1
+    D19                  IBUF (Prop_ibuf_I_O)         1.477     1.477 r  BTN1_IBUF_inst/O
+                         net (fo=9, routed)           1.476     2.953    sate_machine/tck/BTN1_IBUF
+    SLICE_X42Y84         LUT5 (Prop_lut5_I0_O)        0.124     3.077 f  sate_machine/tck/LED1_G_OBUF_inst_i_2/O
+                         net (fo=5, routed)           0.876     3.953    sate_machine/cu/ticks_ce_reg_0
+    SLICE_X42Y82         LUT5 (Prop_lut5_I4_O)        0.148     4.101 r  sate_machine/cu/count[3]_i_1/O
+                         net (fo=4, routed)           0.478     4.579    sate_machine/tck/E[0]
+    SLICE_X42Y85         FDCE                                         r  sate_machine/tck/count_reg[3]/CE
+  -------------------------------------------------------------------    -------------------
+
+                         (clock sys_clk_pin rise edge)
+                                                      0.000     0.000 r  <hidden>
+    H16                                               0.000     0.000 r  clk
+                         net (fo=0)                   0.000     0.000    clk
+    H16                  IBUF (Prop_ibuf_I_O)         1.387     1.387 r  clk_IBUF_inst/O
+                         net (fo=1, routed)           1.880     3.267    clk_IBUF
+    BUFGCTRL_X0Y16       BUFG (Prop_bufg_I_O)         0.091     3.358 r  clk_IBUF_BUFG_inst/O
+                         net (fo=35, routed)          1.558     4.916    sate_machine/tck/clk_IBUF_BUFG
+    SLICE_X42Y85         FDCE                                         r  sate_machine/tck/count_reg[3]/C
+
+Slack:                    inf
+  Source:                 BTN1
+                            (input port)
+  Destination:            sate_machine/tck/ticks_ce_reg/D
+                            (rising edge-triggered cell FDCE clocked by sys_clk_pin  {rise@0.000ns fall@5.000ns period=10.000ns})
+  Path Group:             (none)
+  Path Type:              Setup (Max at Slow Process Corner)
+  Data Path Delay:        4.077ns  (logic 1.725ns (42.309%)  route 2.352ns (57.691%))
+  Logic Levels:           3  (IBUF=1 LUT5=2)
+  Clock Path Skew:        4.913ns (DCD - SCD + CPR)
+    Destination Clock Delay (DCD):    4.913ns
+    Source Clock Delay      (SCD):    0.000ns
+    Clock Pessimism Removal (CPR):    0.000ns
+  Clock Uncertainty:      0.025ns  ((TSJ^2 + TIJ^2)^1/2 + DJ) / 2 + PE
+    Total System Jitter     (TSJ):    0.050ns
+    Total Input Jitter      (TIJ):    0.000ns
+    Discrete Jitter          (DJ):    0.000ns
+    Phase Error              (PE):    0.000ns
+
+    Location             Delay type                Incr(ns)  Path(ns)    Netlist Resource(s)
+  -------------------------------------------------------------------    -------------------
+    D19                                               0.000     0.000 f  BTN1
+                         net (fo=0)                   0.000     0.000    BTN1
+    D19                  IBUF (Prop_ibuf_I_O)         1.477     1.477 f  BTN1_IBUF_inst/O
+                         net (fo=9, routed)           1.476     2.953    sate_machine/tck/BTN1_IBUF
+    SLICE_X42Y84         LUT5 (Prop_lut5_I0_O)        0.124     3.077 r  sate_machine/tck/LED1_G_OBUF_inst_i_2/O
+                         net (fo=5, routed)           0.876     3.953    sate_machine/cu/ticks_ce_reg_0
+    SLICE_X42Y82         LUT5 (Prop_lut5_I3_O)        0.124     4.077 r  sate_machine/cu/ticks_ce_i_1/O
+                         net (fo=1, routed)           0.000     4.077    sate_machine/tck/ticks_ce_reg_1
+    SLICE_X42Y82         FDCE                                         r  sate_machine/tck/ticks_ce_reg/D
+  -------------------------------------------------------------------    -------------------
+
+                         (clock sys_clk_pin rise edge)
+                                                      0.000     0.000 r  <hidden>
+    H16                                               0.000     0.000 r  clk
+                         net (fo=0)                   0.000     0.000    clk
+    H16                  IBUF (Prop_ibuf_I_O)         1.387     1.387 r  clk_IBUF_inst/O
+                         net (fo=1, routed)           1.880     3.267    clk_IBUF
+    BUFGCTRL_X0Y16       BUFG (Prop_bufg_I_O)         0.091     3.358 r  clk_IBUF_BUFG_inst/O
+                         net (fo=35, routed)          1.555     4.913    sate_machine/tck/clk_IBUF_BUFG
+    SLICE_X42Y82         FDCE                                         r  sate_machine/tck/ticks_ce_reg/C
+
+Slack:                    inf
+  Source:                 BTN1
+                            (input port)
+  Destination:            sate_machine/FSM_sequential_curr_state_reg[1]/D
+                            (rising edge-triggered cell FDCE clocked by sys_clk_pin  {rise@0.000ns fall@5.000ns period=10.000ns})
+  Path Group:             (none)
+  Path Type:              Setup (Max at Slow Process Corner)
+  Data Path Delay:        3.702ns  (logic 1.751ns (47.304%)  route 1.951ns (52.696%))
+  Logic Levels:           3  (IBUF=1 LUT4=1 LUT5=1)
+  Clock Path Skew:        4.915ns (DCD - SCD + CPR)
+    Destination Clock Delay (DCD):    4.915ns
+    Source Clock Delay      (SCD):    0.000ns
+    Clock Pessimism Removal (CPR):    0.000ns
+  Clock Uncertainty:      0.025ns  ((TSJ^2 + TIJ^2)^1/2 + DJ) / 2 + PE
+    Total System Jitter     (TSJ):    0.050ns
+    Total Input Jitter      (TIJ):    0.000ns
+    Discrete Jitter          (DJ):    0.000ns
+    Phase Error              (PE):    0.000ns
+
+    Location             Delay type                Incr(ns)  Path(ns)    Netlist Resource(s)
+  -------------------------------------------------------------------    -------------------
+    D19                                               0.000     0.000 f  BTN1
+                         net (fo=0)                   0.000     0.000    BTN1
+    D19                  IBUF (Prop_ibuf_I_O)         1.477     1.477 f  BTN1_IBUF_inst/O
+                         net (fo=9, routed)           1.476     2.953    sate_machine/tck/BTN1_IBUF
+    SLICE_X42Y84         LUT5 (Prop_lut5_I0_O)        0.124     3.077 r  sate_machine/tck/LED1_G_OBUF_inst_i_2/O
+                         net (fo=5, routed)           0.475     3.552    sate_machine/tck/count_reg[3]_0
+    SLICE_X42Y84         LUT4 (Prop_lut4_I2_O)        0.150     3.702 r  sate_machine/tck/FSM_sequential_curr_state[1]_i_1/O
+                         net (fo=1, routed)           0.000     3.702    sate_machine/tck_n_2
+    SLICE_X42Y84         FDCE                                         r  sate_machine/FSM_sequential_curr_state_reg[1]/D
+  -------------------------------------------------------------------    -------------------
+
+                         (clock sys_clk_pin rise edge)
+                                                      0.000     0.000 r  <hidden>
+    H16                                               0.000     0.000 r  clk
+                         net (fo=0)                   0.000     0.000    clk
+    H16                  IBUF (Prop_ibuf_I_O)         1.387     1.387 r  clk_IBUF_inst/O
+                         net (fo=1, routed)           1.880     3.267    clk_IBUF
+    BUFGCTRL_X0Y16       BUFG (Prop_bufg_I_O)         0.091     3.358 r  clk_IBUF_BUFG_inst/O
+                         net (fo=35, routed)          1.557     4.915    sate_machine/clk_IBUF_BUFG
+    SLICE_X42Y84         FDCE                                         r  sate_machine/FSM_sequential_curr_state_reg[1]/C
+
+Slack:                    inf
+  Source:                 BTN1
+                            (input port)
+  Destination:            sate_machine/FSM_sequential_curr_state_reg[0]/D
+                            (rising edge-triggered cell FDCE clocked by sys_clk_pin  {rise@0.000ns fall@5.000ns period=10.000ns})
+  Path Group:             (none)
+  Path Type:              Setup (Max at Slow Process Corner)
+  Data Path Delay:        3.676ns  (logic 1.725ns (46.931%)  route 1.951ns (53.069%))
+  Logic Levels:           3  (IBUF=1 LUT4=1 LUT5=1)
+  Clock Path Skew:        4.915ns (DCD - SCD + CPR)
+    Destination Clock Delay (DCD):    4.915ns
+    Source Clock Delay      (SCD):    0.000ns
+    Clock Pessimism Removal (CPR):    0.000ns
+  Clock Uncertainty:      0.025ns  ((TSJ^2 + TIJ^2)^1/2 + DJ) / 2 + PE
+    Total System Jitter     (TSJ):    0.050ns
+    Total Input Jitter      (TIJ):    0.000ns
+    Discrete Jitter          (DJ):    0.000ns
+    Phase Error              (PE):    0.000ns
+
+    Location             Delay type                Incr(ns)  Path(ns)    Netlist Resource(s)
+  -------------------------------------------------------------------    -------------------
+    D19                                               0.000     0.000 f  BTN1
+                         net (fo=0)                   0.000     0.000    BTN1
+    D19                  IBUF (Prop_ibuf_I_O)         1.477     1.477 f  BTN1_IBUF_inst/O
+                         net (fo=9, routed)           1.476     2.953    sate_machine/tck/BTN1_IBUF
+    SLICE_X42Y84         LUT5 (Prop_lut5_I0_O)        0.124     3.077 r  sate_machine/tck/LED1_G_OBUF_inst_i_2/O
+                         net (fo=5, routed)           0.475     3.552    sate_machine/tck/count_reg[3]_0
+    SLICE_X42Y84         LUT4 (Prop_lut4_I2_O)        0.124     3.676 r  sate_machine/tck/FSM_sequential_curr_state[0]_i_1/O
+                         net (fo=1, routed)           0.000     3.676    sate_machine/tck_n_3
+    SLICE_X42Y84         FDCE                                         r  sate_machine/FSM_sequential_curr_state_reg[0]/D
+  -------------------------------------------------------------------    -------------------
+
+                         (clock sys_clk_pin rise edge)
+                                                      0.000     0.000 r  <hidden>
+    H16                                               0.000     0.000 r  clk
+                         net (fo=0)                   0.000     0.000    clk
+    H16                  IBUF (Prop_ibuf_I_O)         1.387     1.387 r  clk_IBUF_inst/O
+                         net (fo=1, routed)           1.880     3.267    clk_IBUF
+    BUFGCTRL_X0Y16       BUFG (Prop_bufg_I_O)         0.091     3.358 r  clk_IBUF_BUFG_inst/O
+                         net (fo=35, routed)          1.557     4.915    sate_machine/clk_IBUF_BUFG
+    SLICE_X42Y84         FDCE                                         r  sate_machine/FSM_sequential_curr_state_reg[0]/C
+
+Slack:                    inf
+  Source:                 BTN1
+                            (input port)
+  Destination:            sate_machine/tck/count_reg[0]/D
+                            (rising edge-triggered cell FDCE clocked by sys_clk_pin  {rise@0.000ns fall@5.000ns period=10.000ns})
+  Path Group:             (none)
+  Path Type:              Setup (Max at Slow Process Corner)
+  Data Path Delay:        3.627ns  (logic 1.627ns (44.859%)  route 2.000ns (55.141%))
+  Logic Levels:           2  (IBUF=1 LUT5=1)
+  Clock Path Skew:        4.916ns (DCD - SCD + CPR)
+    Destination Clock Delay (DCD):    4.916ns
+    Source Clock Delay      (SCD):    0.000ns
+    Clock Pessimism Removal (CPR):    0.000ns
+  Clock Uncertainty:      0.025ns  ((TSJ^2 + TIJ^2)^1/2 + DJ) / 2 + PE
+    Total System Jitter     (TSJ):    0.050ns
+    Total Input Jitter      (TIJ):    0.000ns
+    Discrete Jitter          (DJ):    0.000ns
+    Phase Error              (PE):    0.000ns
+
+    Location             Delay type                Incr(ns)  Path(ns)    Netlist Resource(s)
+  -------------------------------------------------------------------    -------------------
+    D19                                               0.000     0.000 f  BTN1
+                         net (fo=0)                   0.000     0.000    BTN1
+    D19                  IBUF (Prop_ibuf_I_O)         1.477     1.477 f  BTN1_IBUF_inst/O
+                         net (fo=9, routed)           1.476     2.953    sate_machine/tck/BTN1_IBUF
+    SLICE_X42Y84         LUT5 (Prop_lut5_I3_O)        0.150     3.103 r  sate_machine/tck/count[0]_i_1/O
+                         net (fo=1, routed)           0.524     3.627    sate_machine/tck/count[0]_i_1_n_0
+    SLICE_X42Y85         FDCE                                         r  sate_machine/tck/count_reg[0]/D
+  -------------------------------------------------------------------    -------------------
+
+                         (clock sys_clk_pin rise edge)
+                                                      0.000     0.000 r  <hidden>
+    H16                                               0.000     0.000 r  clk
+                         net (fo=0)                   0.000     0.000    clk
+    H16                  IBUF (Prop_ibuf_I_O)         1.387     1.387 r  clk_IBUF_inst/O
+                         net (fo=1, routed)           1.880     3.267    clk_IBUF
+    BUFGCTRL_X0Y16       BUFG (Prop_bufg_I_O)         0.091     3.358 r  clk_IBUF_BUFG_inst/O
+                         net (fo=35, routed)          1.558     4.916    sate_machine/tck/clk_IBUF_BUFG
+    SLICE_X42Y85         FDCE                                         r  sate_machine/tck/count_reg[0]/C
+
+Slack:                    inf
+  Source:                 BTN0
+                            (input port)
+  Destination:            sate_machine/cu/count_reg[0]/CLR
+                            (recovery check against rising-edge clock sys_clk_pin  {rise@0.000ns fall@5.000ns period=10.000ns})
+  Path Group:             (none)
+  Path Type:              Recovery (Max at Slow Process Corner)
+  Data Path Delay:        3.412ns  (logic 1.475ns (43.232%)  route 1.937ns (56.768%))
+  Logic Levels:           1  (IBUF=1)
+  Clock Path Skew:        4.910ns (DCD - SCD + CPR)
+    Destination Clock Delay (DCD):    4.910ns
+    Source Clock Delay      (SCD):    0.000ns
+    Clock Pessimism Removal (CPR):    0.000ns
+  Clock Uncertainty:      0.025ns  ((TSJ^2 + TIJ^2)^1/2 + DJ) / 2 + PE
+    Total System Jitter     (TSJ):    0.050ns
+    Total Input Jitter      (TIJ):    0.000ns
+    Discrete Jitter          (DJ):    0.000ns
+    Phase Error              (PE):    0.000ns
+
+    Location             Delay type                Incr(ns)  Path(ns)    Netlist Resource(s)
+  -------------------------------------------------------------------    -------------------
+    D20                                               0.000     0.000 f  BTN0
+                         net (fo=0)                   0.000     0.000    BTN0
+    D20                  IBUF (Prop_ibuf_I_O)         1.475     1.475 f  BTN0_IBUF_inst/O
+                         net (fo=35, routed)          1.937     3.412    sate_machine/cu/BTN0_IBUF
+    SLICE_X43Y79         FDCE                                         f  sate_machine/cu/count_reg[0]/CLR
+  -------------------------------------------------------------------    -------------------
+
+                         (clock sys_clk_pin rise edge)
+                                                      0.000     0.000 r  <hidden>
+    H16                                               0.000     0.000 r  clk
+                         net (fo=0)                   0.000     0.000    clk
+    H16                  IBUF (Prop_ibuf_I_O)         1.387     1.387 r  clk_IBUF_inst/O
+                         net (fo=1, routed)           1.880     3.267    clk_IBUF
+    BUFGCTRL_X0Y16       BUFG (Prop_bufg_I_O)         0.091     3.358 r  clk_IBUF_BUFG_inst/O
+                         net (fo=35, routed)          1.552     4.910    sate_machine/cu/clk_IBUF_BUFG
+    SLICE_X43Y79         FDCE                                         r  sate_machine/cu/count_reg[0]/C
+
+Slack:                    inf
+  Source:                 BTN0
+                            (input port)
+  Destination:            sate_machine/cu/count_reg[1]/CLR
+                            (recovery check against rising-edge clock sys_clk_pin  {rise@0.000ns fall@5.000ns period=10.000ns})
+  Path Group:             (none)
+  Path Type:              Recovery (Max at Slow Process Corner)
+  Data Path Delay:        3.412ns  (logic 1.475ns (43.232%)  route 1.937ns (56.768%))
+  Logic Levels:           1  (IBUF=1)
+  Clock Path Skew:        4.910ns (DCD - SCD + CPR)
+    Destination Clock Delay (DCD):    4.910ns
+    Source Clock Delay      (SCD):    0.000ns
+    Clock Pessimism Removal (CPR):    0.000ns
+  Clock Uncertainty:      0.025ns  ((TSJ^2 + TIJ^2)^1/2 + DJ) / 2 + PE
+    Total System Jitter     (TSJ):    0.050ns
+    Total Input Jitter      (TIJ):    0.000ns
+    Discrete Jitter          (DJ):    0.000ns
+    Phase Error              (PE):    0.000ns
+
+    Location             Delay type                Incr(ns)  Path(ns)    Netlist Resource(s)
+  -------------------------------------------------------------------    -------------------
+    D20                                               0.000     0.000 f  BTN0
+                         net (fo=0)                   0.000     0.000    BTN0
+    D20                  IBUF (Prop_ibuf_I_O)         1.475     1.475 f  BTN0_IBUF_inst/O
+                         net (fo=35, routed)          1.937     3.412    sate_machine/cu/BTN0_IBUF
+    SLICE_X43Y79         FDCE                                         f  sate_machine/cu/count_reg[1]/CLR
+  -------------------------------------------------------------------    -------------------
+
+                         (clock sys_clk_pin rise edge)
+                                                      0.000     0.000 r  <hidden>
+    H16                                               0.000     0.000 r  clk
+                         net (fo=0)                   0.000     0.000    clk
+    H16                  IBUF (Prop_ibuf_I_O)         1.387     1.387 r  clk_IBUF_inst/O
+                         net (fo=1, routed)           1.880     3.267    clk_IBUF
+    BUFGCTRL_X0Y16       BUFG (Prop_bufg_I_O)         0.091     3.358 r  clk_IBUF_BUFG_inst/O
+                         net (fo=35, routed)          1.552     4.910    sate_machine/cu/clk_IBUF_BUFG
+    SLICE_X43Y79         FDCE                                         r  sate_machine/cu/count_reg[1]/C
+
+
+
+
+
+Min Delay Paths
+--------------------------------------------------------------------------------------
+Slack:                    inf
+  Source:                 BTN0
+                            (input port)
+  Destination:            sate_machine/FSM_sequential_curr_state_reg[0]/CLR
+                            (removal check against rising-edge clock sys_clk_pin  {rise@0.000ns fall@5.000ns period=10.000ns})
+  Path Group:             (none)
+  Path Type:              Removal (Min at Fast Process Corner)
+  Data Path Delay:        0.767ns  (logic 0.243ns (31.686%)  route 0.524ns (68.314%))
+  Logic Levels:           1  (IBUF=1)
+  Clock Path Skew:        1.977ns (DCD - SCD - CPR)
+    Destination Clock Delay (DCD):    1.977ns
+    Source Clock Delay      (SCD):    0.000ns
+    Clock Pessimism Removal (CPR):    -0.000ns
+
+    Location             Delay type                Incr(ns)  Path(ns)    Netlist Resource(s)
+  -------------------------------------------------------------------    -------------------
+    D20                                               0.000     0.000 f  BTN0
+                         net (fo=0)                   0.000     0.000    BTN0
+    D20                  IBUF (Prop_ibuf_I_O)         0.243     0.243 f  BTN0_IBUF_inst/O
+                         net (fo=35, routed)          0.524     0.767    sate_machine/BTN0_IBUF
+    SLICE_X42Y84         FDCE                                         f  sate_machine/FSM_sequential_curr_state_reg[0]/CLR
+  -------------------------------------------------------------------    -------------------
+
+                         (clock sys_clk_pin rise edge)
+                                                      0.000     0.000 r  <hidden>
+    H16                                               0.000     0.000 r  clk
+                         net (fo=0)                   0.000     0.000    clk
+    H16                  IBUF (Prop_ibuf_I_O)         0.413     0.413 r  clk_IBUF_inst/O
+                         net (fo=1, routed)           0.683     1.096    clk_IBUF
+    BUFGCTRL_X0Y16       BUFG (Prop_bufg_I_O)         0.029     1.125 r  clk_IBUF_BUFG_inst/O
+                         net (fo=35, routed)          0.852     1.977    sate_machine/clk_IBUF_BUFG
+    SLICE_X42Y84         FDCE                                         r  sate_machine/FSM_sequential_curr_state_reg[0]/C
+
+Slack:                    inf
+  Source:                 BTN0
+                            (input port)
+  Destination:            sate_machine/FSM_sequential_curr_state_reg[1]/CLR
+                            (removal check against rising-edge clock sys_clk_pin  {rise@0.000ns fall@5.000ns period=10.000ns})
+  Path Group:             (none)
+  Path Type:              Removal (Min at Fast Process Corner)
+  Data Path Delay:        0.767ns  (logic 0.243ns (31.686%)  route 0.524ns (68.314%))
+  Logic Levels:           1  (IBUF=1)
+  Clock Path Skew:        1.977ns (DCD - SCD - CPR)
+    Destination Clock Delay (DCD):    1.977ns
+    Source Clock Delay      (SCD):    0.000ns
+    Clock Pessimism Removal (CPR):    -0.000ns
+
+    Location             Delay type                Incr(ns)  Path(ns)    Netlist Resource(s)
+  -------------------------------------------------------------------    -------------------
+    D20                                               0.000     0.000 f  BTN0
+                         net (fo=0)                   0.000     0.000    BTN0
+    D20                  IBUF (Prop_ibuf_I_O)         0.243     0.243 f  BTN0_IBUF_inst/O
+                         net (fo=35, routed)          0.524     0.767    sate_machine/BTN0_IBUF
+    SLICE_X42Y84         FDCE                                         f  sate_machine/FSM_sequential_curr_state_reg[1]/CLR
+  -------------------------------------------------------------------    -------------------
+
+                         (clock sys_clk_pin rise edge)
+                                                      0.000     0.000 r  <hidden>
+    H16                                               0.000     0.000 r  clk
+                         net (fo=0)                   0.000     0.000    clk
+    H16                  IBUF (Prop_ibuf_I_O)         0.413     0.413 r  clk_IBUF_inst/O
+                         net (fo=1, routed)           0.683     1.096    clk_IBUF
+    BUFGCTRL_X0Y16       BUFG (Prop_bufg_I_O)         0.029     1.125 r  clk_IBUF_BUFG_inst/O
+                         net (fo=35, routed)          0.852     1.977    sate_machine/clk_IBUF_BUFG
+    SLICE_X42Y84         FDCE                                         r  sate_machine/FSM_sequential_curr_state_reg[1]/C
+
+Slack:                    inf
+  Source:                 BTN0
+                            (input port)
+  Destination:            sate_machine/cu/count_reg[20]/CLR
+                            (removal check against rising-edge clock sys_clk_pin  {rise@0.000ns fall@5.000ns period=10.000ns})
+  Path Group:             (none)
+  Path Type:              Removal (Min at Fast Process Corner)
+  Data Path Delay:        0.767ns  (logic 0.243ns (31.686%)  route 0.524ns (68.314%))
+  Logic Levels:           1  (IBUF=1)
+  Clock Path Skew:        1.977ns (DCD - SCD - CPR)
+    Destination Clock Delay (DCD):    1.977ns
+    Source Clock Delay      (SCD):    0.000ns
+    Clock Pessimism Removal (CPR):    -0.000ns
+
+    Location             Delay type                Incr(ns)  Path(ns)    Netlist Resource(s)
+  -------------------------------------------------------------------    -------------------
+    D20                                               0.000     0.000 f  BTN0
+                         net (fo=0)                   0.000     0.000    BTN0
+    D20                  IBUF (Prop_ibuf_I_O)         0.243     0.243 f  BTN0_IBUF_inst/O
+                         net (fo=35, routed)          0.524     0.767    sate_machine/cu/BTN0_IBUF
+    SLICE_X43Y84         FDCE                                         f  sate_machine/cu/count_reg[20]/CLR
+  -------------------------------------------------------------------    -------------------
+
+                         (clock sys_clk_pin rise edge)
+                                                      0.000     0.000 r  <hidden>
+    H16                                               0.000     0.000 r  clk
+                         net (fo=0)                   0.000     0.000    clk
+    H16                  IBUF (Prop_ibuf_I_O)         0.413     0.413 r  clk_IBUF_inst/O
+                         net (fo=1, routed)           0.683     1.096    clk_IBUF
+    BUFGCTRL_X0Y16       BUFG (Prop_bufg_I_O)         0.029     1.125 r  clk_IBUF_BUFG_inst/O
+                         net (fo=35, routed)          0.852     1.977    sate_machine/cu/clk_IBUF_BUFG
+    SLICE_X43Y84         FDCE                                         r  sate_machine/cu/count_reg[20]/C
+
+Slack:                    inf
+  Source:                 BTN0
+                            (input port)
+  Destination:            sate_machine/cu/count_reg[21]/CLR
+                            (removal check against rising-edge clock sys_clk_pin  {rise@0.000ns fall@5.000ns period=10.000ns})
+  Path Group:             (none)
+  Path Type:              Removal (Min at Fast Process Corner)
+  Data Path Delay:        0.767ns  (logic 0.243ns (31.686%)  route 0.524ns (68.314%))
+  Logic Levels:           1  (IBUF=1)
+  Clock Path Skew:        1.977ns (DCD - SCD - CPR)
+    Destination Clock Delay (DCD):    1.977ns
+    Source Clock Delay      (SCD):    0.000ns
+    Clock Pessimism Removal (CPR):    -0.000ns
+
+    Location             Delay type                Incr(ns)  Path(ns)    Netlist Resource(s)
+  -------------------------------------------------------------------    -------------------
+    D20                                               0.000     0.000 f  BTN0
+                         net (fo=0)                   0.000     0.000    BTN0
+    D20                  IBUF (Prop_ibuf_I_O)         0.243     0.243 f  BTN0_IBUF_inst/O
+                         net (fo=35, routed)          0.524     0.767    sate_machine/cu/BTN0_IBUF
+    SLICE_X43Y84         FDCE                                         f  sate_machine/cu/count_reg[21]/CLR
+  -------------------------------------------------------------------    -------------------
+
+                         (clock sys_clk_pin rise edge)
+                                                      0.000     0.000 r  <hidden>
+    H16                                               0.000     0.000 r  clk
+                         net (fo=0)                   0.000     0.000    clk
+    H16                  IBUF (Prop_ibuf_I_O)         0.413     0.413 r  clk_IBUF_inst/O
+                         net (fo=1, routed)           0.683     1.096    clk_IBUF
+    BUFGCTRL_X0Y16       BUFG (Prop_bufg_I_O)         0.029     1.125 r  clk_IBUF_BUFG_inst/O
+                         net (fo=35, routed)          0.852     1.977    sate_machine/cu/clk_IBUF_BUFG
+    SLICE_X43Y84         FDCE                                         r  sate_machine/cu/count_reg[21]/C
+
+Slack:                    inf
+  Source:                 BTN0
+                            (input port)
+  Destination:            sate_machine/cu/count_reg[22]/CLR
+                            (removal check against rising-edge clock sys_clk_pin  {rise@0.000ns fall@5.000ns period=10.000ns})
+  Path Group:             (none)
+  Path Type:              Removal (Min at Fast Process Corner)
+  Data Path Delay:        0.767ns  (logic 0.243ns (31.686%)  route 0.524ns (68.314%))
+  Logic Levels:           1  (IBUF=1)
+  Clock Path Skew:        1.977ns (DCD - SCD - CPR)
+    Destination Clock Delay (DCD):    1.977ns
+    Source Clock Delay      (SCD):    0.000ns
+    Clock Pessimism Removal (CPR):    -0.000ns
+
+    Location             Delay type                Incr(ns)  Path(ns)    Netlist Resource(s)
+  -------------------------------------------------------------------    -------------------
+    D20                                               0.000     0.000 f  BTN0
+                         net (fo=0)                   0.000     0.000    BTN0
+    D20                  IBUF (Prop_ibuf_I_O)         0.243     0.243 f  BTN0_IBUF_inst/O
+                         net (fo=35, routed)          0.524     0.767    sate_machine/cu/BTN0_IBUF
+    SLICE_X43Y84         FDCE                                         f  sate_machine/cu/count_reg[22]/CLR
+  -------------------------------------------------------------------    -------------------
+
+                         (clock sys_clk_pin rise edge)
+                                                      0.000     0.000 r  <hidden>
+    H16                                               0.000     0.000 r  clk
+                         net (fo=0)                   0.000     0.000    clk
+    H16                  IBUF (Prop_ibuf_I_O)         0.413     0.413 r  clk_IBUF_inst/O
+                         net (fo=1, routed)           0.683     1.096    clk_IBUF
+    BUFGCTRL_X0Y16       BUFG (Prop_bufg_I_O)         0.029     1.125 r  clk_IBUF_BUFG_inst/O
+                         net (fo=35, routed)          0.852     1.977    sate_machine/cu/clk_IBUF_BUFG
+    SLICE_X43Y84         FDCE                                         r  sate_machine/cu/count_reg[22]/C
+
+Slack:                    inf
+  Source:                 BTN0
+                            (input port)
+  Destination:            sate_machine/cu/count_reg[23]/CLR
+                            (removal check against rising-edge clock sys_clk_pin  {rise@0.000ns fall@5.000ns period=10.000ns})
+  Path Group:             (none)
+  Path Type:              Removal (Min at Fast Process Corner)
+  Data Path Delay:        0.767ns  (logic 0.243ns (31.686%)  route 0.524ns (68.314%))
+  Logic Levels:           1  (IBUF=1)
+  Clock Path Skew:        1.977ns (DCD - SCD - CPR)
+    Destination Clock Delay (DCD):    1.977ns
+    Source Clock Delay      (SCD):    0.000ns
+    Clock Pessimism Removal (CPR):    -0.000ns
+
+    Location             Delay type                Incr(ns)  Path(ns)    Netlist Resource(s)
+  -------------------------------------------------------------------    -------------------
+    D20                                               0.000     0.000 f  BTN0
+                         net (fo=0)                   0.000     0.000    BTN0
+    D20                  IBUF (Prop_ibuf_I_O)         0.243     0.243 f  BTN0_IBUF_inst/O
+                         net (fo=35, routed)          0.524     0.767    sate_machine/cu/BTN0_IBUF
+    SLICE_X43Y84         FDCE                                         f  sate_machine/cu/count_reg[23]/CLR
+  -------------------------------------------------------------------    -------------------
+
+                         (clock sys_clk_pin rise edge)
+                                                      0.000     0.000 r  <hidden>
+    H16                                               0.000     0.000 r  clk
+                         net (fo=0)                   0.000     0.000    clk
+    H16                  IBUF (Prop_ibuf_I_O)         0.413     0.413 r  clk_IBUF_inst/O
+                         net (fo=1, routed)           0.683     1.096    clk_IBUF
+    BUFGCTRL_X0Y16       BUFG (Prop_bufg_I_O)         0.029     1.125 r  clk_IBUF_BUFG_inst/O
+                         net (fo=35, routed)          0.852     1.977    sate_machine/cu/clk_IBUF_BUFG
+    SLICE_X43Y84         FDCE                                         r  sate_machine/cu/count_reg[23]/C
+
+Slack:                    inf
+  Source:                 BTN0
+                            (input port)
+  Destination:            sate_machine/cu/count_reg[16]/CLR
+                            (removal check against rising-edge clock sys_clk_pin  {rise@0.000ns fall@5.000ns period=10.000ns})
+  Path Group:             (none)
+  Path Type:              Removal (Min at Fast Process Corner)
+  Data Path Delay:        0.831ns  (logic 0.243ns (29.233%)  route 0.588ns (70.767%))
+  Logic Levels:           1  (IBUF=1)
+  Clock Path Skew:        1.976ns (DCD - SCD - CPR)
+    Destination Clock Delay (DCD):    1.976ns
+    Source Clock Delay      (SCD):    0.000ns
+    Clock Pessimism Removal (CPR):    -0.000ns
+
+    Location             Delay type                Incr(ns)  Path(ns)    Netlist Resource(s)
+  -------------------------------------------------------------------    -------------------
+    D20                                               0.000     0.000 f  BTN0
+                         net (fo=0)                   0.000     0.000    BTN0
+    D20                  IBUF (Prop_ibuf_I_O)         0.243     0.243 f  BTN0_IBUF_inst/O
+                         net (fo=35, routed)          0.588     0.831    sate_machine/cu/BTN0_IBUF
+    SLICE_X43Y83         FDCE                                         f  sate_machine/cu/count_reg[16]/CLR
+  -------------------------------------------------------------------    -------------------
+
+                         (clock sys_clk_pin rise edge)
+                                                      0.000     0.000 r  <hidden>
+    H16                                               0.000     0.000 r  clk
+                         net (fo=0)                   0.000     0.000    clk
+    H16                  IBUF (Prop_ibuf_I_O)         0.413     0.413 r  clk_IBUF_inst/O
+                         net (fo=1, routed)           0.683     1.096    clk_IBUF
+    BUFGCTRL_X0Y16       BUFG (Prop_bufg_I_O)         0.029     1.125 r  clk_IBUF_BUFG_inst/O
+                         net (fo=35, routed)          0.851     1.976    sate_machine/cu/clk_IBUF_BUFG
+    SLICE_X43Y83         FDCE                                         r  sate_machine/cu/count_reg[16]/C
+
+Slack:                    inf
+  Source:                 BTN0
+                            (input port)
+  Destination:            sate_machine/cu/count_reg[17]/CLR
+                            (removal check against rising-edge clock sys_clk_pin  {rise@0.000ns fall@5.000ns period=10.000ns})
+  Path Group:             (none)
+  Path Type:              Removal (Min at Fast Process Corner)
+  Data Path Delay:        0.831ns  (logic 0.243ns (29.233%)  route 0.588ns (70.767%))
+  Logic Levels:           1  (IBUF=1)
+  Clock Path Skew:        1.976ns (DCD - SCD - CPR)
+    Destination Clock Delay (DCD):    1.976ns
+    Source Clock Delay      (SCD):    0.000ns
+    Clock Pessimism Removal (CPR):    -0.000ns
+
+    Location             Delay type                Incr(ns)  Path(ns)    Netlist Resource(s)
+  -------------------------------------------------------------------    -------------------
+    D20                                               0.000     0.000 f  BTN0
+                         net (fo=0)                   0.000     0.000    BTN0
+    D20                  IBUF (Prop_ibuf_I_O)         0.243     0.243 f  BTN0_IBUF_inst/O
+                         net (fo=35, routed)          0.588     0.831    sate_machine/cu/BTN0_IBUF
+    SLICE_X43Y83         FDCE                                         f  sate_machine/cu/count_reg[17]/CLR
+  -------------------------------------------------------------------    -------------------
+
+                         (clock sys_clk_pin rise edge)
+                                                      0.000     0.000 r  <hidden>
+    H16                                               0.000     0.000 r  clk
+                         net (fo=0)                   0.000     0.000    clk
+    H16                  IBUF (Prop_ibuf_I_O)         0.413     0.413 r  clk_IBUF_inst/O
+                         net (fo=1, routed)           0.683     1.096    clk_IBUF
+    BUFGCTRL_X0Y16       BUFG (Prop_bufg_I_O)         0.029     1.125 r  clk_IBUF_BUFG_inst/O
+                         net (fo=35, routed)          0.851     1.976    sate_machine/cu/clk_IBUF_BUFG
+    SLICE_X43Y83         FDCE                                         r  sate_machine/cu/count_reg[17]/C
+
+Slack:                    inf
+  Source:                 BTN0
+                            (input port)
+  Destination:            sate_machine/cu/count_reg[18]/CLR
+                            (removal check against rising-edge clock sys_clk_pin  {rise@0.000ns fall@5.000ns period=10.000ns})
+  Path Group:             (none)
+  Path Type:              Removal (Min at Fast Process Corner)
+  Data Path Delay:        0.831ns  (logic 0.243ns (29.233%)  route 0.588ns (70.767%))
+  Logic Levels:           1  (IBUF=1)
+  Clock Path Skew:        1.976ns (DCD - SCD - CPR)
+    Destination Clock Delay (DCD):    1.976ns
+    Source Clock Delay      (SCD):    0.000ns
+    Clock Pessimism Removal (CPR):    -0.000ns
+
+    Location             Delay type                Incr(ns)  Path(ns)    Netlist Resource(s)
+  -------------------------------------------------------------------    -------------------
+    D20                                               0.000     0.000 f  BTN0
+                         net (fo=0)                   0.000     0.000    BTN0
+    D20                  IBUF (Prop_ibuf_I_O)         0.243     0.243 f  BTN0_IBUF_inst/O
+                         net (fo=35, routed)          0.588     0.831    sate_machine/cu/BTN0_IBUF
+    SLICE_X43Y83         FDCE                                         f  sate_machine/cu/count_reg[18]/CLR
+  -------------------------------------------------------------------    -------------------
+
+                         (clock sys_clk_pin rise edge)
+                                                      0.000     0.000 r  <hidden>
+    H16                                               0.000     0.000 r  clk
+                         net (fo=0)                   0.000     0.000    clk
+    H16                  IBUF (Prop_ibuf_I_O)         0.413     0.413 r  clk_IBUF_inst/O
+                         net (fo=1, routed)           0.683     1.096    clk_IBUF
+    BUFGCTRL_X0Y16       BUFG (Prop_bufg_I_O)         0.029     1.125 r  clk_IBUF_BUFG_inst/O
+                         net (fo=35, routed)          0.851     1.976    sate_machine/cu/clk_IBUF_BUFG
+    SLICE_X43Y83         FDCE                                         r  sate_machine/cu/count_reg[18]/C
+
+Slack:                    inf
+  Source:                 BTN0
+                            (input port)
+  Destination:            sate_machine/cu/count_reg[19]/CLR
+                            (removal check against rising-edge clock sys_clk_pin  {rise@0.000ns fall@5.000ns period=10.000ns})
+  Path Group:             (none)
+  Path Type:              Removal (Min at Fast Process Corner)
+  Data Path Delay:        0.831ns  (logic 0.243ns (29.233%)  route 0.588ns (70.767%))
+  Logic Levels:           1  (IBUF=1)
+  Clock Path Skew:        1.976ns (DCD - SCD - CPR)
+    Destination Clock Delay (DCD):    1.976ns
+    Source Clock Delay      (SCD):    0.000ns
+    Clock Pessimism Removal (CPR):    -0.000ns
+
+    Location             Delay type                Incr(ns)  Path(ns)    Netlist Resource(s)
+  -------------------------------------------------------------------    -------------------
+    D20                                               0.000     0.000 f  BTN0
+                         net (fo=0)                   0.000     0.000    BTN0
+    D20                  IBUF (Prop_ibuf_I_O)         0.243     0.243 f  BTN0_IBUF_inst/O
+                         net (fo=35, routed)          0.588     0.831    sate_machine/cu/BTN0_IBUF
+    SLICE_X43Y83         FDCE                                         f  sate_machine/cu/count_reg[19]/CLR
+  -------------------------------------------------------------------    -------------------
+
+                         (clock sys_clk_pin rise edge)
+                                                      0.000     0.000 r  <hidden>
+    H16                                               0.000     0.000 r  clk
+                         net (fo=0)                   0.000     0.000    clk
+    H16                  IBUF (Prop_ibuf_I_O)         0.413     0.413 r  clk_IBUF_inst/O
+                         net (fo=1, routed)           0.683     1.096    clk_IBUF
+    BUFGCTRL_X0Y16       BUFG (Prop_bufg_I_O)         0.029     1.125 r  clk_IBUF_BUFG_inst/O
+                         net (fo=35, routed)          0.851     1.976    sate_machine/cu/clk_IBUF_BUFG
+    SLICE_X43Y83         FDCE                                         r  sate_machine/cu/count_reg[19]/C
