@@ -1,0 +1,70 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<wave_config>
+   <wave_state>
+   </wave_state>
+   <db_ref_list>
+      <db_ref path="tb_top_led_driver_behav.wdb" id="1">
+         <top_modules>
+            <top_module name="tb_top_led_driver" />
+         </top_modules>
+      </db_ref>
+   </db_ref_list>
+   <zoom_setting>
+      <ZoomStartTime time="0fs"></ZoomStartTime>
+      <ZoomEndTime time="520001fs"></ZoomEndTime>
+      <Cursor1Time time="500000fs"></Cursor1Time>
+   </zoom_setting>
+   <column_width_setting>
+      <NameColumnWidth column_width="156"></NameColumnWidth>
+      <ValueColumnWidth column_width="70"></ValueColumnWidth>
+   </column_width_setting>
+   <WVObjectSize size="10" />
+   <wave_markers>
+      <marker label="" time="135000" />
+      <marker label="" time="175000" />
+      <marker label="" time="315000" />
+      <marker label="" time="455000" />
+      <marker label="" time="245000" />
+   </wave_markers>
+   <wvobject type="logic" fp_name="/tb_top_led_driver/clk">
+      <obj_property name="ElementShortName">clk</obj_property>
+      <obj_property name="ObjectShortName">clk</obj_property>
+   </wvobject>
+   <wvobject type="logic" fp_name="/tb_top_led_driver/uut/DRV/CU/end_counter">
+      <obj_property name="ElementShortName">end_counter</obj_property>
+      <obj_property name="ObjectShortName">end_counter</obj_property>
+   </wvobject>
+   <wvobject type="other" fp_name="/tb_top_led_driver/uut/DRV/r_state">
+      <obj_property name="ElementShortName">r_state</obj_property>
+      <obj_property name="ObjectShortName">r_state</obj_property>
+   </wvobject>
+   <wvobject type="logic" fp_name="/tb_top_led_driver/uut/BTN0">
+      <obj_property name="ElementShortName">BTN0</obj_property>
+      <obj_property name="ObjectShortName">BTN0</obj_property>
+   </wvobject>
+   <wvobject type="logic" fp_name="/tb_top_led_driver/uut/DRV/update">
+      <obj_property name="ElementShortName">update</obj_property>
+      <obj_property name="ObjectShortName">update</obj_property>
+   </wvobject>
+   <wvobject type="logic" fp_name="/tb_top_led_driver/uut/BTN1">
+      <obj_property name="ElementShortName">BTN1</obj_property>
+      <obj_property name="ObjectShortName">BTN1</obj_property>
+   </wvobject>
+   <wvobject type="array" fp_name="/tb_top_led_driver/uut/DRV/r_color">
+      <obj_property name="ElementShortName">r_color[1:0]</obj_property>
+      <obj_property name="ObjectShortName">r_color[1:0]</obj_property>
+      <obj_property name="Radix">BINARYRADIX</obj_property>
+   </wvobject>
+   <wvobject type="logic" fp_name="/tb_top_led_driver/LED0_R">
+      <obj_property name="ElementShortName">LED0_R</obj_property>
+      <obj_property name="ObjectShortName">LED0_R</obj_property>
+   </wvobject>
+   <wvobject type="logic" fp_name="/tb_top_led_driver/LED0_G">
+      <obj_property name="ElementShortName">LED0_G</obj_property>
+      <obj_property name="ObjectShortName">LED0_G</obj_property>
+   </wvobject>
+   <wvobject type="logic" fp_name="/tb_top_led_driver/LED0_B">
+      <obj_property name="ElementShortName">LED0_B</obj_property>
+      <obj_property name="ObjectShortName">LED0_B</obj_property>
+   </wvobject>
+</wave_config>
