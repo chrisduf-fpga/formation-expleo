@@ -1,0 +1,57 @@
+Copyright 1986-2020 Xilinx, Inc. All Rights Reserved.
+-----------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------
+| Tool Version : Vivado v.2020.2 (lin64) Build 3064766 Wed Nov 18 09:12:47 MST 2020
+| Date         : Thu Sep  3 17:34:18 2026
+| Host         : galileo running 64-bit Ubuntu 20.04.6 LTS
+| Command      : report_design_analysis -timing -setup -max_paths 10 -congestion -name design_analysis_1 -file /home/chris/containers/Ubuntu-20.04/dev/formation-fpga-repo/FORMATION_APPLICATIVE_INITIALISATION/TP5/synth/design_analysis_report.txt
+| Design       : circuit_q9
+| Device       : xc7z010
+| Design State : Synthesized
+-----------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------
+
+Report Design Analysis
+
+Table of Contents
+-----------------
+1. Setup Path Characteristics 1-10
+2. Placer Final Level Congestion Reporting
+3. SLR Net Crossing Reporting
+
+1. Setup Path Characteristics 1-10
+----------------------------------
+
++----------+-------------+------------+-------------+------------+------------+--------+-------------------------+--------------+--------+----------------------------------------------------------------------------------------+-------------------+-------------------+-----------+------+--------------+------------------+---------------+---------+-------------+------------+------------+---------------------------+-------------------------+-------------------+-------------------+
+|   Paths  | Requirement | Path Delay | Logic Delay |  Net Delay | Clock Skew |  Slack |    Clock Relationship   | Logic Levels | Routes |                                      Logical Path                                      | Start Point Clock |  End Point Clock  | DSP Block | BRAM | IO Crossings | Config Crossings | SLR Crossings | PBlocks | High Fanout | Dont Touch | Mark Debug | Start Point Pin Primitive | End Point Pin Primitive |  Start Point Pin  |   End Point Pin   |
++----------+-------------+------------+-------------+------------+------------+--------+-------------------------+--------------+--------+----------------------------------------------------------------------------------------+-------------------+-------------------+-----------+------+--------------+------------------+---------------+---------+-------------+------------+------------+---------------------------+-------------------------+-------------------+-------------------+
+| Path #1  | 4.000       | 4.390      | 2.467(57%)  | 1.923(43%) | -0.145     | -0.538 | No Common Primary Clock | 10           | 0      | FDCE-(3)-LUT6-(1)-LUT6-(33)-LUT5-CARRY4-CARRY4-CARRY4-CARRY4-CARRY4-CARRY4-CARRY4-FDCE | clk_A_clk_wiz_0   | clk_A_clk_wiz_0_1 | None      | None | 0            | 0                | 0             | 0       | 33          | 0          | 0          | FDCE/C                    | FDCE/D                  | r_count_reg[14]/C | r_count_reg[25]/D |
+| Path #2  | 4.000       | 4.390      | 2.467(57%)  | 1.923(43%) | -0.145     | -0.538 | Safely Timed            | 10           | 0      | FDCE-(3)-LUT6-(1)-LUT6-(33)-LUT5-CARRY4-CARRY4-CARRY4-CARRY4-CARRY4-CARRY4-CARRY4-FDCE | clk_A_clk_wiz_0   | clk_A_clk_wiz_0   | None      | None | 0            | 0                | 0             | 0       | 33          | 0          | 0          | FDCE/C                    | FDCE/D                  | r_count_reg[14]/C | r_count_reg[25]/D |
+| Path #3  | 4.000       | 4.298      | 2.375(56%)  | 1.923(44%) | -0.145     | -0.446 | No Common Primary Clock | 10           | 0      | FDCE-(3)-LUT6-(1)-LUT6-(33)-LUT5-CARRY4-CARRY4-CARRY4-CARRY4-CARRY4-CARRY4-CARRY4-FDCE | clk_A_clk_wiz_0   | clk_A_clk_wiz_0_1 | None      | None | 0            | 0                | 0             | 0       | 33          | 0          | 0          | FDCE/C                    | FDCE/D                  | r_count_reg[14]/C | r_count_reg[26]/D |
+| Path #4  | 4.000       | 4.298      | 2.375(56%)  | 1.923(44%) | -0.145     | -0.446 | Safely Timed            | 10           | 0      | FDCE-(3)-LUT6-(1)-LUT6-(33)-LUT5-CARRY4-CARRY4-CARRY4-CARRY4-CARRY4-CARRY4-CARRY4-FDCE | clk_A_clk_wiz_0   | clk_A_clk_wiz_0   | None      | None | 0            | 0                | 0             | 0       | 33          | 0          | 0          | FDCE/C                    | FDCE/D                  | r_count_reg[14]/C | r_count_reg[26]/D |
+| Path #5  | 4.000       | 4.277      | 2.354(56%)  | 1.923(44%) | -0.145     | -0.425 | No Common Primary Clock | 10           | 0      | FDCE-(3)-LUT6-(1)-LUT6-(33)-LUT5-CARRY4-CARRY4-CARRY4-CARRY4-CARRY4-CARRY4-CARRY4-FDCE | clk_A_clk_wiz_0   | clk_A_clk_wiz_0_1 | None      | None | 0            | 0                | 0             | 0       | 33          | 0          | 0          | FDCE/C                    | FDCE/D                  | r_count_reg[14]/C | r_count_reg[24]/D |
+| Path #6  | 4.000       | 4.277      | 2.354(56%)  | 1.923(44%) | -0.145     | -0.425 | Safely Timed            | 10           | 0      | FDCE-(3)-LUT6-(1)-LUT6-(33)-LUT5-CARRY4-CARRY4-CARRY4-CARRY4-CARRY4-CARRY4-CARRY4-FDCE | clk_A_clk_wiz_0   | clk_A_clk_wiz_0   | None      | None | 0            | 0                | 0             | 0       | 33          | 0          | 0          | FDCE/C                    | FDCE/D                  | r_count_reg[14]/C | r_count_reg[24]/D |
+| Path #7  | 4.000       | 4.276      | 2.353(56%)  | 1.923(44%) | -0.145     | -0.424 | No Common Primary Clock | 9            | 0      | FDCE-(3)-LUT6-(1)-LUT6-(33)-LUT5-CARRY4-CARRY4-CARRY4-CARRY4-CARRY4-CARRY4-FDCE        | clk_A_clk_wiz_0   | clk_A_clk_wiz_0_1 | None      | None | 0            | 0                | 0             | 0       | 33          | 0          | 0          | FDCE/C                    | FDCE/D                  | r_count_reg[14]/C | r_count_reg[21]/D |
+| Path #8  | 4.000       | 4.276      | 2.353(56%)  | 1.923(44%) | -0.145     | -0.424 | Safely Timed            | 9            | 0      | FDCE-(3)-LUT6-(1)-LUT6-(33)-LUT5-CARRY4-CARRY4-CARRY4-CARRY4-CARRY4-CARRY4-FDCE        | clk_A_clk_wiz_0   | clk_A_clk_wiz_0   | None      | None | 0            | 0                | 0             | 0       | 33          | 0          | 0          | FDCE/C                    | FDCE/D                  | r_count_reg[14]/C | r_count_reg[21]/D |
+| Path #9  | 4.000       | 4.257      | 2.334(55%)  | 1.923(45%) | -0.145     | -0.405 | No Common Primary Clock | 9            | 0      | FDCE-(3)-LUT6-(1)-LUT6-(33)-LUT5-CARRY4-CARRY4-CARRY4-CARRY4-CARRY4-CARRY4-FDCE        | clk_A_clk_wiz_0   | clk_A_clk_wiz_0_1 | None      | None | 0            | 0                | 0             | 0       | 33          | 0          | 0          | FDCE/C                    | FDCE/D                  | r_count_reg[14]/C | r_count_reg[23]/D |
+| Path #10 | 4.000       | 4.257      | 2.334(55%)  | 1.923(45%) | -0.145     | -0.405 | Safely Timed            | 9            | 0      | FDCE-(3)-LUT6-(1)-LUT6-(33)-LUT5-CARRY4-CARRY4-CARRY4-CARRY4-CARRY4-CARRY4-FDCE        | clk_A_clk_wiz_0   | clk_A_clk_wiz_0   | None      | None | 0            | 0                | 0             | 0       | 33          | 0          | 0          | FDCE/C                    | FDCE/D                  | r_count_reg[14]/C | r_count_reg[23]/D |
++----------+-------------+------------+-------------+------------+------------+--------+-------------------------+--------------+--------+----------------------------------------------------------------------------------------+-------------------+-------------------+-----------+------+--------------+------------------+---------------+---------+-------------+------------+------------+---------------------------+-------------------------+-------------------+-------------------+
+* Bounding box calculated as % of dimensions for the target device (156, 199)
+
+
+2. Placer Final Level Congestion Reporting
+------------------------------------------
+
++-----------+------+-------+------------+--------+---------------+---------------+-----+--------+------+------+------+-----+-------+-----+------------+
+| Direction | Type | Level | Congestion | Window | Combined LUTs | Avg LUT Input | LUT | LUTRAM | Flop | MUXF | RAMB | DSP | CARRY | SRL | Cell Names |
++-----------+------+-------+------------+--------+---------------+---------------+-----+--------+------+------+------+-----+-------+-----+------------+
+* The design has not been placed, hence congestion data is not available. The command report_design_analysis -congestion should be run only after place_design has completed.
+
+
+3. SLR Net Crossing Reporting
+-----------------------------
+
++------------+-----------------------------+
+| Cell Names | Number of Nets crossing SLR |
++------------+-----------------------------+
+* The current part is not an SSI device
+
+

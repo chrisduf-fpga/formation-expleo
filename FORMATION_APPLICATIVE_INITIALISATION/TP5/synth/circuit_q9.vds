@@ -1,0 +1,256 @@
+#-----------------------------------------------------------
+# Vivado v2020.2 (64-bit)
+# SW Build 3064766 on Wed Nov 18 09:12:47 MST 2020
+# IP Build 3064653 on Wed Nov 18 14:17:31 MST 2020
+# Start of session at: Thu Sep  3 16:36:29 2026
+# Process ID: 2278254
+# Current directory: /home/chris/containers/Ubuntu-20.04/dev/formation-fpga-repo/FORMATION_APPLICATIVE_INITIALISATION/TP5/vivado/vivado.runs/synth_1
+# Command line: vivado -log circuit_q9.vds -product Vivado -mode batch -messageDb vivado.pb -notrace -source circuit_q9.tcl
+# Log file: /home/chris/containers/Ubuntu-20.04/dev/formation-fpga-repo/FORMATION_APPLICATIVE_INITIALISATION/TP5/vivado/vivado.runs/synth_1/circuit_q9.vds
+# Journal file: /home/chris/containers/Ubuntu-20.04/dev/formation-fpga-repo/FORMATION_APPLICATIVE_INITIALISATION/TP5/vivado/vivado.runs/synth_1/vivado.jou
+#-----------------------------------------------------------
+source circuit_q9.tcl -notrace
+Command: synth_design -top circuit_q9 -part xc7z010clg400-1
+Starting synth_design
+Attempting to get a license for feature 'Synthesis' and/or device 'xc7z010'
+INFO: [Common 17-349] Got license for feature 'Synthesis' and/or device 'xc7z010'
+INFO: [Device 21-403] Loading part xc7z010clg400-1
+INFO: [Synth 8-7079] Multithreading enabled for synth_design using a maximum of 4 processes.
+INFO: [Synth 8-7078] Launching helper process for spawning children vivado processes
+INFO: [Synth 8-7075] Helper process launched with PID 2278807
+---------------------------------------------------------------------------------
+Starting RTL Elaboration : Time (s): cpu = 00:00:03 ; elapsed = 00:00:03 . Memory (MB): peak = 2381.727 ; gain = 0.000 ; free physical = 6354 ; free virtual = 47909
+---------------------------------------------------------------------------------
+INFO: [Synth 8-638] synthesizing module 'circuit_q9' [/home/chris/containers/Ubuntu-20.04/dev/formation-fpga-repo/FORMATION_APPLICATIVE_INITIALISATION/TP5/src/design/circuit_q9.vhd:37]
+	Parameter D bound to: 200000000 - type: integer 
+INFO: [Synth 8-3491] module 'clk_wiz_0' declared at '/home/chris/containers/Ubuntu-20.04/dev/formation-fpga-repo/FORMATION_APPLICATIVE_INITIALISATION/TP5/vivado/vivado.runs/synth_1/.Xil/Vivado-2278254-galileo/realtime/clk_wiz_0_stub.vhdl:5' bound to instance 'CLK_AB' of component 'clk_wiz_0' [/home/chris/containers/Ubuntu-20.04/dev/formation-fpga-repo/FORMATION_APPLICATIVE_INITIALISATION/TP5/src/design/circuit_q9.vhd:95]
+INFO: [Synth 8-638] synthesizing module 'clk_wiz_0' [/home/chris/containers/Ubuntu-20.04/dev/formation-fpga-repo/FORMATION_APPLICATIVE_INITIALISATION/TP5/vivado/vivado.runs/synth_1/.Xil/Vivado-2278254-galileo/realtime/clk_wiz_0_stub.vhdl:14]
+	Parameter D bound to: 200000000 - type: integer 
+INFO: [Synth 8-3491] module 'led_driver' declared at '/home/chris/containers/Ubuntu-20.04/dev/formation-fpga-repo/FORMATION_APPLICATIVE_INITIALISATION/TP5/src/design/led_driver.vhd:12' bound to instance 'DRV_LED0' of component 'led_driver' [/home/chris/containers/Ubuntu-20.04/dev/formation-fpga-repo/FORMATION_APPLICATIVE_INITIALISATION/TP5/src/design/circuit_q9.vhd:101]
+INFO: [Synth 8-638] synthesizing module 'led_driver' [/home/chris/containers/Ubuntu-20.04/dev/formation-fpga-repo/FORMATION_APPLICATIVE_INITIALISATION/TP5/src/design/led_driver.vhd:42]
+	Parameter D bound to: 200000000 - type: integer 
+	Parameter K bound to: 100000000 - type: integer 
+INFO: [Synth 8-3491] module 'counter_unit' declared at '/home/chris/containers/Ubuntu-20.04/dev/formation-fpga-repo/FORMATION_APPLICATIVE_INITIALISATION/TP5/src/design/counter_unit.vhd:18' bound to instance 'CU' of component 'counter_unit' [/home/chris/containers/Ubuntu-20.04/dev/formation-fpga-repo/FORMATION_APPLICATIVE_INITIALISATION/TP5/src/design/led_driver.vhd:73]
+INFO: [Synth 8-638] synthesizing module 'counter_unit' [/home/chris/containers/Ubuntu-20.04/dev/formation-fpga-repo/FORMATION_APPLICATIVE_INITIALISATION/TP5/src/design/counter_unit.vhd:42]
+	Parameter K bound to: 100000000 - type: integer 
+INFO: [Synth 8-256] done synthesizing module 'counter_unit' (1#1) [/home/chris/containers/Ubuntu-20.04/dev/formation-fpga-repo/FORMATION_APPLICATIVE_INITIALISATION/TP5/src/design/counter_unit.vhd:42]
+INFO: [Synth 8-226] default block is never used [/home/chris/containers/Ubuntu-20.04/dev/formation-fpga-repo/FORMATION_APPLICATIVE_INITIALISATION/TP5/src/design/led_driver.vhd:103]
+INFO: [Synth 8-226] default block is never used [/home/chris/containers/Ubuntu-20.04/dev/formation-fpga-repo/FORMATION_APPLICATIVE_INITIALISATION/TP5/src/design/led_driver.vhd:124]
+INFO: [Synth 8-256] done synthesizing module 'led_driver' (2#1) [/home/chris/containers/Ubuntu-20.04/dev/formation-fpga-repo/FORMATION_APPLICATIVE_INITIALISATION/TP5/src/design/led_driver.vhd:42]
+	Parameter D bound to: 200000000 - type: integer 
+INFO: [Synth 8-3491] module 'led_driver' declared at '/home/chris/containers/Ubuntu-20.04/dev/formation-fpga-repo/FORMATION_APPLICATIVE_INITIALISATION/TP5/src/design/led_driver.vhd:12' bound to instance 'DRV_LED1' of component 'led_driver' [/home/chris/containers/Ubuntu-20.04/dev/formation-fpga-repo/FORMATION_APPLICATIVE_INITIALISATION/TP5/src/design/circuit_q9.vhd:112]
+INFO: [Synth 8-3491] module 'color_iter' declared at '/home/chris/containers/Ubuntu-20.04/dev/formation-fpga-repo/FORMATION_APPLICATIVE_INITIALISATION/TP5/src/design/color_iter.vhd:14' bound to instance 'CC_ITER' of component 'color_iter' [/home/chris/containers/Ubuntu-20.04/dev/formation-fpga-repo/FORMATION_APPLICATIVE_INITIALISATION/TP5/src/design/circuit_q9.vhd:123]
+INFO: [Synth 8-638] synthesizing module 'color_iter' [/home/chris/containers/Ubuntu-20.04/dev/formation-fpga-repo/FORMATION_APPLICATIVE_INITIALISATION/TP5/src/design/color_iter.vhd:34]
+INFO: [Synth 8-256] done synthesizing module 'color_iter' (3#1) [/home/chris/containers/Ubuntu-20.04/dev/formation-fpga-repo/FORMATION_APPLICATIVE_INITIALISATION/TP5/src/design/color_iter.vhd:34]
+INFO: [Synth 8-256] done synthesizing module 'circuit_q9' (4#1) [/home/chris/containers/Ubuntu-20.04/dev/formation-fpga-repo/FORMATION_APPLICATIVE_INITIALISATION/TP5/src/design/circuit_q9.vhd:37]
+---------------------------------------------------------------------------------
+Finished RTL Elaboration : Time (s): cpu = 00:00:04 ; elapsed = 00:00:04 . Memory (MB): peak = 2381.727 ; gain = 0.000 ; free physical = 6993 ; free virtual = 48540
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start Handling Custom Attributes
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Finished Handling Custom Attributes : Time (s): cpu = 00:00:04 ; elapsed = 00:00:05 . Memory (MB): peak = 2381.727 ; gain = 0.000 ; free physical = 7031 ; free virtual = 48585
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Finished RTL Optimization Phase 1 : Time (s): cpu = 00:00:04 ; elapsed = 00:00:05 . Memory (MB): peak = 2381.727 ; gain = 0.000 ; free physical = 7031 ; free virtual = 48585
+---------------------------------------------------------------------------------
+Netlist sorting complete. Time (s): cpu = 00:00:00 ; elapsed = 00:00:00 . Memory (MB): peak = 2381.727 ; gain = 0.000 ; free physical = 7031 ; free virtual = 48585
+INFO: [Project 1-570] Preparing netlist for logic optimization
+
+Processing XDC Constraints
+Initializing timing engine
+Parsing XDC File [/home/chris/containers/Ubuntu-20.04/dev/formation-fpga-repo/FORMATION_APPLICATIVE_INITIALISATION/TP5/vivado/vivado.gen/sources_1/ip/clk_wiz_0/clk_wiz_0/clk_wiz_0_in_context.xdc] for cell 'CLK_AB'
+Finished Parsing XDC File [/home/chris/containers/Ubuntu-20.04/dev/formation-fpga-repo/FORMATION_APPLICATIVE_INITIALISATION/TP5/vivado/vivado.gen/sources_1/ip/clk_wiz_0/clk_wiz_0/clk_wiz_0_in_context.xdc] for cell 'CLK_AB'
+Parsing XDC File [/home/chris/containers/Ubuntu-20.04/dev/formation-fpga-repo/FORMATION_APPLICATIVE_INITIALISATION/TP5/src/const/ccc.xdc]
+Finished Parsing XDC File [/home/chris/containers/Ubuntu-20.04/dev/formation-fpga-repo/FORMATION_APPLICATIVE_INITIALISATION/TP5/src/const/ccc.xdc]
+INFO: [Project 1-236] Implementation specific constraints were found while reading constraint file [/home/chris/containers/Ubuntu-20.04/dev/formation-fpga-repo/FORMATION_APPLICATIVE_INITIALISATION/TP5/src/const/ccc.xdc]. These constraints will be ignored for synthesis but will be used in implementation. Impacted constraints are listed in the file [.Xil/circuit_q9_propImpl.xdc].
+Resolution: To avoid this warning, move constraints listed in [.Xil/circuit_q9_propImpl.xdc] to another XDC file and exclude this new file from synthesis with the used_in_synthesis property (File Properties dialog in GUI) and re-run elaboration/synthesis.
+Parsing XDC File [/home/chris/containers/Ubuntu-20.04/dev/formation-fpga-repo/FORMATION_APPLICATIVE_INITIALISATION/TP5/vivado/vivado.srcs/constrs_1/new/synth_xdc.xdc]
+Finished Parsing XDC File [/home/chris/containers/Ubuntu-20.04/dev/formation-fpga-repo/FORMATION_APPLICATIVE_INITIALISATION/TP5/vivado/vivado.srcs/constrs_1/new/synth_xdc.xdc]
+INFO: [Project 1-236] Implementation specific constraints were found while reading constraint file [/home/chris/containers/Ubuntu-20.04/dev/formation-fpga-repo/FORMATION_APPLICATIVE_INITIALISATION/TP5/vivado/vivado.srcs/constrs_1/new/synth_xdc.xdc]. These constraints will be ignored for synthesis but will be used in implementation. Impacted constraints are listed in the file [.Xil/circuit_q9_propImpl.xdc].
+Resolution: To avoid this warning, move constraints listed in [.Xil/circuit_q9_propImpl.xdc] to another XDC file and exclude this new file from synthesis with the used_in_synthesis property (File Properties dialog in GUI) and re-run elaboration/synthesis.
+Completed Processing XDC Constraints
+
+Netlist sorting complete. Time (s): cpu = 00:00:00 ; elapsed = 00:00:00 . Memory (MB): peak = 2509.543 ; gain = 0.000 ; free physical = 7145 ; free virtual = 48513
+INFO: [Project 1-111] Unisim Transformation Summary:
+No Unisim elements were transformed.
+
+Constraint Validation Runtime : Time (s): cpu = 00:00:00 ; elapsed = 00:00:00 . Memory (MB): peak = 2509.543 ; gain = 0.000 ; free physical = 7145 ; free virtual = 48513
+---------------------------------------------------------------------------------
+Finished Constraint Validation : Time (s): cpu = 00:00:08 ; elapsed = 00:00:10 . Memory (MB): peak = 2509.543 ; gain = 127.816 ; free physical = 7202 ; free virtual = 48571
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start Loading Part and Timing Information
+---------------------------------------------------------------------------------
+Loading part: xc7z010clg400-1
+---------------------------------------------------------------------------------
+Finished Loading Part and Timing Information : Time (s): cpu = 00:00:08 ; elapsed = 00:00:10 . Memory (MB): peak = 2509.543 ; gain = 127.816 ; free physical = 7202 ; free virtual = 48571
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start Applying 'set_property' XDC Constraints
+---------------------------------------------------------------------------------
+Applied set_property IO_BUFFER_TYPE = NONE for clk. (constraint file  /home/chris/containers/Ubuntu-20.04/dev/formation-fpga-repo/FORMATION_APPLICATIVE_INITIALISATION/TP5/vivado/vivado.gen/sources_1/ip/clk_wiz_0/clk_wiz_0/clk_wiz_0_in_context.xdc, line 4).
+Applied set_property CLOCK_BUFFER_TYPE = NONE for clk. (constraint file  /home/chris/containers/Ubuntu-20.04/dev/formation-fpga-repo/FORMATION_APPLICATIVE_INITIALISATION/TP5/vivado/vivado.gen/sources_1/ip/clk_wiz_0/clk_wiz_0/clk_wiz_0_in_context.xdc, line 5).
+Applied set_property KEEP_HIERARCHY = SOFT for CLK_AB. (constraint file  auto generated constraint).
+---------------------------------------------------------------------------------
+Finished applying 'set_property' XDC Constraints : Time (s): cpu = 00:00:08 ; elapsed = 00:00:10 . Memory (MB): peak = 2509.543 ; gain = 127.816 ; free physical = 7202 ; free virtual = 48571
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Finished RTL Optimization Phase 2 : Time (s): cpu = 00:00:08 ; elapsed = 00:00:10 . Memory (MB): peak = 2509.543 ; gain = 127.816 ; free physical = 7202 ; free virtual = 48572
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start RTL Component Statistics 
+---------------------------------------------------------------------------------
+Detailed RTL Component Info : 
++---Adders : 
+	   2 Input    4 Bit       Adders := 2     
+	   2 Input    2 Bit       Adders := 1     
++---Registers : 
+	                4 Bit    Registers := 2     
+	                2 Bit    Registers := 3     
+	                1 Bit    Registers := 3     
++---Muxes : 
+	   2 Input    4 Bit        Muxes := 2     
+	   2 Input    2 Bit        Muxes := 1     
+	   2 Input    1 Bit        Muxes := 4     
+	   3 Input    1 Bit        Muxes := 2     
+	   4 Input    1 Bit        Muxes := 2     
+	   5 Input    1 Bit        Muxes := 2     
+---------------------------------------------------------------------------------
+Finished RTL Component Statistics 
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start Part Resource Summary
+---------------------------------------------------------------------------------
+Part Resources:
+DSPs: 80 (col length:40)
+BRAMs: 120 (col length: RAMB18 40 RAMB36 20)
+---------------------------------------------------------------------------------
+Finished Part Resource Summary
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start Cross Boundary and Area Optimization
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Finished Cross Boundary and Area Optimization : Time (s): cpu = 00:00:09 ; elapsed = 00:00:11 . Memory (MB): peak = 2509.543 ; gain = 127.816 ; free physical = 7196 ; free virtual = 48560
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start Applying XDC Timing Constraints
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Finished Applying XDC Timing Constraints : Time (s): cpu = 00:00:14 ; elapsed = 00:00:15 . Memory (MB): peak = 2509.543 ; gain = 127.816 ; free physical = 6987 ; free virtual = 48506
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start Timing Optimization
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Finished Timing Optimization : Time (s): cpu = 00:00:14 ; elapsed = 00:00:16 . Memory (MB): peak = 2509.543 ; gain = 127.816 ; free physical = 6972 ; free virtual = 48490
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start Technology Mapping
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Finished Technology Mapping : Time (s): cpu = 00:00:14 ; elapsed = 00:00:16 . Memory (MB): peak = 2509.543 ; gain = 127.816 ; free physical = 6972 ; free virtual = 48490
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start IO Insertion
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start Flattening Before IO Insertion
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Finished Flattening Before IO Insertion
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start Final Netlist Cleanup
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Finished Final Netlist Cleanup
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Finished IO Insertion : Time (s): cpu = 00:00:16 ; elapsed = 00:00:18 . Memory (MB): peak = 2509.543 ; gain = 127.816 ; free physical = 7086 ; free virtual = 48450
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start Renaming Generated Instances
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Finished Renaming Generated Instances : Time (s): cpu = 00:00:16 ; elapsed = 00:00:18 . Memory (MB): peak = 2509.543 ; gain = 127.816 ; free physical = 7086 ; free virtual = 48450
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start Rebuilding User Hierarchy
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Finished Rebuilding User Hierarchy : Time (s): cpu = 00:00:16 ; elapsed = 00:00:18 . Memory (MB): peak = 2509.543 ; gain = 127.816 ; free physical = 7086 ; free virtual = 48450
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start Renaming Generated Ports
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Finished Renaming Generated Ports : Time (s): cpu = 00:00:16 ; elapsed = 00:00:18 . Memory (MB): peak = 2509.543 ; gain = 127.816 ; free physical = 7086 ; free virtual = 48450
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start Handling Custom Attributes
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Finished Handling Custom Attributes : Time (s): cpu = 00:00:16 ; elapsed = 00:00:18 . Memory (MB): peak = 2509.543 ; gain = 127.816 ; free physical = 7086 ; free virtual = 48450
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start Renaming Generated Nets
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Finished Renaming Generated Nets : Time (s): cpu = 00:00:16 ; elapsed = 00:00:18 . Memory (MB): peak = 2509.543 ; gain = 127.816 ; free physical = 7086 ; free virtual = 48450
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start Writing Synthesis Report
+---------------------------------------------------------------------------------
+
+Report BlackBoxes: 
++------+--------------+----------+
+|      |BlackBox name |Instances |
++------+--------------+----------+
+|1     |clk_wiz_0     |         1|
++------+--------------+----------+
+
+Report Cell Usage: 
++------+---------------+------+
+|      |Cell           |Count |
++------+---------------+------+
+|1     |clk_wiz_0_bbox |     1|
+|2     |CARRY4         |    14|
+|3     |LUT1           |     2|
+|4     |LUT2           |     1|
+|5     |LUT3           |    10|
+|6     |LUT4           |     9|
+|7     |LUT5           |    62|
+|8     |LUT6           |    16|
+|9     |FDCE           |    68|
+|10    |FDPE           |     3|
+|11    |IBUF           |     1|
+|12    |OBUF           |     6|
++------+---------------+------+
+---------------------------------------------------------------------------------
+Finished Writing Synthesis Report : Time (s): cpu = 00:00:16 ; elapsed = 00:00:18 . Memory (MB): peak = 2509.543 ; gain = 127.816 ; free physical = 7086 ; free virtual = 48450
+---------------------------------------------------------------------------------
+Synthesis finished with 0 errors, 0 critical warnings and 0 warnings.
+Synthesis Optimization Runtime : Time (s): cpu = 00:00:15 ; elapsed = 00:00:16 . Memory (MB): peak = 2509.543 ; gain = 0.000 ; free physical = 7121 ; free virtual = 48485
+Synthesis Optimization Complete : Time (s): cpu = 00:00:16 ; elapsed = 00:00:18 . Memory (MB): peak = 2509.543 ; gain = 127.816 ; free physical = 7121 ; free virtual = 48485
+INFO: [Project 1-571] Translating synthesized netlist
+Netlist sorting complete. Time (s): cpu = 00:00:00 ; elapsed = 00:00:00 . Memory (MB): peak = 2509.543 ; gain = 0.000 ; free physical = 7227 ; free virtual = 48591
+INFO: [Netlist 29-17] Analyzing 14 Unisim elements for replacement
+INFO: [Netlist 29-28] Unisim Transformation completed in 0 CPU seconds
+INFO: [Project 1-570] Preparing netlist for logic optimization
+INFO: [Opt 31-138] Pushed 0 inverter(s) to 0 load pin(s).
+Netlist sorting complete. Time (s): cpu = 00:00:00 ; elapsed = 00:00:00 . Memory (MB): peak = 2509.543 ; gain = 0.000 ; free physical = 7184 ; free virtual = 48547
+INFO: [Project 1-111] Unisim Transformation Summary:
+No Unisim elements were transformed.
+
+INFO: [Common 17-83] Releasing license: Synthesis
+32 Infos, 0 Warnings, 0 Critical Warnings and 0 Errors encountered.
+synth_design completed successfully
+synth_design: Time (s): cpu = 00:00:24 ; elapsed = 00:00:22 . Memory (MB): peak = 2509.543 ; gain = 127.844 ; free physical = 7192 ; free virtual = 48558
+INFO: [Common 17-600] The following parameters have non-default value.
+tcl.collectionResultDisplayLimit
+INFO: [Common 17-1381] The checkpoint '/home/chris/containers/Ubuntu-20.04/dev/formation-fpga-repo/FORMATION_APPLICATIVE_INITIALISATION/TP5/vivado/vivado.runs/synth_1/circuit_q9.dcp' has been generated.
+INFO: [runtcl-4] Executing : report_utilization -file circuit_q9_utilization_synth.rpt -pb circuit_q9_utilization_synth.pb
+INFO: [Common 17-206] Exiting Vivado at Thu Sep  3 16:37:02 2026...

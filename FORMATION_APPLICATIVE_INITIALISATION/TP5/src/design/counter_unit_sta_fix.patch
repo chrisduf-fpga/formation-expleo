@@ -1,0 +1,46 @@
+--- counter_unit.vhd	2026-09-03 21:28:39.932778722 +0200
++++ counter_unit_sta_fix.vhd	2026-09-03 21:32:56.366621752 +0200
+@@ -47,28 +47,36 @@
+   -- FIXME: initial state should rely on Power-on Reset signal.
+   signal r_count  : unsigned(N-1 downto 0) := (others => '0');
+ 
+-  -- Wired to the combinatorial logic for r_count = K - 1.
+-  signal w_modK   : std_logic;
++  -- Pre-compute and register condition (r_count + 1 = K - 1)
++  -- to avoid some delay on end_counter output logic.
++  signal r_modK   : std_logic := '0';
+ 
+   begin
+ 
+-    -- Combinatorial circuit.
+-    -- Evaluated on rising edges, when r_count is updated.
+-    w_modK <= '1' when (r_count = K - 1) else '0';
+-    end_counter <= w_modK;
++    -- Pre-computed, no output logic.
++    end_counter <= r_modK;
+ 
+     rtl: process(clk, resetn)
+     begin
+ 
+       if (resetn = '0') then
+         r_count <= (others => '0');
++        r_modK <= '0';
+ 
+       elsif rising_edge(clk) then
+-        if (w_modK = '1') then
++        -- r_count + 1 = K - 1, avoiding overflows.
++        if (r_count = K - 2) then
++          r_modK <= '1';
++        else
++          r_modK <= '0';
++        end if;
++
++        if (r_modK = '1') then
+           r_count <= (others => '0');
+         else
+           r_count <= r_count + 1;
+         end if;
++
+       end if;
+ 
+     end process rtl;
