@@ -1,0 +1,85 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<wave_config>
+   <wave_state>
+   </wave_state>
+   <db_ref_list>
+      <db_ref path="tb_environnement_behav.wdb" id="1">
+         <top_modules>
+            <top_module name="glbl" />
+            <top_module name="tb_environnement" />
+         </top_modules>
+      </db_ref>
+   </db_ref_list>
+   <zoom_setting>
+      <ZoomStartTime time="753333333333fs"></ZoomStartTime>
+      <ZoomEndTime time="2309333333334fs"></ZoomEndTime>
+      <Cursor1Time time="1137333333333fs"></Cursor1Time>
+   </zoom_setting>
+   <column_width_setting>
+      <NameColumnWidth column_width="323"></NameColumnWidth>
+      <ValueColumnWidth column_width="158"></ValueColumnWidth>
+   </column_width_setting>
+   <WVObjectSize size="3" />
+   <wvobject type="group" fp_name="group31">
+      <obj_property name="label">AXI4S-Master(Driver)</obj_property>
+      <obj_property name="DisplayName">label</obj_property>
+      <obj_property name="isExpanded"></obj_property>
+      <wvobject type="logic" fp_name="/tb_environnement/u_driver/m_tvalid">
+         <obj_property name="ElementShortName">m_tvalid</obj_property>
+         <obj_property name="ObjectShortName">m_tvalid</obj_property>
+      </wvobject>
+      <wvobject type="array" fp_name="/tb_environnement/u_driver/m_tdata">
+         <obj_property name="ElementShortName">m_tdata[7:0]</obj_property>
+         <obj_property name="ObjectShortName">m_tdata[7:0]</obj_property>
+      </wvobject>
+      <wvobject type="logic" fp_name="/tb_environnement/u_driver/m_tlast">
+         <obj_property name="ElementShortName">m_tlast</obj_property>
+         <obj_property name="ObjectShortName">m_tlast</obj_property>
+      </wvobject>
+      <wvobject type="logic" fp_name="/tb_environnement/u_driver/m_tready">
+         <obj_property name="ElementShortName">m_tready</obj_property>
+         <obj_property name="ObjectShortName">m_tready</obj_property>
+      </wvobject>
+      <wvobject type="logic" fp_name="/tb_environnement/u_driver/clk_i">
+         <obj_property name="ElementShortName">clk_i</obj_property>
+         <obj_property name="ObjectShortName">clk_i</obj_property>
+      </wvobject>
+      <wvobject type="logic" fp_name="/tb_environnement/u_driver/rst_i">
+         <obj_property name="ElementShortName">rst_i</obj_property>
+         <obj_property name="ObjectShortName">rst_i</obj_property>
+      </wvobject>
+   </wvobject>
+   <wvobject type="group" fp_name="group32">
+      <obj_property name="label">AXI4S-Slave(Monitor)</obj_property>
+      <obj_property name="DisplayName">label</obj_property>
+      <obj_property name="isExpanded"></obj_property>
+      <wvobject type="logic" fp_name="/tb_environnement/u_monitor/clk_i">
+         <obj_property name="ElementShortName">clk_i</obj_property>
+         <obj_property name="ObjectShortName">clk_i</obj_property>
+      </wvobject>
+      <wvobject type="logic" fp_name="/tb_environnement/u_monitor/rst_i">
+         <obj_property name="ElementShortName">rst_i</obj_property>
+         <obj_property name="ObjectShortName">rst_i</obj_property>
+      </wvobject>
+      <wvobject type="logic" fp_name="/tb_environnement/u_monitor/s_tvalid">
+         <obj_property name="ElementShortName">s_tvalid</obj_property>
+         <obj_property name="ObjectShortName">s_tvalid</obj_property>
+      </wvobject>
+      <wvobject type="array" fp_name="/tb_environnement/u_monitor/s_tdata">
+         <obj_property name="ElementShortName">s_tdata[7:0]</obj_property>
+         <obj_property name="ObjectShortName">s_tdata[7:0]</obj_property>
+      </wvobject>
+      <wvobject type="logic" fp_name="/tb_environnement/u_monitor/s_tlast">
+         <obj_property name="ElementShortName">s_tlast</obj_property>
+         <obj_property name="ObjectShortName">s_tlast</obj_property>
+      </wvobject>
+      <wvobject type="logic" fp_name="/tb_environnement/u_monitor/s_tuser">
+         <obj_property name="ElementShortName">s_tuser</obj_property>
+         <obj_property name="ObjectShortName">s_tuser</obj_property>
+      </wvobject>
+   </wvobject>
+   <wvobject type="logic" fp_name="/tb_environnement/u_monitor/s_tready">
+      <obj_property name="ElementShortName">s_tready</obj_property>
+      <obj_property name="ObjectShortName">s_tready</obj_property>
+   </wvobject>
+</wave_config>
