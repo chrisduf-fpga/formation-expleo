@@ -15,9 +15,10 @@
 #==============================================================================
 set -euo pipefail
 
-ROOT="$(cd "$(dirname "${BASH_SOURCE[0]}")" && pwd)"
-VIVADO_SETTINGS=/tools/xilinx/Vivado/2020.2/settings64.sh
-VITIS_SETTINGS=/tools/xilinx/Vitis/2020.2/settings64.sh
+ROOT=$(  cd -- "$(dirname -- "$0")" >/dev/null 2>&1 &&  pwd -P)
+
+VIVADO_SETTINGS=${VIVADO_SETTINGS:=/tools/xilinx/Vivado/2020.2/settings64.sh}
+VITIS_SETTINGS=${VITIS_SETTINGS:=/tools/xilinx/Vitis/2020.2/settings64.sh}
 
 mkdir -p "$ROOT/logs"
 
