@@ -14,6 +14,6 @@ create_clock -period 6.66 -name default   ;# 150 MHz
 csim_design
 csynth_design
 #cosim_design -trace_level all
-#export_design -format ip_catalog
+export_design -rtl vhdl -version 1.0.0 -format ip_catalog
 
 exit
