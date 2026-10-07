@@ -226,9 +226,9 @@ architecture RTL of axis_tpg is
         rgb8_chan_g <= x"ff";
       else
         -- Region E. Vertical grayscale.
-        rgb8_chan_r <= rgb8_chan_scale(r_pxl_v, VGA_MAX_V);
-        rgb8_chan_b <= rgb8_chan_scale(r_pxl_v, VGA_MAX_V);
-        rgb8_chan_g <= rgb8_chan_scale(r_pxl_v, VGA_MAX_V);
+        rgb8_chan_r <= rgb8_chan_scale(r_pxl_v, VGA_MAX_V - MARK_V - 1);
+        rgb8_chan_b <= rgb8_chan_scale(r_pxl_v, VGA_MAX_V - MARK_V - 1);
+        rgb8_chan_g <= rgb8_chan_scale(r_pxl_v, VGA_MAX_V - MARK_V - 1);
       end if;
     end if;
   end process rgb8;

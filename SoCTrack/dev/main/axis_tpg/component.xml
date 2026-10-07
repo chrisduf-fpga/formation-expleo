@@ -116,7 +116,7 @@
         <spirit:parameters>
           <spirit:parameter>
             <spirit:name>viewChecksum</spirit:name>
-            <spirit:value>99d54d1e</spirit:value>
+            <spirit:value>7e6361da</spirit:value>
           </spirit:parameter>
         </spirit:parameters>
       </spirit:view>
@@ -132,7 +132,7 @@
         <spirit:parameters>
           <spirit:parameter>
             <spirit:name>viewChecksum</spirit:name>
-            <spirit:value>0bf90236</spirit:value>
+            <spirit:value>b437c1d7</spirit:value>
           </spirit:parameter>
         </spirit:parameters>
       </spirit:view>
@@ -277,25 +277,17 @@
       <spirit:file>
         <spirit:name>vivado/vivado.gen/sources_1/bd/axis_tpg_bd/synth/axis_tpg_bd.vhd</spirit:name>
         <spirit:fileType>vhdlSource</spirit:fileType>
-        <spirit:define>
-          <spirit:name>processing_order</spirit:name>
-          <spirit:value>early</spirit:value>
-        </spirit:define>
       </spirit:file>
       <spirit:file>
         <spirit:name>vivado/vivado.gen/sources_1/bd/axis_tpg_bd/axis_tpg_bd_ooc.xdc</spirit:name>
         <spirit:userFileType>xdc</spirit:userFileType>
         <spirit:userFileType>SCOPED_TO_REF_axis_tpg_bd</spirit:userFileType>
         <spirit:userFileType>USED_IN_out_of_context</spirit:userFileType>
-        <spirit:define>
-          <spirit:name>processing_order</spirit:name>
-          <spirit:value>early</spirit:value>
-        </spirit:define>
       </spirit:file>
       <spirit:file>
         <spirit:name>vivado/vivado.gen/sources_1/bd/axis_tpg_bd/hdl/axis_tpg_bd_wrapper.vhd</spirit:name>
         <spirit:fileType>vhdlSource</spirit:fileType>
-        <spirit:userFileType>CHECKSUM_1adbf243</spirit:userFileType>
+        <spirit:userFileType>CHECKSUM_29581f8f</spirit:userFileType>
       </spirit:file>
     </spirit:fileSet>
     <spirit:fileSet>
@@ -315,10 +307,6 @@
       <spirit:file>
         <spirit:name>vivado/vivado.gen/sources_1/bd/axis_tpg_bd/sim/axis_tpg_bd.vhd</spirit:name>
         <spirit:fileType>vhdlSource</spirit:fileType>
-        <spirit:define>
-          <spirit:name>processing_order</spirit:name>
-          <spirit:value>early</spirit:value>
-        </spirit:define>
       </spirit:file>
       <spirit:file>
         <spirit:name>vivado/vivado.gen/sources_1/bd/axis_tpg_bd/hdl/axis_tpg_bd_wrapper.vhd</spirit:name>
@@ -345,20 +333,55 @@
   <spirit:vendorExtensions>
     <xilinx:coreExtensions>
       <xilinx:supportedFamilies>
-        <xilinx:family xilinx:lifeCycle="Production">zynq</xilinx:family>
+        <xilinx:family xilinx:lifeCycle="Pre-Production">zynq</xilinx:family>
       </xilinx:supportedFamilies>
       <xilinx:taxonomies>
         <xilinx:taxonomy>/UserIP</xilinx:taxonomy>
       </xilinx:taxonomies>
       <xilinx:displayName>AXIS Test Pattern Generator</xilinx:displayName>
       <xilinx:definitionSource>package_project</xilinx:definitionSource>
-      <xilinx:coreRevision>1/xilinx:coreRevision>
-      <xilinx:coreCreationDateTime>2026-09-21T14:27:30Z</xilinx:coreCreationDateTime>
+      <xilinx:coreRevision>5</xilinx:coreRevision>
+      <xilinx:coreCreationDateTime>2026-10-07T03:24:50Z</xilinx:coreCreationDateTime>
+      <xilinx:tags>
+        <xilinx:tag xilinx:name="ui.data.coregen.dd@516c01c9_ARCHIVE_LOCATION">/home/chris/containers/Ubuntu-20.04/dev/formation-fpga-repo/SoCTrack/dev/main/axis_tpg</xilinx:tag>
+        <xilinx:tag xilinx:name="ui.data.coregen.dd@678c7394_ARCHIVE_LOCATION">/home/chris/containers/Ubuntu-20.04/dev/formation-fpga-repo/SoCTrack/dev/main/axis_tpg</xilinx:tag>
+        <xilinx:tag xilinx:name="ui.data.coregen.dd@8f48b12_ARCHIVE_LOCATION">/home/chris/containers/Ubuntu-20.04/dev/formation-fpga-repo/SoCTrack/dev/main/axis_tpg</xilinx:tag>
+        <xilinx:tag xilinx:name="ui.data.coregen.dd@49bc3b82_ARCHIVE_LOCATION">/home/chris/containers/Ubuntu-20.04/dev/formation-fpga-repo/SoCTrack/dev/main/axis_tpg</xilinx:tag>
+        <xilinx:tag xilinx:name="ui.data.coregen.dd@3eb3a2eb_ARCHIVE_LOCATION">/home/chris/containers/Ubuntu-20.04/dev/formation-fpga-repo/SoCTrack/dev/main/axis_tpg</xilinx:tag>
+        <xilinx:tag xilinx:name="ui.data.coregen.dd@6d6cc0a3_ARCHIVE_LOCATION">/home/chris/containers/Ubuntu-20.04/dev/formation-fpga-repo/SoCTrack/dev/main/axis_tpg</xilinx:tag>
+        <xilinx:tag xilinx:name="ui.data.coregen.dd@7393db31_ARCHIVE_LOCATION">/home/chris/containers/Ubuntu-20.04/dev/formation-fpga-repo/SoCTrack/dev/main/axis_tpg</xilinx:tag>
+        <xilinx:tag xilinx:name="ui.data.coregen.dd@3d7f81c1_ARCHIVE_LOCATION">/home/chris/containers/Ubuntu-20.04/dev/formation-fpga-repo/SoCTrack/dev/main/axis_tpg</xilinx:tag>
+        <xilinx:tag xilinx:name="ui.data.coregen.dd@3050115e_ARCHIVE_LOCATION">/home/chris/containers/Ubuntu-20.04/dev/formation-fpga-repo/SoCTrack/dev/main/axis_tpg</xilinx:tag>
+        <xilinx:tag xilinx:name="ui.data.coregen.dd@2d861fab_ARCHIVE_LOCATION">/home/chris/containers/Ubuntu-20.04/dev/formation-fpga-repo/SoCTrack/dev/main/axis_tpg</xilinx:tag>
+        <xilinx:tag xilinx:name="ui.data.coregen.dd@7be34003_ARCHIVE_LOCATION">/home/chris/containers/Ubuntu-20.04/dev/formation-fpga-repo/SoCTrack/dev/main/axis_tpg</xilinx:tag>
+        <xilinx:tag xilinx:name="ui.data.coregen.dd@e9ec987_ARCHIVE_LOCATION">/home/chris/containers/Ubuntu-20.04/dev/formation-fpga-repo/SoCTrack/dev/main/axis_tpg</xilinx:tag>
+        <xilinx:tag xilinx:name="ui.data.coregen.dd@492c77a5_ARCHIVE_LOCATION">/home/chris/containers/Ubuntu-20.04/dev/formation-fpga-repo/SoCTrack/dev/main/axis_tpg</xilinx:tag>
+        <xilinx:tag xilinx:name="ui.data.coregen.dd@4c442412_ARCHIVE_LOCATION">/home/chris/containers/Ubuntu-20.04/dev/formation-fpga-repo/SoCTrack/dev/main/axis_tpg</xilinx:tag>
+        <xilinx:tag xilinx:name="ui.data.coregen.dd@2142bff8_ARCHIVE_LOCATION">/home/chris/containers/Ubuntu-20.04/dev/formation-fpga-repo/SoCTrack/dev/main/axis_tpg</xilinx:tag>
+        <xilinx:tag xilinx:name="ui.data.coregen.dd@1a37f0f5_ARCHIVE_LOCATION">/home/chris/containers/Ubuntu-20.04/dev/formation-fpga-repo/SoCTrack/dev/main/axis_tpg</xilinx:tag>
+        <xilinx:tag xilinx:name="ui.data.coregen.dd@444092ce_ARCHIVE_LOCATION">/home/chris/containers/Ubuntu-20.04/dev/formation-fpga-repo/SoCTrack/dev/main/axis_tpg</xilinx:tag>
+        <xilinx:tag xilinx:name="ui.data.coregen.dd@34ae6a73_ARCHIVE_LOCATION">/home/chris/containers/Ubuntu-20.04/dev/formation-fpga-repo/SoCTrack/dev/main/axis_tpg</xilinx:tag>
+        <xilinx:tag xilinx:name="ui.data.coregen.dd@57c9a79b_ARCHIVE_LOCATION">/home/chris/containers/Ubuntu-20.04/dev/formation-fpga-repo/SoCTrack/dev/main/axis_tpg</xilinx:tag>
+        <xilinx:tag xilinx:name="ui.data.coregen.dd@7a406912_ARCHIVE_LOCATION">/home/chris/containers/Ubuntu-20.04/dev/formation-fpga-repo/SoCTrack/dev/main/axis_tpg</xilinx:tag>
+        <xilinx:tag xilinx:name="ui.data.coregen.dd@2b1f2a57_ARCHIVE_LOCATION">/home/chris/containers/Ubuntu-20.04/dev/formation-fpga-repo/SoCTrack/dev/main/axis_tpg</xilinx:tag>
+        <xilinx:tag xilinx:name="ui.data.coregen.dd@1024df52_ARCHIVE_LOCATION">/home/chris/containers/Ubuntu-20.04/dev/formation-fpga-repo/SoCTrack/dev/main/axis_tpg</xilinx:tag>
+        <xilinx:tag xilinx:name="ui.data.coregen.dd@67533c01_ARCHIVE_LOCATION">/home/chris/containers/Ubuntu-20.04/dev/formation-fpga-repo/SoCTrack/dev/main/axis_tpg</xilinx:tag>
+        <xilinx:tag xilinx:name="ui.data.coregen.dd@7fd102e8_ARCHIVE_LOCATION">/home/chris/containers/Ubuntu-20.04/dev/formation-fpga-repo/SoCTrack/dev/main/axis_tpg</xilinx:tag>
+        <xilinx:tag xilinx:name="ui.data.coregen.dd@4a63d7e_ARCHIVE_LOCATION">/home/chris/containers/Ubuntu-20.04/dev/formation-fpga-repo/SoCTrack/dev/main/axis_tpg</xilinx:tag>
+        <xilinx:tag xilinx:name="ui.data.coregen.dd@4a0d8dc2_ARCHIVE_LOCATION">/home/chris/containers/Ubuntu-20.04/dev/formation-fpga-repo/SoCTrack/dev/main/axis_tpg</xilinx:tag>
+        <xilinx:tag xilinx:name="ui.data.coregen.dd@393789a6_ARCHIVE_LOCATION">/home/chris/containers/Ubuntu-20.04/dev/formation-fpga-repo/SoCTrack/dev/main/axis_tpg</xilinx:tag>
+        <xilinx:tag xilinx:name="ui.data.coregen.dd@57ac2d7b_ARCHIVE_LOCATION">/home/chris/containers/Ubuntu-20.04/dev/formation-fpga-repo/SoCTrack/dev/main/axis_tpg</xilinx:tag>
+        <xilinx:tag xilinx:name="ui.data.coregen.dd@4a2ded91_ARCHIVE_LOCATION">/home/chris/containers/Ubuntu-20.04/dev/formation-fpga-repo/SoCTrack/dev/main/axis_tpg</xilinx:tag>
+        <xilinx:tag xilinx:name="ui.data.coregen.dd@2065d3dc_ARCHIVE_LOCATION">/home/chris/containers/Ubuntu-20.04/dev/formation-fpga-repo/SoCTrack/dev/main/axis_tpg</xilinx:tag>
+        <xilinx:tag xilinx:name="ui.data.coregen.dd@6cbc1220_ARCHIVE_LOCATION">/home/chris/containers/Ubuntu-20.04/dev/formation-fpga-repo/SoCTrack/dev/main/axis_tpg</xilinx:tag>
+        <xilinx:tag xilinx:name="ui.data.coregen.dd@5adefcf4_ARCHIVE_LOCATION">/home/chris/containers/Ubuntu-20.04/dev/formation-fpga-repo/SoCTrack/dev/main/axis_tpg</xilinx:tag>
+        <xilinx:tag xilinx:name="ui.data.coregen.dd@18ecc0dc_ARCHIVE_LOCATION">/home/chris/containers/Ubuntu-20.04/dev/formation-fpga-repo/SoCTrack/dev/main/axis_tpg</xilinx:tag>
+      </xilinx:tags>
     </xilinx:coreExtensions>
     <xilinx:packagingInfo>
       <xilinx:xilinxVersion>2020.2</xilinx:xilinxVersion>
       <xilinx:checksum xilinx:scope="busInterfaces" xilinx:value="7dfa0ff2"/>
-      <xilinx:checksum xilinx:scope="fileGroups" xilinx:value="80651c13"/>
+      <xilinx:checksum xilinx:scope="fileGroups" xilinx:value="932a8576"/>
       <xilinx:checksum xilinx:scope="ports" xilinx:value="6c9ef3c6"/>
       <xilinx:checksum xilinx:scope="parameters" xilinx:value="503e8e26"/>
     </xilinx:packagingInfo>
