@@ -112,7 +112,15 @@ Le SRS est satisfait.
 
 ** 2.2. [PL-IP-001] Source Vidéo TPG [1]
 *** A-2.2_1 Protocole AXI4-Stream Test Pattern Generator
+On vérifie sur le chronographe Fig. [[A-2.2_1-tpg-testbench]] :
+- Le signal ~TLAST~ (EOL) qui précède le signal ~TUSER~ (SOF) indiquant le premier pixel de la frame suivane
+- Les données RGB attendues: ~0x010101~ (dernier gris très clair d'un /grayscale/), puis ~0x008000~ (pixel rouge clair début mosaïque)
+
 Le SRS est satisfait.
+
+#+CAPTION: Simulation Test Pattern Generator
+#+NAME: fig:A-2.2_1-tpg-testbench
+[[file:dev/figs/A-2.2_1-tpg-testbench.png]]
 
 *** D-2.2_1 Visualisation de la mire
 La mire peut être observée Fig. [[fig:D-2.2_1-tpg]], ou sur une vidéo: ~https://youtu.be/aCMtNJG_Zlo~

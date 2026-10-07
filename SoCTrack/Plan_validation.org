@@ -24,7 +24,7 @@ Le FPGA incorpore un DMA MM2S (Memory Map To Stream) permettant la relecture d�
 Le SRS est satisfait si:
 - On identifie les éléments de conception (/design/) nécessaires à la production d'un flux AXI-Stream transférant une région mémoire DMA.
 
-*** A-2.1_1 Conversion bi-directionnelle RGB8/AXI4-Stream
+*** A-2.1_1 Conversion bi-directionnelle RGB888/AXI4-Stream
 Le SRS est satisfait si:
 - Le flux AXIS transférant une region mémoire DMA (/frame buffer/) permet de reconstruire l'image en mémoire.
 
