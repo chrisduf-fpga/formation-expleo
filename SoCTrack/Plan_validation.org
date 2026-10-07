@@ -1,0 +1,221 @@
+#+title: SocTrack - Plan de Validation
+#+AUTHOR: Christophe Dufaza
+#+LANGUAGE: fr
+#+LATEX_CLASS: article
+#+LATEX_HEADER: \usepackage[a4paper,top=2cm, bottom=2cm]{geometry}
+#+LATEX_HEADER: \usepackage{hyperref}
+#+LATEX_HEADER: \hypersetup{colorlinks=true,linkcolor=cyan}
+#+LATEX_HEADER: \usepackage{graphicx}
+#+OPTIONS: date:nil
+#+OPTIONS: toc:2
+#+LATEX: \tableofcontents
+
+\newpage
+
+*Spécifications*: [[file:./20260709-SRS-SoC-Tracking__720__0.pdf][20260709-SRS-SoC-Tracking__720__0.pdf]]
+
+* 2. FPGA image processing
+** 2.1. [PL-IP-000] Source Vidéo mémoire [1]
+#+begin_quote
+Le FPGA incorpore un DMA MM2S (Memory Map To Stream) permettant la relecture d’une image de résolution 640x480 pixels au format RGB8bits depuis la mémoire externe DDR3 et cela avec une cadence de 60 images par seconde.
+#+end_quote
+
+*** I-2.1_1 Architecture MM2S
+Le SRS est satisfait si:
+- On identifie les éléments de conception (/design/) nécessaires à la production d'un flux AXI-Stream transférant une région mémoire DMA.
+
+*** A-2.1_1 Conversion bi-directionnelle RGB8/AXI4-Stream
+Le SRS est satisfait si:
+- Le flux AXIS transférant une region mémoire DMA (/frame buffer/) permet de reconstruire l'image en mémoire.
+
+Mettre en oeuvre les tests unitaires de l'IP DMA24b_mm2s.
+
+*** T-2.1_1 Espaces d'adressage AXI
+Le SRS est satisfait si:
+- L'adresse AXI pour la region mémoire DDR est celle spécifiée (~0x00110080~). La mémoire DDR disponible est suffisant pour accueillir une image RGB888 640x480 (environ 900 kB): écrire une image de référence mémoire avec XSCT(~mwr~), puis lire le contenu de la mémoire toujours avec XSCT (~mrd~), et comparer avec l'image de référence.
+- L'adresse de base pour le ~register space~ AXI est celle spécifiée (~0x0x84a00000~). L'espace mémoire réservé est suffisant pour les registres définis (5 mots de 32 bits): vérifier par exemple ~image_h~ et ~image_in~ en entrée de l'IP DMA24b_mm2s à l'aide de /debug probes/ ILA.
+
+*** T-2.1_2 Protocole AXI4-Stream
+Le SRS est satisfait si le flux AXIS produit vérifie:
+- ~TDATA~, ~TUSER~, et ~TLAST~ ne sont mis à jour que lorsque ~TVALID~ et ~TREADY~ sont actifs.
+- ~TUSER~ est haut pour le premier pixel de chaque /frame/ (SOF).
+- ~TLAST~ est haut pour le dernier pixel de chaque ligne (EOF).
+
+La validation s'effectue en plaçant des /debug probes/ ILA sur l'interface de sortie ~STR_Video_out~ de l'IP DMA24b_mm2s.
+
+*** T-2.1_3 Support 60 FPS
+Le SRS est satisfait si:
+- La fréquences du signal VSYNC est 60 Hz.
+
+La validation s'effectue à l'aide d'un oscilloscope.
+
+*** D-2.1_1 Restitution image
+Le SRS est satisfait si:
+- Le système permet d'afficher l'image en mémoire sur le moniteur VGA.
+
+** 2.2. [PL-IP-001] Source Vidéo TPG [1]
+#+begin_quote
+Le FPGA incorpore un TPG (Test Pattern Generator) émettant une mire comportant au moins un élément dynamique (élément en mouvement).
+#+end_quote
+
+*** A-2.2_1 Protocole AXI4-Stream Test Pattern Generator
+Le SRS est satisfait si le flux AXIS produit vérifie:
+- ~TDATA~, ~TUSER~, et ~TLAST~ ne sont mis à jour que lorsque ~TVALID~ et ~TREADY~ sont actifs.
+- ~TUSER~ est haut pour le premier pixel de chaque /frame/ (SOF).
+- ~TLAST~ est haut pour le dernier pixel de chaque ligne (EOF).
+
+La validation s'effectue par simulation VHDL (/testbench/).
+
+*** D-2.2_1 Visualisation de la mire
+Le SRS est satisfait si on observe en sortie sur le moniteur VGA:
+- La mire attendue.
+- Un élément mobile.
+
+** 2.3  [PL-IP-002] Sélection de source vidéo init [1]
+#+begin_quote
+La sélection de source vidéo est faite à l’initialisation du système.
+#+end_quote
+
+*** I-2.3_1 Multiplexer AXI
+Le SRS est satisfait si:
+- On identifie les éléments de conception (/design/) nécessaires à la sélection de la source vidéo.
+
+*** D-2.3_1 Sélection source vidéo initiale
+Le SRS est satisfait si:
+- La sélection de la source vidéo (mire/image) vérifie la configuration initiale du registre  ~SOCTRACK_CTRL_AXIS_SEL~.
+
+** 2.4  [PL-IP-003] Sélection de source vidéo à chaud [2]
+#+begin_quote
+La sélection de source vidéo peut être faite à chaud au moyen d’un registre dédié accessible par la partie PS du SoC.
+#+end_quote
+
+*** D-2.4_1 Sélection source vidéo à chaud
+Le SRS est satisfait si:
+- La sélection de la source vidéo (mire/image) la configuration /temps-réel du registre  ~SOCTRACK_CTRL_AXIS_SEL~.
+
+Utiliser XSCT ~mwr~ pour sélectionner la source.
+
+** 2.5. [PL-IP-004] Architecture filtre à convolution [1]
+TBD.
+
+** 2.6. [PL-IP-005] Standards de transferts [1]
+#+begin_quote
+L’entrée ainsi que la sortie des filtres à convolution sont au standard AXI4S.
+#+end_quote
+
+*** I-2.6_1 Protocole AXI4-Stream
+Le SRS est satisfait si:
+- Chaque filtre a une interface AXIS /slave/ et une interface AXIS /master/ (~TVALID~, ~TDATA~, ~TUSER~, ~TLAST~, ~TREADY~).
+- Le domaine d'horloge est ~ACLK~, avec lequel sont synchrinisés les /reset/.
+
+** 2.7. [PL-IP-006] Filtre gaussien [1]
+#+begin_quote
+La chaîne de traitement incorpore un premier filtre gaussien dont le kernel est de dimension 3 x 3.
+#+end_quote
+
+*** A-2.7_1 Filtre Gaussien
+Le SRS est satisfait si:
+- L'image RGB8 produite par le filtre, pour un /kernel/ donné, correspond à l'image produite par un outil tiers appliquant le même /kernel/.
+
+Note:
+- L'outil ImageJ peut être utilsé pour créer les images de références.
+- Écrire un /testbench/ (voir ~TestPatterns/Axi4s_monitor.vhd~) permettant d'écrire dans un fichier l'image en sortie du filtre.
+
+** 2.8. [PL-IP-007] Filtre Harris [1]
+#+begin_quote
+La chaîne de traitement incorpore un second étage de filtre dont le kernel est de dimension 3 x 3.
+#+end_quote
+
+** 2.9. [PL-IP-008] Filtre Harris binarisation [1]
+#+begin_quote
+La chaîne de traitement incorpore un dernier étage de binarisation produit par seuillage de la sortie du filtre de Harris.
+#+end_quote
+
+** 2.10. [PL-IP-009] Filtre Harris seuillage paramétrable [1]
+#+begin_quote
+La valeur du seuil de l’étage de binarisation est paramétrable à chaud (en fonctionnement) et est accessible par la
+partie PS du SoC.
+#+end_quote
+
+** 2.11. [PL-IP-010] Filtre Harris retour de données [2]
+#+begin_quote
+La réponse maximale en sortie du filtre de Harris doit être mise à disposition dans un groupe de registres accessibles
+par la partie PS du SoC.
+#+end_quote
+
+** 2.12.  [PL-DISP-001] Overlay [1]
+#+begin_quote
+#+begin_quote
+Le flux vidéo brut ainsi que le flux vidéo sortant de la chaîne de traitement peuvent être fusionnés afin de créer un overlay ; si la sortie du filtre de harris vaux « 1 » alors la valeur du pixel dans l’image brute est remplacée par une
+couleur forte (cyan, vert, rouge ect..)
+#+end_quote
+#+end_quote
+
+** 2.13. [PL-DISP-002] Affichage écran VGA [1]
+#+begin_quote
+Le FPGA doit permettre d’afficher un flux vidéo sortant sur un écran compatible VGA 640 x 480 @ 60
+#+end_quote
+
+*** A-2.13.1 Mode VGA 480p
+Le SRS est satisfait si:
+- La fréquence du signal VSYNC est 60 Hz.
+
+La validation s'effectue à l'aide d'un oscilloscope.
+
+*** D-2.13_1 Affichage moniteur
+Le SRS est satisfait si:
+- Le système produit un affichage satisfaisant visuellement sur un moniteur VGA.
+- Le flux vidéo en sorte du /design/ est /vérouillée/ (LED1 bleue, signal de timing /locked/).
+
+** 2.14. [PL-DISP-003] Mode d’affichage [2]
+#+begin_quote
+Le mode d’affichage (sans traitement, overlay Haris) est modifiable à chaud par l’action d’une écriture par la partie PS dans un registre dédié.
+#+end_quote
+
+*** A-2.14_1
+Note: utiliser une approche similaire à "D-2.4_1 Sélection source vidéo à chaud".
+
+*** D-2.14_2
+Note: utiliser une approche similaire à "D-2.4_1 Sélection source vidéo à chaud".
+
+* 3. SoC
+** 3.1. [PS-001] Mise en mémoire manuelle pattern [1]
+#+begin_quote
+La mise en mémoire DDR de l’image source est fait à l’initialisation du système par l’outil XSCT via la commande mwr x0….0 -file image.bin.
+#+end_quote
+
+*** T_3.1_1 Mise en mémoire manuelle
+Le SRS est satisfait si:
+- L'image lue en mémoire est bien celle précédemment téléchargée.
+
+Note: Utiliser XSCT ~mwr~ et ~mrd~, voir T-2.1_1 Espaces d'adressage AXI.
+
+** 3.2. [PS-002] Mise en mémoire automatique pattern [2]
+#+begin_quote
+La mise en mémoire DDR de l’image source est fait à l’initialisation du système par relecture d’une carte SD.
+#+end_quote
+
+
+*** T_3.1_1 Mise en mémoire manuelle
+Le SRS est satisfait si:
+- L'image lue en mémoire est bien celle précédemment sauvegardée sur la SD.
+
+Note: Utiliser XSCT ~mrd~.
+
+** 3.3. [PS-003] Retour de données UART [2]
+#+begin_quote
+Les retours de données (cf « Filtre Harris retour de données ») sont faits sur le port UART0 avec un baudrate de
+115200. L’afichage doit faire apparaitre le score maximal et les coordonnées du score maximal
+#+end_quote
+
+*** A-3.3_1 Configuration UART
+Le SRS est satisfait si:
+- UART (PS GPIO) est activé est correctement configuré.
+
+*** D-3.3_1 Console UART
+Le SRS est satisfait si:
+- Le retour UART sur la console est correct.
+
+*** A-3.3_2 Score maximal et coordonnées
+Le SRS est satisfait si:
+- Le retour UART sur la console confirme score maximal et coordonées calculées .
