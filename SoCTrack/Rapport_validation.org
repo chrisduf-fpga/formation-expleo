@@ -40,7 +40,6 @@
 |                    | A-3.3_2    |  .     |
 
 * 2. FPGA image processing
-
 ** 2.1. [PL-IP-000] Source Vidéo mémoire [1]
 *** I-2.1_1 Architecture MM2S
 Sur le /design/ SoCTrack:
@@ -213,6 +212,7 @@ Le SRS n'est pas satisfait (validation non mise en oeuvre).
 Voir Fig. [[fig:D-2.2_1-tpg]], ou sur une vidéo: ~https://youtu.be/aCMtNJG_Zlo~.
 
 La LED1 confirme le vérouillage.
+
 Le SRS est satisfait.
 
 ** 2.14. [PL-DISP-003] Mode d’affichage [2]

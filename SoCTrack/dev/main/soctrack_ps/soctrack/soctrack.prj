@@ -1,0 +1,11 @@
+<?xml version="1.0" encoding="ASCII"?>
+<sdkproject:SdkProject xmi:version="2.0" xmlns:xmi="http://www.omg.org/XMI" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:sdkproject="http://www.xilinx.com/sdkproject" name="soctrack" location="/home/chris/containers/Ubuntu-20.04/dev/formation-fpga-repo/SoCTrack/dev/main/soctrack_ps/soctrack" platform="/home/chris/containers/Ubuntu-20.04/dev/formation-fpga-repo/SoCTrack/dev/main/soctrack_ps/top_soctrack_pl/export/top_soctrack_pl/top_soctrack_pl.xpfm" platformUID="xilinx:::0.0(custom)" systemProject="soctrack_system" sysConfig="top_soctrack_pl" runtime="C/C++" cpu="standalone_ps7_cortexa9_0" cpuInstance="ps7_cortexa9_0" os="standalone" mssSignature="cb1b069a6dffa9be0e674ea6338cc013">
+  <configuration name="Debug" id="xilinx.gnu.armv7.exe.debug.276252542">
+    <configBuildOptions xsi:type="sdkproject:SdkOptions"/>
+    <lastBuildOptions xsi:type="sdkproject:SdkOptions"/>
+  </configuration>
+  <configuration name="Release" id="xilinx.gnu.armv7.exe.release.1761575109" dirty="true">
+    <configBuildOptions xsi:type="sdkproject:SdkOptions"/>
+  </configuration>
+  <template appTemplateName="hello_world"/>
+</sdkproject:SdkProject>
